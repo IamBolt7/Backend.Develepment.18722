@@ -13,7 +13,7 @@ This directory contains practical experiments covering web development, backend 
 | 3 | Lab Test-2 Experiment | [Open](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-2%20Experiment) | `[PLACEHOLDER: Exact topic]` |
 | 4 | Lab Test-3 Experiment | [Open](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-3%20Experiment) | `[PLACEHOLDER: Exact topic]` |
 | 5 | Lab Test-4 Experiment | [Open](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-4%20Experiment) | `[PLACEHOLDER: Exact topic]` |
-| 6 | Relational vs Document Databases | [Open](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Relational-vs-Document-Databases-Lab) | SQL vs document databases |
+| 6 | Lab Test-5 Experiment | [Open](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-5%20Experiment) | SQL vs document databases |
 ## Technology Stack
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Backend:** Node.js, Express.js
@@ -264,8 +264,11 @@ Ensure the required database service is running.
 ## Conclusion
 `[PLACEHOLDER: Lab Test-4 conclusion.]`
 ---
-# 6. Relational vs Document Databases Lab
-**Source:** [Open Database Lab](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Relational-vs-Document-Databases-Lab)
+# 6. Lab Test-5 Experiment
+
+## Topic
+Relational vs Document Databases
+**Source:** [Open Lab Test-5](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-5%20Experiment)
 ## Aim
 To understand and compare relational and document-oriented databases, including their structures, schemas, relationships, queries, and common use cases.
 ## Relational Databases
@@ -403,7 +406,7 @@ Backend.Develepment.18722/
 │   ├── Lab Test-2 Experiment/
 │   ├── Lab Test-3 Experiment/
 │   ├── Lab Test-4 Experiment/
-│   ├── Relational-vs-Document-Databases-Lab/
+│   ├── Lab Test-5 Experiment/
 │   └── README.md
 ├── Theory/
 ├── .gitignore
