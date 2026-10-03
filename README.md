@@ -1,28 +1,30 @@
 # Backend Development — 18722
 
-> A consolidated repository of backend development laboratory experiments, theory exercises, database work, and a complete Content Management System application.
+A central documentation hub for my **Backend Development** coursework, containing laboratory experiments, theory assignments, database exercises, and application projects.
 
-## Repository Overview
+The repository follows my progression from web fundamentals and browser storage to backend servers, APIs, server-side rendering, MongoDB, PostgreSQL, JSONB, and database-backed applications.
 
-This repository documents my practical work for **Backend Development**. It brings together laboratory experiments, backend theory implementations, database exercises, and a CMS application in one place.
+---
 
-The work progresses from web/backend fundamentals to **Node.js, Express.js, EJS, REST-style routing, MongoDB, Flask, SQL vs NoSQL concepts, CRUD operations, validation, server-side rendering, and database-backed applications**.
+## 📌 Quick Navigation
 
-## Quick Navigation
-
-| Section | Description | Documentation |
+| Section | Contents | Open |
 | --- | --- | --- |
-| **LABS** | Backend Development laboratory experiments and lab tests | [Open LABS README](./LABS/README.md) |
-| **Theory** | Express/EJS and Flask backend theory/practice implementations | [Open Theory README](./Theory/README.md) |
-| **CMS Lab** | Full Content Management System using Node.js, Express, EJS and MongoDB | [Open CMS README](./Applications/cms-lab/README.md) |
+| **LABS** | EXP-1 and Lab Test Experiments 1–5 | [LABS](./LABS/) |
+| **Theory** | Assignment 1, Assignment 2, and Theory 1 | [Theory](./Theory/) |
+| **Applications** | CMS Lab | [Applications](./Applications/) |
 
-## Repository Structure
+---
+
+## 📂 Repository Structure
 
 ```text
 Backend.Develepment.18722/
+│
 ├── Applications/
 │   └── cms-lab/
 │       └── README.md
+│
 ├── LABS/
 │   ├── EXP-1/
 │   ├── Lab Test-1 Experiment/
@@ -31,157 +33,269 @@ Backend.Develepment.18722/
 │   ├── Lab Test-4 Experiment/
 │   ├── Lab Test-5 Experiment/
 │   └── README.md
+│
 ├── Theory/
-│   └── README.md
+│   ├── Assignment-1-Notes-App/
+│   ├── Assignment 2/
+│   └── Theory 1/
+│
 ├── .gitignore
 └── README.md
 ```
 
 ---
 
-# Laboratory Work
+# 🧪 Laboratory Work
 
-The [`LABS`](./LABS/README.md) directory contains the practical experiments completed during the course.
+The [`LABS`](./LABS/) directory contains the practical experiments completed during the Backend Development course.
+
+For detailed lab documentation, see **[LABS/README.md](./LABS/README.md)**.
 
 ## EXP-1
 
-**Documentation:** [LABS README — EXP-1](./LABS/README.md#1-exp-1)  
 **Project:** [Open EXP-1](./LABS/EXP-1/)
 
-This experiment introduces the structure and workflow of a backend/web development project. It focuses on understanding how project files are organised, how application logic is implemented, and how an application is executed and tested.
+The first experiment introduces the basic workflow and organisation of a web/backend development project. It establishes the foundation for the later practical work in the repository.
 
-**Main learning areas:** project structure, web-development fundamentals, application flow, testing and debugging.
+**Concepts:** project structure, web fundamentals, application flow, execution, testing, and debugging.
+
+---
 
 ## Lab Test-1 Experiment
 
-**Documentation:** [LABS README — Lab Test-1](./LABS/README.md#2-lab-test-1-experiment)  
 **Project:** [Open Lab Test-1](./LABS/Lab%20Test-1%20Experiment/)
 
-This lab test develops the basic practical workflow used throughout the backend development course. It reinforces implementation, running an application locally, understanding request/response behaviour, and debugging the resulting application.
+This experiment builds on the introductory material and applies core web/backend concepts in a practical application.
 
-**Main learning areas:** backend fundamentals, request-response flow, implementation, testing and debugging.
+**Concepts:** application structure, HTTP fundamentals, request-response flow, implementation, testing, and debugging.
+
+---
 
 ## Lab Test-2 Experiment
 
-**Documentation:** [LABS README — Lab Test-2](./LABS/README.md#3-lab-test-2-experiment)  
 **Project:** [Open Lab Test-2](./LABS/Lab%20Test-2%20Experiment/)
 
-This experiment continues the progression toward structured backend applications. It focuses on working with routes and application logic while keeping the implementation organised and testable.
+This experiment develops a more structured backend workflow and focuses on organising application logic and routes.
 
-**Main learning areas:** routing, backend application structure, data handling, HTTP concepts and debugging.
+**Concepts:** routing, HTTP methods, backend logic, data handling, application organisation, and error handling.
+
+---
 
 ## Lab Test-3 Experiment
 
-**Documentation:** [LABS README — Lab Test-3](./LABS/README.md#4-lab-test-3-experiment)  
 **Project:** [Open Lab Test-3](./LABS/Lab%20Test-3%20Experiment/)
 
-This lab expands the backend work toward API-oriented development. It demonstrates how server-side code receives requests, processes data and returns appropriate responses.
+This experiment extends the practical work toward API-oriented backend development, where a server receives requests, processes information, and returns suitable responses.
 
-**Main learning areas:** APIs, HTTP requests and responses, JSON/data handling, routes and server-side logic.
+**Concepts:** APIs, JSON, HTTP requests and responses, routes, server-side logic, and client-server communication.
+
+---
 
 ## Lab Test-4 Experiment
 
-**Documentation:** [LABS README — Lab Test-4](./LABS/README.md#5-lab-test-4-experiment)  
 **Project:** [Open Lab Test-4](./LABS/Lab%20Test-4%20Experiment/)
 
-This experiment advances into database-oriented backend development. It connects application concepts with structured data storage and introduces the role of schemas, routes and CRUD-style operations in a backend system.
+This experiment advances into database-oriented backend development and demonstrates how application logic can interact with structured and persistent data.
 
-**Main learning areas:** databases, schemas/data models, backend routes, CRUD concepts and persistent data.
+**Concepts:** databases, schemas/data models, backend routes, CRUD operations, and persistent storage.
+
+---
 
 ## Lab Test-5 Experiment — Relational vs Document Databases
 
-**Documentation:** [LABS README — Lab Test-5](./LABS/README.md#6-lab-test-5-experiment)  
-**Project:** [Open Database Lab](./LABS/Lab Test-5 Experiment/)
+**Project:** [Open Lab Test-5](./LABS/Lab%20Test-5%20Experiment/)
 
-This experiment compares **relational databases** with **document-oriented databases**. It examines how the same information can be represented using tables, rows, columns and relationships in SQL systems versus collections, documents and fields in document databases such as MongoDB.
+Lab Test-5 compares **relational databases** and **document-oriented databases**, showing how similar information can be represented using different database models.
 
-Topics include:
+### Topics Covered
 
-- SQL and NoSQL database models
-- Tables, rows and columns
-- Collections, documents and fields
-- Fixed and flexible schemas
+- SQL and NoSQL
+- Relational databases
+- Document databases
+- Tables, rows, and columns
+- Collections and documents
 - Primary and foreign keys
-- Joins
-- Embedded documents and references
+- Relationships and joins
+- Embedded documents
+- References
+- Fixed and flexible schemas
 - CRUD operations
-- Choosing a database model based on application requirements
+- Relational vs document data modelling
 
-A relational system generally models relationships using keys and joins, while a document database can represent related information using embedded documents or references. Neither model is universally better; the appropriate design depends on the application's data relationships, query patterns, consistency requirements and operational needs.
-
-> For detailed experiment notes, commands, execution guidance, troubleshooting and reference material, see the **[complete LABS README](./LABS/README.md)**.
+The experiment demonstrates the conceptual differences between relational and document-oriented storage and the design considerations involved in choosing a data model.
 
 ---
 
-# Theory and Backend Practice
+# 📚 Theory
 
-**Full documentation:** [Open Theory README](./Theory/README.md)  
-**Project directory:** [Open Theory](./Theory/)
+The [`Theory`](./Theory/) directory now contains **three separate pieces of work**:
 
-The `Theory` project contains two independent backend implementations that demonstrate similar backend concepts using different technology stacks.
+| No. | Work | Topic | Link |
+| ---: | --- | --- | --- |
+| 1 | **Assignment 1** | Notes App / Browser Storage | [Open](./Theory/Assignment-1-Notes-App/) |
+| 2 | **Assignment 2** | PostgreSQL as SQL + NoSQL using JSONB | [Open](./Theory/Assignment%202/) |
+| 3 | **Theory 1** | Previous Backend Theory Work | [Open](./Theory/Theory%201/) |
 
-## Node.js + Express + EJS
+---
 
-The Node.js application demonstrates a small **Student Management** website and JSON API.
+## 1. Assignment 1 — Notes App
 
-It includes:
+**Project:** [Assignment-1-Notes-App](./Theory/Assignment-1-Notes-App/)
 
-- An Express server
+### Final Task — Build a Notes App
+
+Assignment 1 applies browser-storage concepts by building a functional Notes application.
+
+The project demonstrates how information can be stored and managed in the browser without requiring a backend database.
+
+### Main Concepts
+
+- LocalStorage
+- SessionStorage
+- JavaScript
+- DOM manipulation
+- Event handling
+- Forms
+- Browser-side persistence
+- Dynamic UI updates
+
+### Notes App Functionality
+
+The project is designed around common note-management operations such as:
+
+- Creating notes
+- Viewing saved notes
+- Editing notes
+- Deleting notes
+- Searching/filtering notes
+- Persisting information in browser storage
+- Providing a responsive and usable interface
+
+### Learning Outcome
+
+The assignment demonstrates client-side persistence and provides a useful bridge between basic frontend applications and later database-backed applications.
+
+---
+
+## 2. Assignment 2 — PostgreSQL as SQL + NoSQL
+
+**Project:** [Assignment 2](./Theory/Assignment%202/)
+
+### Working with JSONB
+
+Assignment 2 explores PostgreSQL's **`jsonb`** data type and how a relational database can also support document-style data.
+
+### Learning Objective
+
+The objective is to understand how PostgreSQL can combine conventional relational structures with semi-structured JSON documents and to evaluate scenarios where JSONB can provide functionality associated with document databases.
+
+### Topics Covered
+
+- PostgreSQL
+- SQL
+- NoSQL concepts
+- JSON
+- JSONB
+- Relational tables
+- Semi-structured data
+- Document-style storage
+- JSON querying
+- Nested data
+- PostgreSQL and MongoDB concepts
+- Hybrid relational/document design
+
+### Conceptual Model
+
+```text
+PostgreSQL
+│
+├── Relational Model
+│   ├── Tables
+│   ├── Rows
+│   ├── Columns
+│   ├── Keys
+│   └── Relationships
+│
+└── JSONB
+    ├── JSON Objects
+    ├── Nested Properties
+    ├── Arrays
+    └── Flexible Document Data
+```
+
+JSONB makes it possible to keep relational and document-style information within the same PostgreSQL database while still using PostgreSQL's broader database capabilities.
+
+---
+
+## 3. Theory 1 — Previous Theory Work
+
+**Project:** [Theory 1](./Theory/Theory%201/)
+
+`Theory 1` contains the backend theory/practice work that was completed before the newer assignments were separated into their own folders.
+
+It demonstrates similar backend concepts through multiple technology stacks.
+
+### Node.js + Express + EJS
+
+The Node.js implementation demonstrates server-side JavaScript using Express and EJS.
+
+**Concepts covered:**
+
+- Node.js
+- Express.js
 - HTTP routing
-- EJS server-side templates
-- Static CSS
-- A student listing page
-- A JSON API endpoint
-- Environment-based port configuration
-- Basic 404 handling
-
-Important routes include:
-
-| Route | Purpose |
-| --- | --- |
-| `/` | Displays the project home page |
-| `/students` | Renders the student list using EJS |
-| `/api/students` | Returns student information as JSON |
-
-The application uses in-memory sample data, so a database is not required for this example.
-
-## Python + Flask
-
-The Flask implementation demonstrates a lightweight Python backend server.
-
-It includes routes for:
-
-| Route | Purpose |
-| --- | --- |
-| `/` | Basic Flask landing page |
-| `/data` | Returns sample information as JSON |
-| `/html` | Displays data as server-generated HTML |
-
-Together, the Express and Flask examples demonstrate how different backend frameworks solve the same core problems: receiving HTTP requests, routing them to application logic and returning HTML or JSON responses.
-
-### Theory Concepts Covered
-
-- Backend server creation
-- HTTP routing
-- Express middleware
-- Server-side rendering with EJS
-- Static-file serving
+- Middleware
+- EJS templates
+- Server-side rendering
+- Static files
 - JSON APIs
-- Flask routes and `jsonify`
-- Separation of frontend views and backend logic
-- Configurable server ports
 - 404/error handling
 
-> See **[Theory/README.md](./Theory/README.md)** for setup instructions, project structure, routes and execution commands.
+Typical request flow:
+
+```text
+Browser
+   │
+   │ HTTP Request
+   ▼
+Express Server
+   │
+   ├── Middleware
+   ├── Route
+   ├── Application Logic
+   └── EJS / JSON
+   │
+   ▼
+HTTP Response
+```
+
+### Python + Flask
+
+The Flask implementation demonstrates backend development using Python.
+
+**Concepts covered:**
+
+- Flask server creation
+- Python backend development
+- Route handling
+- HTML responses
+- JSON responses
+- API fundamentals
+
+Together, the Express and Flask examples demonstrate how different backend frameworks implement the same fundamental request-processing-response model.
 
 ---
 
-# CMS Application
+# 🖥️ Applications
 
-**Full documentation:** [Open CMS Lab README](./Applications/cms-lab/README.md)  
-**Project directory:** [Open CMS Lab](./Applications/cms-lab/)
+## CMS Lab
 
-The CMS Lab is a responsive **Content Management System for blog posts** built using:
+**Project:** [Open CMS Lab](./Applications/cms-lab/)  
+**Documentation:** [CMS README](./Applications/cms-lab/README.md)
+
+The CMS Lab is a **Content Management System** that combines several concepts from the course into a larger backend application.
+
+### Technology Stack
 
 - Node.js
 - Express.js
@@ -189,169 +303,290 @@ The CMS Lab is a responsive **Content Management System for blog posts** built u
 - MongoDB
 - HTML5
 - CSS3
-
-The application supports two operating modes.
-
-### MongoDB Mode
-
-When MongoDB is available, posts are stored permanently in the `cms_lab` database.
-
-### Demo Mode
-
-If MongoDB is unavailable, the server can still run using temporary in-memory sample posts. This makes the application easy to demonstrate locally while preserving real database support.
+- JavaScript
 
 ### Main Features
 
-- View all blog posts
-- Read individual posts
+- Display blog posts
+- View individual posts
 - Create new posts
-- Validate title, author and content
-- Store posts in MongoDB
-- Fall back to in-memory demo data
-- Seed sample posts into an empty database
-- Responsive desktop/mobile interface
-- Custom 404 handling
-- EJS server-side rendering
+- Validate form input
+- Store data using MongoDB
+- Server-side rendering
+- Responsive user interface
+- Error handling
+- Demo/in-memory data support
 
-### Main Routes
-
-| Method | Route | Purpose |
-| --- | --- | --- |
-| `GET` | `/` | Redirects to the posts page |
-| `GET` | `/posts` | Displays all posts |
-| `GET` | `/posts/new` | Displays the create-post form |
-| `POST` | `/posts` | Validates and creates a post |
-| `GET` | `/posts/:id` | Displays one complete post |
-
-This project combines many of the concepts introduced elsewhere in the repository into a more complete application: routing, forms, validation, server-side rendering, database access, error handling and responsive UI design.
-
-> See **[Applications/cms-lab/README.md](./Applications/cms-lab/README.md)** for complete installation, MongoDB configuration, routes, architecture and usage instructions.
-
----
-
-# Concepts Covered Across the Repository
-
-| Area | Concepts |
-| --- | --- |
-| **Backend Fundamentals** | Client-server architecture, request-response cycle, routing |
-| **Node.js** | Server-side JavaScript and npm-based projects |
-| **Express.js** | Routes, middleware, request handling and error handling |
-| **EJS** | Dynamic HTML and server-side rendering |
-| **Python / Flask** | Routes, HTML responses and JSON APIs |
-| **HTTP** | GET, POST, PUT/PATCH and DELETE concepts |
-| **REST / APIs** | Resource-oriented routes and JSON responses |
-| **CRUD** | Create, Read, Update and Delete operations |
-| **MongoDB** | Collections, documents, persistence and database connections |
-| **Relational Databases** | Tables, keys, relationships and joins |
-| **Document Databases** | Documents, flexible schemas, embedding and references |
-| **Frontend Integration** | HTML, CSS, forms and responsive layouts |
-| **Validation** | Checking and sanitising user input |
-| **Error Handling** | Invalid routes, missing resources and connection failures |
-| **Git & GitHub** | Version control and repository organisation |
-
----
-
-# General Backend Architecture
+### Application Architecture
 
 ```text
 User
-  |
-  v
-Browser / API Client
-  |
-  | HTTP Request
-  v
-Backend Server
-(Node.js / Express or Python / Flask)
-  |
-  +--> Middleware
-  |
-  +--> Route
-  |
-  +--> Application Logic
-  |
-  +--> Data Layer / Database
-  |
-  v
-HTTP Response
-  |
-  v
-Browser / API Client
+ │
+ ▼
+Browser
+ │
+ │ HTTP Request
+ ▼
+Express.js
+ │
+ ├── Middleware
+ ├── Routes
+ ├── Validation
+ └── Application Logic
+ │
+ ▼
+MongoDB
+ │
+ ▼
+EJS View
+ │
+ ▼
+HTML Response
 ```
 
-Not every experiment uses every layer, but this architecture represents the overall progression of the repository.
+The CMS project brings together routing, forms, validation, database interaction, server-side rendering, and responsive UI design.
 
-# Learning Outcomes
+---
 
-Through these experiments and projects, I have practised how to:
+# 🛠️ Technologies Used
 
-- Build and run backend servers.
-- Understand the HTTP request-response lifecycle.
-- Create routes and APIs.
-- Return both HTML and JSON responses.
-- Use EJS for dynamic server-rendered pages.
-- Build simple backend applications using Flask.
-- Work with MongoDB and persistent data.
-- Understand relational and document-oriented database models.
-- Apply CRUD concepts.
-- Validate incoming form data.
-- Handle invalid routes and common application errors.
-- Structure backend projects clearly.
-- Use Git and GitHub to maintain and document practical work.
+| Technology | Purpose |
+| --- | --- |
+| **HTML5** | Page structure |
+| **CSS3** | Styling and responsive design |
+| **JavaScript** | Client-side and server-side programming |
+| **LocalStorage** | Persistent browser storage |
+| **SessionStorage** | Session-based browser storage |
+| **Node.js** | JavaScript backend runtime |
+| **Express.js** | Web server, middleware, and routing |
+| **EJS** | Server-side templating |
+| **Python** | Backend programming |
+| **Flask** | Python web framework |
+| **MongoDB** | Document-oriented database |
+| **PostgreSQL** | Relational database |
+| **JSON / JSONB** | Structured and semi-structured data |
+| **Git** | Version control |
+| **GitHub** | Repository hosting and documentation |
 
-# Running the Projects
+---
 
-Different folders have different requirements, so use the README inside the relevant section before running a project.
+# 🔑 Major Concepts Covered
 
-For most Node.js projects:
+### Backend Development
+
+- Client-server architecture
+- HTTP request-response lifecycle
+- Routes and routing
+- Middleware
+- Server-side logic
+- Server-side rendering
+- APIs
+- JSON responses
+- Validation
+- Error handling
+
+### Databases
+
+- SQL and NoSQL
+- PostgreSQL
+- MongoDB
+- JSONB
+- Relational modelling
+- Document modelling
+- Schemas
+- Keys and relationships
+- Joins
+- Embedded documents
+- References
+- CRUD operations
+
+### Frontend Integration
+
+- HTML
+- CSS
+- Responsive design
+- JavaScript
+- Forms
+- DOM manipulation
+- LocalStorage
+- SessionStorage
+
+### Development Workflow
+
+- Project organisation
+- npm
+- Dependencies
+- Environment configuration
+- Testing
+- Debugging
+- Git
+- GitHub
+- Technical documentation
+
+---
+
+# 🔄 CRUD Operations
+
+CRUD is a recurring concept throughout backend development:
+
+| Operation | Meaning | Common HTTP Method |
+| --- | --- | --- |
+| **Create** | Add new data | `POST` |
+| **Read** | Retrieve data | `GET` |
+| **Update** | Modify existing data | `PUT` / `PATCH` |
+| **Delete** | Remove data | `DELETE` |
+
+---
+
+# 🌐 General Backend Architecture
+
+```text
+                 USER
+                   │
+                   ▼
+           ┌───────────────┐
+           │    Browser    │
+           └───────┬───────┘
+                   │
+              HTTP Request
+                   │
+                   ▼
+           ┌───────────────┐
+           │ Backend Server│
+           │ Express/Flask │
+           └───────┬───────┘
+                   │
+          ┌────────┴────────┐
+          │                 │
+          ▼                 ▼
+ Application Logic       Database
+                    MongoDB/PostgreSQL
+          │                 │
+          └────────┬────────┘
+                   │
+                   ▼
+            HTML / JSON
+                   │
+                   ▼
+                Browser
+```
+
+Not every project uses every layer, but this represents the overall architecture explored throughout the repository.
+
+---
+
+# 🎯 Learning Outcomes
+
+Through the experiments, theory assignments, and application projects in this repository, I have practised how to:
+
+- Build web and backend applications.
+- Understand client-server architecture.
+- Work with HTTP requests and responses.
+- Create backend routes.
+- Build JSON APIs.
+- Use Node.js and Express.js.
+- Build lightweight backend applications using Flask.
+- Render dynamic pages using EJS.
+- Work with LocalStorage and SessionStorage.
+- Integrate MongoDB with backend applications.
+- Work with PostgreSQL.
+- Store and query JSONB data.
+- Understand SQL and NoSQL models.
+- Compare relational and document databases.
+- Apply CRUD operations.
+- Validate user input.
+- Handle common application errors.
+- Create responsive interfaces.
+- Organise backend projects.
+- Use Git and GitHub for version control.
+- Document software projects using Markdown.
+
+---
+
+# ▶️ Running the Projects
+
+Each experiment may have different dependencies. Check the project-specific README or source files before running it.
+
+### Typical Node.js Project
 
 ```bash
 npm install
 npm start
 ```
 
-For the Flask theory example:
+If no start script is configured:
+
+```bash
+node server.js
+```
+
+### Typical Flask Project
 
 ```bash
 pip install -r requirements.txt
-python3 "flask server/main.py"
+python3 main.py
 ```
 
-For detailed instructions, use:
+### Database Projects
 
-- [LABS/README.md](./LABS/README.md)
-- [Theory/README.md](./Theory/README.md)
-- [Applications/cms-lab/README.md](./Applications/cms-lab/README.md)
+Database-based projects may additionally require:
 
-# Documentation Map
+- MongoDB
+- PostgreSQL
+- A local or cloud database instance
+- Environment variables
+- Database connection configuration
+
+---
+
+# 🗺️ Documentation Map
 
 ```text
-Main README
+Main README.md
 │
-├── LABS
-│   └── README.md
-│       ├── EXP-1
-│       ├── Lab Test-1
-│       ├── Lab Test-2
-│       ├── Lab Test-3
-│       ├── Lab Test-4
-│       └── Lab Test-5 — Relational vs Document Databases
+├── LABS/
+│   ├── README.md
+│   ├── EXP-1/
+│   ├── Lab Test-1 Experiment/
+│   ├── Lab Test-2 Experiment/
+│   ├── Lab Test-3 Experiment/
+│   ├── Lab Test-4 Experiment/
+│   └── Lab Test-5 Experiment/
 │
-├── Theory
-│   └── README.md
-│       ├── Node.js + Express + EJS
-│       └── Python + Flask
+├── Theory/
+│   ├── Assignment-1-Notes-App/
+│   ├── Assignment 2/
+│   └── Theory 1/
 │
-└── Applications
-    └── cms-lab
+└── Applications/
+    └── cms-lab/
         └── README.md
 ```
 
-# Repository
+---
 
-**GitHub:** [IamBolt7/Backend.Develepment.18722](https://github.com/IamBolt7/Backend.Develepment.18722)
+# 🔗 Quick Links
 
-This main README acts as the central index for the repository. Detailed documentation remains inside each section so that the root page stays readable while every project can still be explored independently.
+- [LABS](./LABS/)
+- [LABS README](./LABS/README.md)
+- [EXP-1](./LABS/EXP-1/)
+- [Lab Test-1](./LABS/Lab%20Test-1%20Experiment/)
+- [Lab Test-2](./LABS/Lab%20Test-2%20Experiment/)
+- [Lab Test-3](./LABS/Lab%20Test-3%20Experiment/)
+- [Lab Test-4](./LABS/Lab%20Test-4%20Experiment/)
+- [Lab Test-5](./LABS/Lab%20Test-5%20Experiment/)
+- [Theory](./Theory/)
+- [Assignment 1 — Notes App](./Theory/Assignment-1-Notes-App/)
+- [Assignment 2 — PostgreSQL JSONB](./Theory/Assignment%202/)
+- [Theory 1](./Theory/Theory%201/)
+- [CMS Lab](./Applications/cms-lab/)
+- [CMS README](./Applications/cms-lab/README.md)
+
+---
+
+## About This Repository
+
+This repository serves as a record of my **Backend Development coursework and practical implementations**. It demonstrates the progression from browser-side storage and introductory web development to backend frameworks, APIs, relational/document databases, and complete database-backed applications.
 
 ---
 
@@ -359,4 +594,4 @@ This main README acts as the central index for the repository. Detailed document
 
 **Arnav Daftuar**
 
-Backend Development coursework and practical implementations.
+Backend Development coursework, assignments, laboratory experiments, and application projects.
