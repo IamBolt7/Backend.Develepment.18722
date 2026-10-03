@@ -1,46 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <main class="container">
-    <section class="hero">
-      <span class="badge">Experiment 12</span>
-      <h1>Node.js, Express.js & EJS Templating</h1>
-      <p>A working lab implementation covering Express responses, route/query parameters, POST data and dynamic EJS rendering.</p>
-    </section>
-
-    <section class="card">
-      <h2>Experiment Topics</h2>
-      <div class="topics">
-        <% topics.forEach(topic => { %><span><%= topic %></span><% }) %>
-      </div>
-    </section>
-
-    <section class="grid">
-      <article class="card"><h2>Response Methods</h2><a href="/text">Plain Text</a><a href="/html">HTML</a><a href="/json">JSON</a><a href="/status">Status 201</a></article>
-      <article class="card"><h2>URL Parameters</h2><a href="/user/123">/user/123</a><a href="/product/electronics/456">/product/electronics/456</a></article>
-      <article class="card"><h2>Query Parameters</h2><a href="/search?q=nodejs&page=2&limit=20">Search Example</a><a href="/calculate?num1=10&num2=5&operation=add">Calculator Example</a></article>
-    </section>
-
-    <section class="card">
-      <h2>EJS + POST Data Demo</h2>
-      <form method="POST" action="/feedback">
-        <label>Name<input name="name" required placeholder="Your name"></label>
-        <label>Message<textarea name="message" required placeholder="Enter feedback"></textarea></label>
-        <button type="submit">Submit Feedback</button>
-      </form>
-    </section>
-
-    <section class="card api">
-      <h2>POST API Testing</h2>
-      <p><strong>POST /register</strong> JSON: <code>{"username":"john","email":"john@example.com","password":"pass123"}</code></p>
-      <p><strong>POST /login</strong> JSON: <code>{"email":"test@example.com","password":"password123"}</code></p>
-    </section>
-  </main>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title><%= title %></title><link rel="stylesheet" href="/style.css"></head><body><main class="container">
+<section class="hero"><span class="badge">Experiment 12 • Backend Development</span><h1>Node.js, Express.js & EJS Templating</h1><p>A complete working experiment covering Node.js fundamentals, Express routing, HTTP responses, URL and query parameters, POST data, EJS templates and Nodemon.</p><div class="actions"><a class="button" href="/home">Open EJS Demo</a><a class="button secondary" href="/users">View Users</a></div></section>
+<section class="card"><h2>Objective</h2><p>Build a server-side JavaScript application with Node.js and Express, process different request types, and render dynamic web pages using EJS.</p><div class="topics"><% topics.forEach(topic => { %><span><%= topic %></span><% }) %></div></section>
+<section class="grid"><article class="card"><h2>HTTP Responses</h2><p>Compare common Express response methods.</p><a href="/text">Plain text →</a><a href="/html">HTML →</a><a href="/json">JSON →</a><a href="/status">Status 201 →</a></article><article class="card"><h2>Route Parameters</h2><p>Read values embedded in the URL path.</p><a href="/user/123">User 123 →</a><a href="/product/electronics/456">Product example →</a></article><article class="card"><h2>Query Parameters</h2><p>Read optional values from the query string.</p><a href="/search?q=nodejs&page=2&limit=20">Search example →</a><a href="/calculate?num1=10&num2=5&operation=add">Calculator example →</a></article></section>
+<section class="grid two"><article class="card"><h2>EJS Templates</h2><p>Server-rendered pages using variables, arrays and route data.</p><a href="/home">Home template →</a><a href="/users">Users loop →</a><a href="/profile/1">Dynamic profile →</a></article><article class="card"><h2>POST Data</h2><p>Submit this form to demonstrate URL-encoded POST data and EJS rendering.</p><form method="POST" action="/feedback"><label>Name<input name="name" required placeholder="Enter your name"></label><label>Message<textarea name="message" required placeholder="Enter feedback"></textarea></label><button type="submit">Submit Feedback</button></form></article></section>
+<section class="card api"><h2>API Testing</h2><p>Use Postman or curl for POST routes.</p><p><strong>POST /register</strong><br><code>{"username":"john","email":"john@example.com","password":"pass123"}</code></p><p><strong>POST /login</strong><br><code>{"email":"test@example.com","password":"password123"}</code></p></section>
+<footer>Lab Test-3 Experiment • Experiment 12</footer></main></body></html>
