@@ -1,0 +1,16 @@
+<%- include("partials/header", { title: post.title }) %>
+
+<article class="post">
+    <p class="eyebrow">Published post</p>
+    <h1><%= post.title %></h1>
+    <p class="meta">
+        By <strong><%= post.author %></strong>
+        <span class="meta-dot">•</span>
+        <time datetime="<%= post.createdAt.toISOString() %>"><%= formatDateTime(post.createdAt) %></time>
+    </p>
+    <div class="content"><%= post.content %></div>
+</article>
+
+<a class="back-link" href="/posts">← Back to all posts</a>
+
+<%- include("partials/footer") %>

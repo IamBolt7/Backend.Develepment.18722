@@ -1,0 +1,43 @@
+<%- include("partials/header", { title: "New post" }) %>
+
+<section class="page-heading">
+    <div>
+        <p class="eyebrow">Create</p>
+        <h1>New post</h1>
+        <p class="lead">Write something worth sharing.</p>
+    </div>
+</section>
+
+<% if (errors.length > 0) { %>
+    <div class="errors" role="alert">
+        <strong>Please fix the following:</strong>
+        <ul>
+            <% errors.forEach(error => { %><li><%= error %></li><% }) %>
+        </ul>
+    </div>
+<% } %>
+
+<form action="/posts" method="POST" class="post-form">
+    <div class="field">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" value="<%= values.title || "" %>" placeholder="Give your post a clear title" autocomplete="off" required>
+    </div>
+
+    <div class="field">
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author" value="<%= values.author || "" %>" placeholder="Your name" autocomplete="name" required>
+    </div>
+
+    <div class="field">
+        <label for="content">Content</label>
+        <p class="field-hint">Add the main text for your post.</p>
+        <textarea id="content" name="content" rows="10" placeholder="Start writing here..." required><%= values.content || "" %></textarea>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="button">Publish post</button>
+        <a href="/posts" class="button secondary">Cancel</a>
+    </div>
+</form>
+
+<%- include("partials/footer") %>
