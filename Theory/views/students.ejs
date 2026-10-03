@@ -1,15 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Students</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management | Students</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>All Students</h1>
-    <ul>
-        <% students.forEach(student => { %>
-            <li><strong><%= student.name %></strong> — <%= student.branch %></li>
-        <% }); %>
-    </ul>
-    <a href="/">Back to Home</a>
+  <main class="container">
+    <section class="card">
+      <div class="page-heading">
+        <div>
+          <span class="badge">Student Directory</span>
+          <h1>All Students</h1>
+          <p>Sample data rendered on the server using EJS.</p>
+        </div>
+        <a class="text-link" href="/">← Home</a>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Name</th><th>Branch</th></tr>
+          </thead>
+          <tbody>
+            <% students.forEach(student => { %>
+              <tr>
+                <td><%= student.id %></td>
+                <td><strong><%= student.name %></strong></td>
+                <td><%= student.branch %></td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

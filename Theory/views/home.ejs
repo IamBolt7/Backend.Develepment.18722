@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management | Home</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Student Management API</h1>
-    <p>Welcome to the backend server.</p>
-    <a href="/students">View All Students</a>
+  <main class="container">
+    <section class="hero card">
+      <span class="badge">Express + EJS Demo</span>
+      <h1>Student Management</h1>
+      <p>A simple backend-development project demonstrating Express routing, EJS templates, static assets, and a JSON API.</p>
+      <div class="actions">
+        <a class="button" href="/students">View Students</a>
+        <a class="button secondary" href="/api/students">Open JSON API</a>
+      </div>
+      <p class="meta"><strong><%= studentCount %></strong> sample students are currently available.</p>
+    </section>
+  </main>
 </body>
 </html>
