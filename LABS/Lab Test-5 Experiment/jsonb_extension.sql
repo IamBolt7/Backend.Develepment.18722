@@ -1,7 +1,7 @@
 -- PostgreSQL JSONB extension portion
 -- Run after postgresql_lab.sql in student_management.
 
-ALTER TABLE students ADD COLUMN profile JSONB;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS profile JSONB;
 
 UPDATE students
 SET profile = '{"skills": ["python", "sql"], "clubs": {"robotics": true}}'

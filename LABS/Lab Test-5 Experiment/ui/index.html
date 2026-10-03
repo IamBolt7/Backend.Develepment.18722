@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lab Test-5 | Relational vs Document Databases</title><link rel="stylesheet" href="styles.css"></head><body>
+<header class="top"><a class="brand" href="#">DB<span>Lab</span></a><nav><a href="#overview">Overview</a><a href="#data">Data</a><a href="#queries">Queries</a><a href="#compare">Compare</a></nav></header>
+<main>
+<section class="hero" id="overview"><div><p class="eyebrow">BACKEND DEVELOPMENT · LAB TEST 5</p><h1>Relational <span>vs</span> Document Databases</h1><p class="lead">One student-management dataset, two database models. Explore PostgreSQL, MongoDB and PostgreSQL JSONB through practical CRUD operations.</p><div class="actions"><a class="btn primary" href="#data">Explore dataset</a><a class="btn" href="#queries">View queries</a></div></div><div class="db-visual"><div class="orb pg">PostgreSQL<small>Relational</small></div><div class="connector">VS</div><div class="orb mongo">MongoDB<small>Document</small></div></div></section>
+<section class="stats"><article><strong>5</strong><span>Student records</span></article><article><strong>2</strong><span>Database models</span></article><article><strong>CRUD</strong><span>Create · Read · Update · Delete</span></article><article><strong>JSONB</strong><span>Hybrid flexibility</span></article></section>
+<section class="section" id="data"><div class="heading"><p class="eyebrow">DATASET</p><h2>Student records</h2><p>Search by name or email, or filter the sample data by branch.</p></div><div class="toolbar"><input id="search" placeholder="Search students…" aria-label="Search students"><select id="branch" aria-label="Filter branch"><option value="">All branches</option><option>CSE</option><option>ECE</option><option>ME</option></select></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Branch</th><th>Email</th><th>Enrollment</th></tr></thead><tbody id="studentRows"></tbody></table></div></section>
+<section class="section" id="queries"><div class="heading"><p class="eyebrow">CRUD</p><h2>Same task, different syntax</h2><p>Switch between SQL and MongoDB Query Language to compare the operations.</p></div><div class="tabs"><button class="tab active" data-tab="sql">PostgreSQL</button><button class="tab" data-tab="mongo">MongoDB</button></div><div id="sql" class="code-panel active"><pre><code>-- Students in CSE
+SELECT * FROM students WHERE branch = 'CSE';
+
+-- Enrolled after January 2024
+SELECT * FROM students
+WHERE enrollment_date &gt; '2024-01-31';
+
+-- Update branch
+UPDATE students SET branch = 'AI/ML'
+WHERE email = 'bilal@example.com';
+
+-- Delete
+DELETE FROM students
+WHERE email = 'divya@example.com';</code></pre></div><div id="mongo" class="code-panel"><pre><code>// Students in CSE
+db.students.find({ branch: "CSE" })
+
+// Enrolled after January 2024
+db.students.find({ enrollment_date: {
+  $gt: new Date("2024-01-31")
+}})
+
+// Update branch
+db.students.updateOne(
+  { email: "bilal@example.com" },
+  { $set: { branch: "AI/ML" } }
+)
+
+// Delete
+db.students.deleteOne({ email: "carla@example.com" })</code></pre></div></section>
+<section class="section" id="compare"><div class="heading"><p class="eyebrow">COMPARISON</p><h2>Two approaches to persistence</h2></div><div class="cards"><article class="card"><div class="tag">PostgreSQL</div><h3>Structure first</h3><p>Typed columns, constraints, SQL, joins and strong transactional behavior make it ideal for predictable core student data.</p><ul><li>Explicit schema</li><li>Native relationships</li><li>SQL querying</li><li>JSONB when flexibility is needed</li></ul></article><article class="card"><div class="tag green">MongoDB</div><h3>Document first</h3><p>JSON-like BSON documents make evolving or nested records convenient when the shape of each record can vary.</p><ul><li>Flexible document shape</li><li>Nested data is natural</li><li>Document-shaped queries</li><li>Secondary indexes and aggregation</li></ul></article></div><div class="jsonb"><div><p class="eyebrow">HYBRID APPROACH</p><h3>PostgreSQL + JSONB</h3><p>Keep strict columns such as ID, name and email, while storing optional skills, clubs or metadata in an indexable JSONB profile.</p></div><code>{ "skills": ["python", "sql"], "clubs": { "robotics": true } }</code></div></section>
+</main><footer>Lab Test-5 Experiment · Relational vs Document Databases</footer><script src="app.js"></script></body></html>
