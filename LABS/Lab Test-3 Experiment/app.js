@@ -1,0 +1,106 @@
+const express = require('express');
+const path = require('path');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+  res.render('index', {
+    title: 'Lab Test-3 Experiment',
+    student: 'Student',
+    course: 'Backend Development',
+    topics: ['Node.js', 'Express.js', 'REST APIs', 'URL Parameters', 'POST Data', 'EJS Templating']
+  });
+});
+
+app.get('/text', (req, res) => res.send('This is plain text response'));
+app.get('/html', (req, res) => res.send('<h1>HTML Response</h1><p>This is HTML content</p>'));
+app.get('/json', (req, res) => res.json({ message: 'This is JSON response', status: 'success', data: { name: 'Student', course: 'Backend Development' } }));
+app.get('/status', (req, res) => res.status(201).json({ message: 'Created successfully' }));
+
+app.get('/user/:id', (req, res) => {
+  res.json({ message: 'User details', userId: req.params.id });
+});
+
+app.get('/product/:category/:id', (req, res) => {
+  const { category, id } = req.params;
+  res.json({ category, productId: id });
+});
+
+app.get('/search', (req, res) => {
+  const { q, page, limit } = req.query;
+  res.json({ searchQuery: q, page: page || 1, limit: limit || 10 });
+});
+
+app.get('/calculate', (req, res) => {
+  const { num1, num2, operation } = req.query;
+  const n1 = parseFloat(num1);
+  const n2 = parseFloat(num2);
+  let result;
+  switch (operation) {
+    case 'add': result = n1 + n2; break;
+    case 'subtract': result = n1 - n2; break;
+    case 'multiply': result = n1 * n2; break;
+    case 'divide': result = n2 !== 0 ? n1 / n2 : 'Error: Division by zero'; break;
+    default: result = 'Invalid operation';
+  }
+  res.json({ num1: n1, num2: n2, operation, result });
+});
+
+app.post('/register', (req, res) => {
+  const { username, email } = req.body;
+  res.json({ message: 'Registration successful', user: { username, email } });
+});
+
+app.post('/login', (req, res) => {
+  const { email, password } = req.body;
+  if (email === 'test@example.com' && password === 'password123') {
+    return res.json({ success: true, message: 'Login successful', token: 'sample-jwt-token' });
+  }
+  res.status(401).json({ success: false, message: 'Invalid credentials' });
+});
+
+app.post('/feedback', (req, res) => {
+  const { name, message } = req.body;
+  res.render('result', { title: 'Feedback Received', name, message });
+});
+
+
+app.get('/home', (req, res) => {
+  res.render('home', {
+    title: 'Home Page',
+    heading: 'Welcome to EJS Templating',
+    message: 'EJS makes it easy to generate dynamic HTML'
+  });
+});
+
+app.get('/users', (req, res) => {
+  const users = [
+    { id: 1, name: 'John Doe', email: 'john@example.com' },
+    { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
+    { id: 3, name: 'Bob Johnson', email: 'bob@example.com' }
+  ];
+  res.render('users', { users });
+});
+
+app.get('/profile/:id', (req, res) => {
+  const user = {
+    id: req.params.id,
+    name: 'John Doe',
+    email: 'john@example.com',
+    age: 25,
+    city: 'New York'
+  };
+  res.render('profile', { user });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+  console.log('EJS: /home, /users, /profile/1');
+});
