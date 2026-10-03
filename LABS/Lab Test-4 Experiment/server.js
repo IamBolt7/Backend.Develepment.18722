@@ -2,116 +2,99 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const app = express();
+const PORT = process.env.PORT || 3000;
+const DB_URL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/userdb';
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// STEP 1: CONNECT TO MONGODB
-const DB_URL = 'mongodb://localhost:27017/userdb';
+const escapeHtml = (value = '') => String(value)
+  .replaceAll('&', '&amp;').replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;').replaceAll('"', '&quot;')
+  .replaceAll("'", '&#039;');
 
+const page = (title, content) => `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title} | User Management System</title>
+<style>
+*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#1f2937}
+main{width:min(1000px,92%);margin:42px auto}.hero{background:#111827;color:white;padding:32px;border-radius:18px;margin-bottom:22px}.hero h1{margin:0 0 8px}.hero p{margin:0;color:#cbd5e1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}.card{background:white;padding:22px;border-radius:14px;box-shadow:0 8px 28px #0f172a12;border:1px solid #e5e7eb}.card h2{margin-top:0}
+label{font-size:14px;font-weight:700}input{width:100%;padding:11px 12px;margin:6px 0 14px;border:1px solid #cbd5e1;border-radius:8px}button,.button{display:inline-block;background:#2563eb;color:white;border:0;padding:11px 16px;border-radius:8px;text-decoration:none;cursor:pointer;font-weight:700}button:hover,.button:hover{background:#1d4ed8}.secondary{background:#475569}.success{color:#15803d}.error{color:#b91c1c}.user{padding:14px 0;border-bottom:1px solid #e5e7eb}.muted{color:#64748b;font-size:14px}nav{margin-top:20px}
+</style>
+</head><body><main>${content}</main></body></html>`;
+
+// 1. Connect to MongoDB
 mongoose.connect(DB_URL)
   .then(() => console.log('Connected to MongoDB successfully'))
-  .catch(err => console.error('MongoDB connection error:', err));
+  .catch((error) => console.error('MongoDB connection error:', error.message));
 
-// STEP 2: DEFINE THE USER SCHEMA
+// 2. Define a schema (the structure of each user document)
 const userSchema = new mongoose.Schema({
-  username: { type: String, required: true, unique: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
+  username: { type: String, required: true, unique: true, trim: true, minlength: 3 },
+  email: { type: String, required: true, unique: true, trim: true, lowercase: true },
+  password: { type: String, required: true, minlength: 4 },
   createdAt: { type: Date, default: Date.now }
 });
 
-// STEP 3: CREATE THE MODEL
+// 3. Create a model (interface used to work with the users collection)
 const User = mongoose.model('User', userSchema);
 
-// STEP 4: CREATE ROUTES
+// 4. Routes
 app.get('/', (req, res) => {
-  res.send(`
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>User Management System</title>
-      <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
-        .container { background: #f5f5f5; padding: 20px; margin: 20px 0; border-radius: 8px; }
-        h2 { color: #333; }
-        input { width: 100%; padding: 10px; margin: 5px 0; box-sizing: border-box; }
-        button { background: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; margin: 5px 0; }
-        button:hover { background: #0056b3; }
-        .success { color: green; }
-        .error { color: red; }
-      </style>
-    </head>
-    <body>
-      <h1>User Management System</h1>
-      <div class="container">
-        <h2>Register New User</h2>
-        <form action="/signup" method="POST">
-          <input type="text" name="username" placeholder="Username" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="password" name="password" placeholder="Password" required>
-          <button type="submit">Sign Up</button>
-        </form>
-      </div>
-      <div class="container">
-        <h2>Login</h2>
-        <form action="/login" method="POST">
-          <input type="text" name="username" placeholder="Username" required>
-          <input type="password" name="password" placeholder="Password" required>
-          <button type="submit">Login</button>
-        </form>
-      </div>
-      <div class="container">
-        <h2>View All Users</h2>
-        <form action="/users" method="GET">
-          <button type="submit">Show All Registered Users</button>
-        </form>
-      </div>
-    </body>
-    </html>
-  `);
+  res.send(page('Home', `
+    <section class="hero"><h1>Express + Mongoose User Management</h1><p>Lab Test-4 • Experiment 13A • MongoDB, Mongoose and Express basics</p></section>
+    <div class="grid">
+      <section class="card"><h2>Register User</h2><form action="/signup" method="POST">
+        <label>Username</label><input name="username" minlength="3" required placeholder="e.g. arnav">
+        <label>Email</label><input type="email" name="email" required placeholder="name@example.com">
+        <label>Password</label><input type="password" name="password" minlength="4" required placeholder="Minimum 4 characters">
+        <button type="submit">Create Account</button></form></section>
+      <section class="card"><h2>Login</h2><form action="/login" method="POST">
+        <label>Username</label><input name="username" required placeholder="Your username">
+        <label>Password</label><input type="password" name="password" required placeholder="Your password">
+        <button type="submit">Login</button></form></section>
+      <section class="card"><h2>Registered Users</h2><p>Retrieve documents from MongoDB using <code>User.find()</code>.</p><a class="button secondary" href="/users">View All Users</a></section>
+    </div>`));
 });
 
 app.post('/signup', async (req, res) => {
   try {
     const { username, email, password } = req.body;
-    const newUser = new User({ username, email, password });
-    await newUser.save();
-    res.send(`<h2 class="success">User registered successfully!</h2><p>Username: ${username}</p><p>Email: ${email}</p><a href="/">Go back to home</a>`);
+    await User.create({ username, email, password });
+    res.status(201).send(page('Registration Successful', `<section class="card"><h1 class="success">User registered successfully</h1><p><b>Username:</b> ${escapeHtml(username)}</p><p><b>Email:</b> ${escapeHtml(email)}</p><nav><a class="button" href="/">Back to Home</a></nav></section>`));
   } catch (error) {
-    if (error.code === 11000) {
-      res.send('<h2 class="error">Error: Username or email already exists</h2><a href="/">Go back and try again</a>');
-    } else {
-      res.send(`<h2 class="error">Error: ${error.message}</h2><a href="/">Go back and try again</a>`);
-    }
+    const message = error.code === 11000 ? 'That username or email is already registered.' : error.message;
+    res.status(400).send(page('Registration Error', `<section class="card"><h1 class="error">Registration failed</h1><p>${escapeHtml(message)}</p><a class="button" href="/">Try Again</a></section>`));
   }
 });
 
 app.post('/login', async (req, res) => {
   try {
     const { username, password } = req.body;
-    const user = await User.findOne({ username });
-    if (!user) return res.send('<h2 class="error">User not found</h2><a href="/">Go back and try again</a>');
-    if (user.password !== password) return res.send('<h2 class="error">Incorrect password</h2><a href="/">Go back and try again</a>');
-    res.send(`<h2 class="success">Login successful!</h2><p>Welcome back, ${user.username}!</p><p>Email: ${user.email}</p><p>Account created: ${user.createdAt.toDateString()}</p><a href="/">Go back to home</a>`);
+    const user = await User.findOne({ username: username.trim() });
+    if (!user || user.password !== password) {
+      return res.status(401).send(page('Login Failed', `<section class="card"><h1 class="error">Login failed</h1><p>Invalid username or password.</p><a class="button" href="/">Try Again</a></section>`));
+    }
+    res.send(page('Login Successful', `<section class="card"><h1 class="success">Login successful</h1><p>Welcome back, <b>${escapeHtml(user.username)}</b>.</p><p>Email: ${escapeHtml(user.email)}</p><p class="muted">Account created: ${user.createdAt.toDateString()}</p><a class="button" href="/">Back to Home</a></section>`));
   } catch (error) {
-    res.send(`<h2 class="error">Error: ${error.message}</h2><a href="/">Go back and try again</a>`);
+    res.status(500).send(page('Server Error', `<section class="card"><h1 class="error">Something went wrong</h1><p>${escapeHtml(error.message)}</p><a class="button" href="/">Back to Home</a></section>`));
   }
 });
 
 app.get('/users', async (req, res) => {
   try {
-    const allUsers = await User.find();
-    if (allUsers.length === 0) return res.send('<h2>No users registered yet</h2><a href="/">Go back to home</a>');
-    let userList = '<h2>Registered Users</h2><ul>';
-    allUsers.forEach(user => {
-      userList += `<li><strong>Username:</strong> ${user.username} | <strong>Email:</strong> ${user.email} | <strong>Joined:</strong> ${user.createdAt.toDateString()}</li>`;
-    });
-    userList += '</ul><a href="/">Go back to home</a>';
-    res.send(userList);
+    const users = await User.find().sort({ createdAt: -1 });
+    const list = users.length ? users.map((user, i) => `<div class="user"><b>${i + 1}. ${escapeHtml(user.username)}</b><br>${escapeHtml(user.email)}<br><span class="muted">Joined ${user.createdAt.toDateString()}</span></div>`).join('') : '<p>No users registered yet.</p>';
+    res.send(page('Registered Users', `<section class="card"><h1>Registered Users</h1><p class="muted">${users.length} user(s) found in MongoDB.</p>${list}<nav><a class="button" href="/">Back to Home</a></nav></section>`));
   } catch (error) {
-    res.send(`<h2 class="error">Error: ${error.message}</h2><a href="/">Go back and try again</a>`);
+    res.status(500).send(page('Server Error', `<section class="card"><h1 class="error">Could not load users</h1><p>${escapeHtml(error.message)}</p><a class="button" href="/">Back to Home</a></section>`));
   }
 });
 
-const PORT = 3000;
+app.use((req, res) => res.status(404).send(page('Not Found', '<section class="card"><h1>404 - Page Not Found</h1><a class="button" href="/">Back to Home</a></section>')));
+
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
