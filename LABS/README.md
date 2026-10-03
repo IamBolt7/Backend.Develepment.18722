@@ -1,825 +1,258 @@
-# Backend Development Laboratory
-**Repository:** [https://github.com/IamBolt7/Backend.Develepment.18722](https://github.com/IamBolt7/Backend.Develepment.18722)  
-**LABS Directory:** [Open LABS on GitHub](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS)  
-**Course:** Backend Development
-This README is the central documentation and navigation page for the experiments in the `LABS` directory. It covers the purpose, concepts, setup, implementation, execution, testing, learning outcomes, and viva preparation for each experiment.
-> **Note:** Items marked `[PLACEHOLDER: ...]` should be replaced with details from the corresponding source code or official lab instructions.
----
+# Backend Development — 18722
+
+> A consolidated repository of backend development laboratory experiments, theory exercises, database work, and a complete Content Management System application.
+
+## Repository Overview
+
+This repository documents my practical work for **Backend Development**. It brings together laboratory experiments, backend theory implementations, database exercises, and a CMS application in one place.
+
+The work progresses from web/backend fundamentals to **Node.js, Express.js, EJS, REST-style routing, MongoDB, Flask, SQL vs NoSQL concepts, CRUD operations, validation, server-side rendering, and database-backed applications**.
+
 ## Quick Navigation
-| # | Experiment | GitHub Link | Main Area |
-|---:|---|---|---|
-| 1 | EXP-1 | [Open Experiment](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/EXP-1) | Foundational backend/web development experiment |
-| 2 | Lab Test-1 Experiment | [Open Experiment](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-1%20Experiment) | Lab Test 1 implementation |
-| 3 | Lab Test-2 Experiment | [Open Experiment](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-2%20Experiment) | Lab Test 2 implementation |
-| 4 | Lab Test-3 Experiment | [Open Experiment](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-3%20Experiment) | Lab Test 3 implementation |
-| 5 | Lab Test-4 Experiment | [Open Experiment](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-4%20Experiment) | Lab Test 4 implementation |
-| 6 | Relational-vs-Document-Databases-Lab | [Open Experiment](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Relational-vs-Document-Databases-Lab) | Relational and document database comparison |
+
+| Section | Description | Documentation |
+| --- | --- | --- |
+| **LABS** | Backend Development laboratory experiments and lab tests | [Open LABS README](./LABS/README.md) |
+| **Theory** | Express/EJS and Flask backend theory/practice implementations | [Open Theory README](./Theory/README.md) |
+| **CMS Lab** | Full Content Management System using Node.js, Express, EJS and MongoDB | [Open CMS README](./Applications/cms-lab/README.md) |
+
+## Repository Structure
+
+```text
+Backend.Develepment.18722/
+├── Applications/
+│   └── cms-lab/
+│       └── README.md
+├── LABS/
+│   ├── EXP-1/
+│   ├── Lab Test-1 Experiment/
+│   ├── Lab Test-2 Experiment/
+│   ├── Lab Test-3 Experiment/
+│   ├── Lab Test-4 Experiment/
+│   ├── Lab Test-5 Experiment/
+│   └── README.md
+├── Theory/
+│   └── README.md
+├── .gitignore
+└── README.md
+```
+
 ---
-## Technology Stack
-Technologies used across the laboratory work may include:
-- **Frontend:** HTML5, CSS3, JavaScript
-- **Backend:** Node.js, Express.js
-- **Data:** JSON, REST APIs, CRUD operations
-- **Databases:** MongoDB, Mongoose, SQL/relational database concepts
-- **Tools:** npm, Git, GitHub, Terminal, VS Code, browser developer tools
-- **API Testing:** `[PLACEHOLDER: Postman / Thunder Client / other tool if used]`
-## General Prerequisites
-Check the required development tools:
-```bash
-node --version
-npm --version
-git --version
-```
-For a Node.js experiment containing `package.json`:
-```bash
-npm install
-```
-Recommended root `.gitignore`:
-```gitignore
-node_modules/
-.env
-.env.local
-.env.*.local
-.DS_Store
-*.log
-coverage/
-dist/
-build/
-.vscode/
-.idea/
-```
-Never commit passwords, API keys, database credentials, private keys, or other secrets.
----
-# 1. EXP-1
-**GitHub:** [EXP-1](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/EXP-1)
-## Aim
-`[PLACEHOLDER: Replace with the exact aim and topic from the experiment.]`
-## Objectives
-- Understand the main concepts demonstrated by this experiment.
-- Implement the required functionality in a structured manner.
-- Run and test the implementation.
-- Understand how the components communicate.
-- Document the important files, commands, inputs, and outputs.
-- `[PLACEHOLDER: Add experiment-specific objectives.]`
-## Problem Statement
-`[PLACEHOLDER: Insert the exact problem statement from the laboratory instructions.]`
-## Concepts Covered
-- `[PLACEHOLDER: Primary concept]`
-- `[PLACEHOLDER: Secondary concept]`
-- Web/backend application structure
-- Request-response flow, if applicable
-- Data handling and validation, if applicable
-- Testing and debugging
-## Technologies Used
-| Technology | Purpose |
-|---|---|
-| `[PLACEHOLDER]` | `[PLACEHOLDER: Confirm from source code]` |
-| `[PLACEHOLDER]` | `[PLACEHOLDER: Confirm from source code]` |
-| Git/GitHub | Version control and repository hosting |
-## Theory
-`[PLACEHOLDER: Explain the theory directly related to this experiment.]`
-For a web/backend experiment, useful concepts may include:
-- **HTML** for page structure.
-- **CSS** for presentation and responsive layout.
-- **JavaScript** for behaviour and application logic.
-- **Node.js** for executing JavaScript on the server.
-- **Express.js** for routing, middleware, and HTTP handling.
-- **REST** for resource-oriented API design.
-- **JSON** for structured client-server data exchange.
-- **CRUD** for Create, Read, Update, and Delete operations.
-- **MongoDB/Mongoose** for persistent document storage, if used.
-Remove concepts that are not actually used by this experiment.
-## Application / Data Flow
-```text
-User / Client
-      |
-      v
-Request or Input
-      |
-      v
-Application Logic
-      |
-      v
-[PLACEHOLDER: Server / API / Database / Processing]
-      |
-      v
-Result / HTTP Response
-      |
-      v
-User / Client
-```
-## Project Structure
-```text
-EXP-1/
-├── [PLACEHOLDER: entry/source file]
-├── [PLACEHOLDER: supporting file]
-├── [PLACEHOLDER: assets/routes/models if applicable]
-└── [PLACEHOLDER: other files]
-```
-## Important Files
-| File | Purpose |
-|---|---|
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-## Implementation Steps
-1. Read and analyse the experiment requirements.
-2. Create or open the experiment directory.
-3. Configure the required files and dependencies.
-4. Implement the main functionality.
-5. Add validation and error handling where required.
-6. Connect the database/API if required.
-7. Run the application.
-8. Test the required functionality.
-9. Fix errors and verify the expected output.
-10. `[PLACEHOLDER: Add exact experiment-specific steps.]`
-## How to Run
-Open the experiment directory:
-```bash
-cd "EXP-1"
-```
-If it is a Node.js project:
-```bash
-npm install
-npm start
-```
-If there is no `start` script:
-```bash
-node [PLACEHOLDER: server.js/app.js/index.js]
-```
-If it is a static frontend project, open:
-```text
-[PLACEHOLDER: index.html or actual entry file]
-```
-Application URL, if applicable:
-```text
-http://localhost:[PLACEHOLDER: port]
-```
-## API Endpoints
-> `[PLACEHOLDER: Remove this table if the experiment does not implement an API.]`
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `[PLACEHOLDER]` | Retrieve data |
-| POST | `[PLACEHOLDER]` | Create data |
-| PUT/PATCH | `[PLACEHOLDER]` | Update data |
-| DELETE | `[PLACEHOLDER]` | Delete data |
-## Expected Output
-`[PLACEHOLDER: Describe the expected page, terminal output, API response, or database result.]`
-## Learning Outcomes
-After completing this experiment, the student should be able to:
-- Explain the purpose of the experiment.
-- Describe its application/data flow.
-- Run and test the implementation.
-- Explain the role of its major source files.
-- Identify and debug common errors.
-- `[PLACEHOLDER: Add experiment-specific outcomes.]`
-## Conclusion
-`[PLACEHOLDER: Summarize what was implemented, tested, and learned.]`
----
-# 2. Lab Test-1 Experiment
-**GitHub:** [Lab Test-1 Experiment](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-1%20Experiment)
-## Aim
-`[PLACEHOLDER: Replace with the exact Lab Test-1 problem statement and technologies.]`
-## Objectives
-- Understand the main concepts demonstrated by this experiment.
-- Implement the required functionality in a structured manner.
-- Run and test the implementation.
-- Understand how the components communicate.
-- Document the important files, commands, inputs, and outputs.
-- `[PLACEHOLDER: Add experiment-specific objectives.]`
-## Problem Statement
-`[PLACEHOLDER: Insert the exact problem statement from the laboratory instructions.]`
-## Concepts Covered
-- `[PLACEHOLDER: Primary concept]`
-- `[PLACEHOLDER: Secondary concept]`
-- Web/backend application structure
-- Request-response flow, if applicable
-- Data handling and validation, if applicable
-- Testing and debugging
-## Technologies Used
-| Technology | Purpose |
-|---|---|
-| `[PLACEHOLDER]` | `[PLACEHOLDER: Confirm from source code]` |
-| `[PLACEHOLDER]` | `[PLACEHOLDER: Confirm from source code]` |
-| Git/GitHub | Version control and repository hosting |
-## Theory
-`[PLACEHOLDER: Explain the theory directly related to this experiment.]`
-For a web/backend experiment, useful concepts may include:
-- **HTML** for page structure.
-- **CSS** for presentation and responsive layout.
-- **JavaScript** for behaviour and application logic.
-- **Node.js** for executing JavaScript on the server.
-- **Express.js** for routing, middleware, and HTTP handling.
-- **REST** for resource-oriented API design.
-- **JSON** for structured client-server data exchange.
-- **CRUD** for Create, Read, Update, and Delete operations.
-- **MongoDB/Mongoose** for persistent document storage, if used.
-Remove concepts that are not actually used by this experiment.
-## Application / Data Flow
-```text
-User / Client
-      |
-      v
-Request or Input
-      |
-      v
-Application Logic
-      |
-      v
-[PLACEHOLDER: Server / API / Database / Processing]
-      |
-      v
-Result / HTTP Response
-      |
-      v
-User / Client
-```
-## Project Structure
-```text
-Lab Test-1 Experiment/
-├── [PLACEHOLDER: entry/source file]
-├── [PLACEHOLDER: supporting file]
-├── [PLACEHOLDER: assets/routes/models if applicable]
-└── [PLACEHOLDER: other files]
-```
-## Important Files
-| File | Purpose |
-|---|---|
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-## Implementation Steps
-1. Read and analyse the experiment requirements.
-2. Create or open the experiment directory.
-3. Configure the required files and dependencies.
-4. Implement the main functionality.
-5. Add validation and error handling where required.
-6. Connect the database/API if required.
-7. Run the application.
-8. Test the required functionality.
-9. Fix errors and verify the expected output.
-10. `[PLACEHOLDER: Add exact experiment-specific steps.]`
-## How to Run
-Open the experiment directory:
-```bash
-cd "Lab Test-1 Experiment"
-```
-If it is a Node.js project:
-```bash
-npm install
-npm start
-```
-If there is no `start` script:
-```bash
-node [PLACEHOLDER: server.js/app.js/index.js]
-```
-If it is a static frontend project, open:
-```text
-[PLACEHOLDER: index.html or actual entry file]
-```
-Application URL, if applicable:
-```text
-http://localhost:[PLACEHOLDER: port]
-```
-## API Endpoints
-> `[PLACEHOLDER: Remove this table if the experiment does not implement an API.]`
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `[PLACEHOLDER]` | Retrieve data |
-| POST | `[PLACEHOLDER]` | Create data |
-| PUT/PATCH | `[PLACEHOLDER]` | Update data |
-| DELETE | `[PLACEHOLDER]` | Delete data |
-## Expected Output
-`[PLACEHOLDER: Describe the expected page, terminal output, API response, or database result.]`
-## Learning Outcomes
-After completing this experiment, the student should be able to:
-- Explain the purpose of the experiment.
-- Describe its application/data flow.
-- Run and test the implementation.
-- Explain the role of its major source files.
-- Identify and debug common errors.
-- `[PLACEHOLDER: Add experiment-specific outcomes.]`
-## Conclusion
-`[PLACEHOLDER: Summarize what was implemented, tested, and learned.]`
----
-# 3. Lab Test-2 Experiment
-**GitHub:** [Lab Test-2 Experiment](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-2%20Experiment)
-## Aim
-`[PLACEHOLDER: Replace with the exact Lab Test-2 problem statement, routes, and technologies.]`
-## Objectives
-- Understand the main concepts demonstrated by this experiment.
-- Implement the required functionality in a structured manner.
-- Run and test the implementation.
-- Understand how the components communicate.
-- Document the important files, commands, inputs, and outputs.
-- `[PLACEHOLDER: Add experiment-specific objectives.]`
-## Problem Statement
-`[PLACEHOLDER: Insert the exact problem statement from the laboratory instructions.]`
-## Concepts Covered
-- `[PLACEHOLDER: Primary concept]`
-- `[PLACEHOLDER: Secondary concept]`
-- Web/backend application structure
-- Request-response flow, if applicable
-- Data handling and validation, if applicable
-- Testing and debugging
-## Technologies Used
-| Technology | Purpose |
-|---|---|
-| `[PLACEHOLDER]` | `[PLACEHOLDER: Confirm from source code]` |
-| `[PLACEHOLDER]` | `[PLACEHOLDER: Confirm from source code]` |
-| Git/GitHub | Version control and repository hosting |
-## Theory
-`[PLACEHOLDER: Explain the theory directly related to this experiment.]`
-For a web/backend experiment, useful concepts may include:
-- **HTML** for page structure.
-- **CSS** for presentation and responsive layout.
-- **JavaScript** for behaviour and application logic.
-- **Node.js** for executing JavaScript on the server.
-- **Express.js** for routing, middleware, and HTTP handling.
-- **REST** for resource-oriented API design.
-- **JSON** for structured client-server data exchange.
-- **CRUD** for Create, Read, Update, and Delete operations.
-- **MongoDB/Mongoose** for persistent document storage, if used.
-Remove concepts that are not actually used by this experiment.
-## Application / Data Flow
-```text
-User / Client
-      |
-      v
-Request or Input
-      |
-      v
-Application Logic
-      |
-      v
-[PLACEHOLDER: Server / API / Database / Processing]
-      |
-      v
-Result / HTTP Response
-      |
-      v
-User / Client
-```
-## Project Structure
-```text
-Lab Test-2 Experiment/
-├── [PLACEHOLDER: entry/source file]
-├── [PLACEHOLDER: supporting file]
-├── [PLACEHOLDER: assets/routes/models if applicable]
-└── [PLACEHOLDER: other files]
-```
-## Important Files
-| File | Purpose |
-|---|---|
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-## Implementation Steps
-1. Read and analyse the experiment requirements.
-2. Create or open the experiment directory.
-3. Configure the required files and dependencies.
-4. Implement the main functionality.
-5. Add validation and error handling where required.
-6. Connect the database/API if required.
-7. Run the application.
-8. Test the required functionality.
-9. Fix errors and verify the expected output.
-10. `[PLACEHOLDER: Add exact experiment-specific steps.]`
-## How to Run
-Open the experiment directory:
-```bash
-cd "Lab Test-2 Experiment"
-```
-If it is a Node.js project:
-```bash
-npm install
-npm start
-```
-If there is no `start` script:
-```bash
-node [PLACEHOLDER: server.js/app.js/index.js]
-```
-If it is a static frontend project, open:
-```text
-[PLACEHOLDER: index.html or actual entry file]
-```
-Application URL, if applicable:
-```text
-http://localhost:[PLACEHOLDER: port]
-```
-## API Endpoints
-> `[PLACEHOLDER: Remove this table if the experiment does not implement an API.]`
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `[PLACEHOLDER]` | Retrieve data |
-| POST | `[PLACEHOLDER]` | Create data |
-| PUT/PATCH | `[PLACEHOLDER]` | Update data |
-| DELETE | `[PLACEHOLDER]` | Delete data |
-## Expected Output
-`[PLACEHOLDER: Describe the expected page, terminal output, API response, or database result.]`
-## Learning Outcomes
-After completing this experiment, the student should be able to:
-- Explain the purpose of the experiment.
-- Describe its application/data flow.
-- Run and test the implementation.
-- Explain the role of its major source files.
-- Identify and debug common errors.
-- `[PLACEHOLDER: Add experiment-specific outcomes.]`
-## Conclusion
-`[PLACEHOLDER: Summarize what was implemented, tested, and learned.]`
----
-# 4. Lab Test-3 Experiment
-**GitHub:** [Lab Test-3 Experiment](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-3%20Experiment)
-## Aim
-`[PLACEHOLDER: Replace with the exact Lab Test-3 problem statement, API endpoints, and technologies.]`
-## Objectives
-- Understand the main concepts demonstrated by this experiment.
-- Implement the required functionality in a structured manner.
-- Run and test the implementation.
-- Understand how the components communicate.
-- Document the important files, commands, inputs, and outputs.
-- `[PLACEHOLDER: Add experiment-specific objectives.]`
-## Problem Statement
-`[PLACEHOLDER: Insert the exact problem statement from the laboratory instructions.]`
-## Concepts Covered
-- `[PLACEHOLDER: Primary concept]`
-- `[PLACEHOLDER: Secondary concept]`
-- Web/backend application structure
-- Request-response flow, if applicable
-- Data handling and validation, if applicable
-- Testing and debugging
-## Technologies Used
-| Technology | Purpose |
-|---|---|
-| `[PLACEHOLDER]` | `[PLACEHOLDER: Confirm from source code]` |
-| `[PLACEHOLDER]` | `[PLACEHOLDER: Confirm from source code]` |
-| Git/GitHub | Version control and repository hosting |
-## Theory
-`[PLACEHOLDER: Explain the theory directly related to this experiment.]`
-For a web/backend experiment, useful concepts may include:
-- **HTML** for page structure.
-- **CSS** for presentation and responsive layout.
-- **JavaScript** for behaviour and application logic.
-- **Node.js** for executing JavaScript on the server.
-- **Express.js** for routing, middleware, and HTTP handling.
-- **REST** for resource-oriented API design.
-- **JSON** for structured client-server data exchange.
-- **CRUD** for Create, Read, Update, and Delete operations.
-- **MongoDB/Mongoose** for persistent document storage, if used.
-Remove concepts that are not actually used by this experiment.
-## Application / Data Flow
-```text
-User / Client
-      |
-      v
-Request or Input
-      |
-      v
-Application Logic
-      |
-      v
-[PLACEHOLDER: Server / API / Database / Processing]
-      |
-      v
-Result / HTTP Response
-      |
-      v
-User / Client
-```
-## Project Structure
-```text
-Lab Test-3 Experiment/
-├── [PLACEHOLDER: entry/source file]
-├── [PLACEHOLDER: supporting file]
-├── [PLACEHOLDER: assets/routes/models if applicable]
-└── [PLACEHOLDER: other files]
-```
-## Important Files
-| File | Purpose |
-|---|---|
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-## Implementation Steps
-1. Read and analyse the experiment requirements.
-2. Create or open the experiment directory.
-3. Configure the required files and dependencies.
-4. Implement the main functionality.
-5. Add validation and error handling where required.
-6. Connect the database/API if required.
-7. Run the application.
-8. Test the required functionality.
-9. Fix errors and verify the expected output.
-10. `[PLACEHOLDER: Add exact experiment-specific steps.]`
-## How to Run
-Open the experiment directory:
-```bash
-cd "Lab Test-3 Experiment"
-```
-If it is a Node.js project:
-```bash
-npm install
-npm start
-```
-If there is no `start` script:
-```bash
-node [PLACEHOLDER: server.js/app.js/index.js]
-```
-If it is a static frontend project, open:
-```text
-[PLACEHOLDER: index.html or actual entry file]
-```
-Application URL, if applicable:
-```text
-http://localhost:[PLACEHOLDER: port]
-```
-## API Endpoints
-> `[PLACEHOLDER: Remove this table if the experiment does not implement an API.]`
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `[PLACEHOLDER]` | Retrieve data |
-| POST | `[PLACEHOLDER]` | Create data |
-| PUT/PATCH | `[PLACEHOLDER]` | Update data |
-| DELETE | `[PLACEHOLDER]` | Delete data |
-## Expected Output
-`[PLACEHOLDER: Describe the expected page, terminal output, API response, or database result.]`
-## Learning Outcomes
-After completing this experiment, the student should be able to:
-- Explain the purpose of the experiment.
-- Describe its application/data flow.
-- Run and test the implementation.
-- Explain the role of its major source files.
-- Identify and debug common errors.
-- `[PLACEHOLDER: Add experiment-specific outcomes.]`
-## Conclusion
-`[PLACEHOLDER: Summarize what was implemented, tested, and learned.]`
----
-# 5. Lab Test-4 Experiment
-**GitHub:** [Lab Test-4 Experiment](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-4%20Experiment)
-## Aim
-`[PLACEHOLDER: Replace with the exact Lab Test-4 problem statement, database, schema, and routes.]`
-## Objectives
-- Understand the main concepts demonstrated by this experiment.
-- Implement the required functionality in a structured manner.
-- Run and test the implementation.
-- Understand how the components communicate.
-- Document the important files, commands, inputs, and outputs.
-- `[PLACEHOLDER: Add experiment-specific objectives.]`
-## Problem Statement
-`[PLACEHOLDER: Insert the exact problem statement from the laboratory instructions.]`
-## Concepts Covered
-- `[PLACEHOLDER: Primary concept]`
-- `[PLACEHOLDER: Secondary concept]`
-- Web/backend application structure
-- Request-response flow, if applicable
-- Data handling and validation, if applicable
-- Testing and debugging
-## Technologies Used
-| Technology | Purpose |
-|---|---|
-| `[PLACEHOLDER]` | `[PLACEHOLDER: Confirm from source code]` |
-| `[PLACEHOLDER]` | `[PLACEHOLDER: Confirm from source code]` |
-| Git/GitHub | Version control and repository hosting |
-## Theory
-`[PLACEHOLDER: Explain the theory directly related to this experiment.]`
-For a web/backend experiment, useful concepts may include:
-- **HTML** for page structure.
-- **CSS** for presentation and responsive layout.
-- **JavaScript** for behaviour and application logic.
-- **Node.js** for executing JavaScript on the server.
-- **Express.js** for routing, middleware, and HTTP handling.
-- **REST** for resource-oriented API design.
-- **JSON** for structured client-server data exchange.
-- **CRUD** for Create, Read, Update, and Delete operations.
-- **MongoDB/Mongoose** for persistent document storage, if used.
-Remove concepts that are not actually used by this experiment.
-## Application / Data Flow
-```text
-User / Client
-      |
-      v
-Request or Input
-      |
-      v
-Application Logic
-      |
-      v
-[PLACEHOLDER: Server / API / Database / Processing]
-      |
-      v
-Result / HTTP Response
-      |
-      v
-User / Client
-```
-## Project Structure
-```text
-Lab Test-4 Experiment/
-├── [PLACEHOLDER: entry/source file]
-├── [PLACEHOLDER: supporting file]
-├── [PLACEHOLDER: assets/routes/models if applicable]
-└── [PLACEHOLDER: other files]
-```
-## Important Files
-| File | Purpose |
-|---|---|
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-## Implementation Steps
-1. Read and analyse the experiment requirements.
-2. Create or open the experiment directory.
-3. Configure the required files and dependencies.
-4. Implement the main functionality.
-5. Add validation and error handling where required.
-6. Connect the database/API if required.
-7. Run the application.
-8. Test the required functionality.
-9. Fix errors and verify the expected output.
-10. `[PLACEHOLDER: Add exact experiment-specific steps.]`
-## How to Run
-Open the experiment directory:
-```bash
-cd "Lab Test-4 Experiment"
-```
-If it is a Node.js project:
-```bash
-npm install
-npm start
-```
-If there is no `start` script:
-```bash
-node [PLACEHOLDER: server.js/app.js/index.js]
-```
-If it is a static frontend project, open:
-```text
-[PLACEHOLDER: index.html or actual entry file]
-```
-Application URL, if applicable:
-```text
-http://localhost:[PLACEHOLDER: port]
-```
-## API Endpoints
-> `[PLACEHOLDER: Remove this table if the experiment does not implement an API.]`
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `[PLACEHOLDER]` | Retrieve data |
-| POST | `[PLACEHOLDER]` | Create data |
-| PUT/PATCH | `[PLACEHOLDER]` | Update data |
-| DELETE | `[PLACEHOLDER]` | Delete data |
-## Expected Output
-`[PLACEHOLDER: Describe the expected page, terminal output, API response, or database result.]`
-## Learning Outcomes
-After completing this experiment, the student should be able to:
-- Explain the purpose of the experiment.
-- Describe its application/data flow.
-- Run and test the implementation.
-- Explain the role of its major source files.
-- Identify and debug common errors.
-- `[PLACEHOLDER: Add experiment-specific outcomes.]`
-## Conclusion
-`[PLACEHOLDER: Summarize what was implemented, tested, and learned.]`
----
-# 6. Relational-vs-Document-Databases-Lab
-**GitHub:** [Relational-vs-Document-Databases-Lab](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Relational-vs-Document-Databases-Lab)
-## Aim
-Compare relational databases with document-oriented databases and study their data models and operations.
-## Objectives
-- Understand the main concepts demonstrated by this experiment.
-- Implement the required functionality in a structured manner.
-- Run and test the implementation.
-- Understand how the components communicate.
-- Document the important files, commands, inputs, and outputs.
-- `[PLACEHOLDER: Add experiment-specific objectives.]`
-## Problem Statement
-`[PLACEHOLDER: Insert the exact problem statement from the laboratory instructions.]`
-## Concepts Covered
-- Relational databases
-- Document-oriented databases
-- Tables, rows, and columns
-- Collections, documents, and fields
-- SQL and NoSQL
-- Schemas
+
+# Laboratory Work
+
+The [`LABS`](./LABS/README.md) directory contains the practical experiments completed during the course.
+
+## EXP-1
+
+**Documentation:** [LABS README — EXP-1](./LABS/README.md#1-exp-1)  
+**Project:** [Open EXP-1](./LABS/EXP-1/)
+
+This experiment introduces the structure and workflow of a backend/web development project. It focuses on understanding how project files are organised, how application logic is implemented, and how an application is executed and tested.
+
+**Main learning areas:** project structure, web-development fundamentals, application flow, testing and debugging.
+
+## Lab Test-1 Experiment
+
+**Documentation:** [LABS README — Lab Test-1](./LABS/README.md#2-lab-test-1-experiment)  
+**Project:** [Open Lab Test-1](./LABS/Lab%20Test-1%20Experiment/)
+
+This lab test develops the basic practical workflow used throughout the backend development course. It reinforces implementation, running an application locally, understanding request/response behaviour, and debugging the resulting application.
+
+**Main learning areas:** backend fundamentals, request-response flow, implementation, testing and debugging.
+
+## Lab Test-2 Experiment
+
+**Documentation:** [LABS README — Lab Test-2](./LABS/README.md#3-lab-test-2-experiment)  
+**Project:** [Open Lab Test-2](./LABS/Lab%20Test-2%20Experiment/)
+
+This experiment continues the progression toward structured backend applications. It focuses on working with routes and application logic while keeping the implementation organised and testable.
+
+**Main learning areas:** routing, backend application structure, data handling, HTTP concepts and debugging.
+
+## Lab Test-3 Experiment
+
+**Documentation:** [LABS README — Lab Test-3](./LABS/README.md#4-lab-test-3-experiment)  
+**Project:** [Open Lab Test-3](./LABS/Lab%20Test-3%20Experiment/)
+
+This lab expands the backend work toward API-oriented development. It demonstrates how server-side code receives requests, processes data and returns appropriate responses.
+
+**Main learning areas:** APIs, HTTP requests and responses, JSON/data handling, routes and server-side logic.
+
+## Lab Test-4 Experiment
+
+**Documentation:** [LABS README — Lab Test-4](./LABS/README.md#5-lab-test-4-experiment)  
+**Project:** [Open Lab Test-4](./LABS/Lab%20Test-4%20Experiment/)
+
+This experiment advances into database-oriented backend development. It connects application concepts with structured data storage and introduces the role of schemas, routes and CRUD-style operations in a backend system.
+
+**Main learning areas:** databases, schemas/data models, backend routes, CRUD concepts and persistent data.
+
+## Lab Test-5 Experiment — Relational vs Document Databases
+
+**Documentation:** [LABS README — Lab Test-5](./LABS/README.md#6-lab-test-5-experiment)  
+**Project:** [Open Database Lab](./LABS/Lab Test-5 Experiment/)
+
+This experiment compares **relational databases** with **document-oriented databases**. It examines how the same information can be represented using tables, rows, columns and relationships in SQL systems versus collections, documents and fields in document databases such as MongoDB.
+
+Topics include:
+
+- SQL and NoSQL database models
+- Tables, rows and columns
+- Collections, documents and fields
+- Fixed and flexible schemas
 - Primary and foreign keys
 - Joins
-- Embedding and references
+- Embedded documents and references
 - CRUD operations
-## Technologies Used
-| Technology | Purpose |
-|---|---|
-| `[PLACEHOLDER]` | `[PLACEHOLDER: Confirm from source code]` |
-| `[PLACEHOLDER]` | `[PLACEHOLDER: Confirm from source code]` |
-| Git/GitHub | Version control and repository hosting |
-## Theory
-A **relational database** organizes information into tables made of rows and columns. Relationships between tables can be represented with keys and queried using SQL.
-A **document database** stores records as documents. MongoDB, for example, stores JSON-like BSON documents inside collections. Related information can be embedded in a document or represented using references.
-| Feature | Relational Database | Document Database |
-|---|---|---|
-| Main structure | Tables | Collections |
-| Record | Row | Document |
-| Attribute | Column | Field |
-| Schema | Usually predefined | Often flexible |
-| Relationships | Keys and joins | Embedding/references |
-| Example | MySQL/PostgreSQL | MongoDB |
-Example SQL:
-```sql
-SELECT * FROM users;
-```
-Example MongoDB query:
-```javascript
-db.users.find({})
-```
-Neither model is universally better. The appropriate choice depends on data relationships, consistency requirements, query patterns, scalability needs, and operational constraints.
-## Application / Data Flow
-```text
-User / Client
-      |
-      v
-Request or Input
-      |
-      v
-Application Logic
-      |
-      v
-[PLACEHOLDER: Server / API / Database / Processing]
-      |
-      v
-Result / HTTP Response
-      |
-      v
-User / Client
-```
-## Project Structure
-```text
-Relational-vs-Document-Databases-Lab/
-├── [PLACEHOLDER: entry/source file]
-├── [PLACEHOLDER: supporting file]
-├── [PLACEHOLDER: assets/routes/models if applicable]
-└── [PLACEHOLDER: other files]
-```
-## Important Files
-| File | Purpose |
-|---|---|
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-| `[PLACEHOLDER: filename]` | `[PLACEHOLDER: Explain its role]` |
-## Implementation Steps
-1. Read and analyse the experiment requirements.
-2. Create or open the experiment directory.
-3. Configure the required files and dependencies.
-4. Implement the main functionality.
-5. Add validation and error handling where required.
-6. Connect the database/API if required.
-7. Run the application.
-8. Test the required functionality.
-9. Fix errors and verify the expected output.
-10. `[PLACEHOLDER: Add exact experiment-specific steps.]`
-## How to Run
-Open the experiment directory:
-```bash
-cd "Relational-vs-Document-Databases-Lab"
-```
-If it is a Node.js project:
-```bash
-npm install
-npm start
-```
-If there is no `start` script:
-```bash
-node [PLACEHOLDER: server.js/app.js/index.js]
-```
-If it is a static frontend project, open:
-```text
-[PLACEHOLDER: index.html or actual entry file]
-```
-Application URL, if applicable:
-```text
-http://localhost:[PLACEHOLDER: port]
-```
-## API Endpoints
-> `[PLACEHOLDER: Remove this table if the experiment does not implement an API.]`
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `[PLACEHOLDER]` | Retrieve data |
-| POST | `[PLACEHOLDER]` | Create data |
-| PUT/PATCH | `[PLACEHOLDER]` | Update data |
-| DELETE | `[PLACEHOLDER]` | Delete data |
-## Expected Output
-`[PLACEHOLDER: Describe the expected page, terminal output, API response, or database result.]`
-## Learning Outcomes
-After completing this experiment, the student should be able to:
-- Explain the purpose of the experiment.
-- Describe its application/data flow.
-- Run and test the implementation.
-- Explain the role of its major source files.
-- Identify and debug common errors.
-- `[PLACEHOLDER: Add experiment-specific outcomes.]`
-## Conclusion
-`[PLACEHOLDER: Summarize what was implemented, tested, and learned.]`
+- Choosing a database model based on application requirements
+
+A relational system generally models relationships using keys and joins, while a document database can represent related information using embedded documents or references. Neither model is universally better; the appropriate design depends on the application's data relationships, query patterns, consistency requirements and operational needs.
+
+> For detailed experiment notes, commands, execution guidance, troubleshooting and reference material, see the **[complete LABS README](./LABS/README.md)**.
+
 ---
-# Backend Development Reference
-## Client-Server Architecture
-A common backend request-response flow is:
+
+# Theory and Backend Practice
+
+**Full documentation:** [Open Theory README](./Theory/README.md)  
+**Project directory:** [Open Theory](./Theory/)
+
+The `Theory` project contains two independent backend implementations that demonstrate similar backend concepts using different technology stacks.
+
+## Node.js + Express + EJS
+
+The Node.js application demonstrates a small **Student Management** website and JSON API.
+
+It includes:
+
+- An Express server
+- HTTP routing
+- EJS server-side templates
+- Static CSS
+- A student listing page
+- A JSON API endpoint
+- Environment-based port configuration
+- Basic 404 handling
+
+Important routes include:
+
+| Route | Purpose |
+| --- | --- |
+| `/` | Displays the project home page |
+| `/students` | Renders the student list using EJS |
+| `/api/students` | Returns student information as JSON |
+
+The application uses in-memory sample data, so a database is not required for this example.
+
+## Python + Flask
+
+The Flask implementation demonstrates a lightweight Python backend server.
+
+It includes routes for:
+
+| Route | Purpose |
+| --- | --- |
+| `/` | Basic Flask landing page |
+| `/data` | Returns sample information as JSON |
+| `/html` | Displays data as server-generated HTML |
+
+Together, the Express and Flask examples demonstrate how different backend frameworks solve the same core problems: receiving HTTP requests, routing them to application logic and returning HTML or JSON responses.
+
+### Theory Concepts Covered
+
+- Backend server creation
+- HTTP routing
+- Express middleware
+- Server-side rendering with EJS
+- Static-file serving
+- JSON APIs
+- Flask routes and `jsonify`
+- Separation of frontend views and backend logic
+- Configurable server ports
+- 404/error handling
+
+> See **[Theory/README.md](./Theory/README.md)** for setup instructions, project structure, routes and execution commands.
+
+---
+
+# CMS Application
+
+**Full documentation:** [Open CMS Lab README](./Applications/cms-lab/README.md)  
+**Project directory:** [Open CMS Lab](./Applications/cms-lab/)
+
+The CMS Lab is a responsive **Content Management System for blog posts** built using:
+
+- Node.js
+- Express.js
+- EJS
+- MongoDB
+- HTML5
+- CSS3
+
+The application supports two operating modes.
+
+### MongoDB Mode
+
+When MongoDB is available, posts are stored permanently in the `cms_lab` database.
+
+### Demo Mode
+
+If MongoDB is unavailable, the server can still run using temporary in-memory sample posts. This makes the application easy to demonstrate locally while preserving real database support.
+
+### Main Features
+
+- View all blog posts
+- Read individual posts
+- Create new posts
+- Validate title, author and content
+- Store posts in MongoDB
+- Fall back to in-memory demo data
+- Seed sample posts into an empty database
+- Responsive desktop/mobile interface
+- Custom 404 handling
+- EJS server-side rendering
+
+### Main Routes
+
+| Method | Route | Purpose |
+| --- | --- | --- |
+| `GET` | `/` | Redirects to the posts page |
+| `GET` | `/posts` | Displays all posts |
+| `GET` | `/posts/new` | Displays the create-post form |
+| `POST` | `/posts` | Validates and creates a post |
+| `GET` | `/posts/:id` | Displays one complete post |
+
+This project combines many of the concepts introduced elsewhere in the repository into a more complete application: routing, forms, validation, server-side rendering, database access, error handling and responsive UI design.
+
+> See **[Applications/cms-lab/README.md](./Applications/cms-lab/README.md)** for complete installation, MongoDB configuration, routes, architecture and usage instructions.
+
+---
+
+# Concepts Covered Across the Repository
+
+| Area | Concepts |
+| --- | --- |
+| **Backend Fundamentals** | Client-server architecture, request-response cycle, routing |
+| **Node.js** | Server-side JavaScript and npm-based projects |
+| **Express.js** | Routes, middleware, request handling and error handling |
+| **EJS** | Dynamic HTML and server-side rendering |
+| **Python / Flask** | Routes, HTML responses and JSON APIs |
+| **HTTP** | GET, POST, PUT/PATCH and DELETE concepts |
+| **REST / APIs** | Resource-oriented routes and JSON responses |
+| **CRUD** | Create, Read, Update and Delete operations |
+| **MongoDB** | Collections, documents, persistence and database connections |
+| **Relational Databases** | Tables, keys, relationships and joins |
+| **Document Databases** | Documents, flexible schemas, embedding and references |
+| **Frontend Integration** | HTML, CSS, forms and responsive layouts |
+| **Validation** | Checking and sanitising user input |
+| **Error Handling** | Invalid routes, missing resources and connection failures |
+| **Git & GitHub** | Version control and repository organisation |
+
+---
+
+# General Backend Architecture
+
 ```text
 User
   |
@@ -828,172 +261,102 @@ Browser / API Client
   |
   | HTTP Request
   v
-Node.js / Express Server
+Backend Server
+(Node.js / Express or Python / Flask)
   |
   +--> Middleware
   |
-  +--> Router
+  +--> Route
   |
   +--> Application Logic
   |
-  +--> Data Access / Model
-  |
-  v
-Database
+  +--> Data Layer / Database
   |
   v
 HTTP Response
   |
   v
-Client
+Browser / API Client
 ```
-Not every experiment uses every layer.
-## HTTP Methods
-| Method | Common Purpose |
-|---|---|
-| GET | Retrieve a resource |
-| POST | Create a resource |
-| PUT | Replace/update a resource |
-| PATCH | Partially update a resource |
-| DELETE | Delete a resource |
-## CRUD Operations
-| CRUD | HTTP Method | Typical Database Operation |
-|---|---|---|
-| Create | POST | Insert/Create |
-| Read | GET | Find/Select |
-| Update | PUT/PATCH | Update |
-| Delete | DELETE | Delete |
-# Git and GitHub Workflow
-## Repository
-[Open Backend.Develepment.18722](https://github.com/IamBolt7/Backend.Develepment.18722)
-## Check Status
-```bash
-git status
-```
-## Add an Individual Experiment
-```bash
-git add "LABS/Lab Test-2 Experiment"
-git commit -m "Add Lab Test-2 Experiment"
-git push origin main
-```
-Repeat with the appropriate folder name for other experiments.
-## Update This README
-```bash
-git add "LABS/README.md"
-git commit -m "Update LABS README"
-git push origin main
-```
-## Recommended `.gitignore`
-```gitignore
-node_modules/
-.env
-.env.local
-.env.*.local
-.DS_Store
-*.log
-coverage/
-dist/
-build/
-.vscode/
-.idea/
-```
----
-# General Troubleshooting
-## `npm` Not Found
-Check:
-```bash
-node --version
-npm --version
-```
-Install Node.js if these commands are unavailable.
-## Missing Dependencies
-From the experiment directory:
+
+Not every experiment uses every layer, but this architecture represents the overall progression of the repository.
+
+# Learning Outcomes
+
+Through these experiments and projects, I have practised how to:
+
+- Build and run backend servers.
+- Understand the HTTP request-response lifecycle.
+- Create routes and APIs.
+- Return both HTML and JSON responses.
+- Use EJS for dynamic server-rendered pages.
+- Build simple backend applications using Flask.
+- Work with MongoDB and persistent data.
+- Understand relational and document-oriented database models.
+- Apply CRUD concepts.
+- Validate incoming form data.
+- Handle invalid routes and common application errors.
+- Structure backend projects clearly.
+- Use Git and GitHub to maintain and document practical work.
+
+# Running the Projects
+
+Different folders have different requirements, so use the README inside the relevant section before running a project.
+
+For most Node.js projects:
+
 ```bash
 npm install
+npm start
 ```
-## `Cannot find module`
-Check that:
-1. `npm install` completed successfully.
-2. The package exists in `package.json`.
-3. The import or `require()` path is correct.
-## Port Already in Use
-Stop the process occupying the configured port or use another port.
-```javascript
-const PORT = process.env.PORT || 3001;
-```
-## MongoDB Connection Failure
-Check:
-- MongoDB is running.
-- The connection URI is correct.
-- Credentials are correct if authentication is enabled.
-- Network access is allowed for hosted databases.
-- Environment variables are loaded.
-## `not a git repository`
-Move to the repository root before running Git commands:
+
+For the Flask theory example:
+
 ```bash
-cd "/Users/arnavdaftuar031gmail.com/Documents/Programming/5th Semester/Backend Development/Backend.Develepment.18722-main"
-git status
+pip install -r requirements.txt
+python3 "flask server/main.py"
 ```
-## Changes Not Visible on GitHub
-```bash
-git status
-git log --oneline -5
-git remote -v
-git push origin main
-```
-## Already-Tracked `.env`
-If `.env` was tracked before being added to `.gitignore`:
-```bash
-git rm --cached .env
-git commit -m "Stop tracking environment file"
-git push origin main
-```
-If real credentials were previously pushed, rotate/revoke them.
----
-# Overall Learning Outcomes
-After completing the laboratory work, students should be able to:
-1. Understand web application and client-server architecture.
-2. Build frontend and server-side applications using the technologies covered.
-3. Understand HTTP, routing, middleware, REST APIs, and JSON.
-4. Implement and test CRUD operations.
-5. Validate input and handle common application errors.
-6. Connect applications to persistent databases.
-7. Understand MongoDB, schemas, models, and document-oriented storage where applicable.
-8. Understand relational databases, SQL, keys, joins, and structured data.
-9. Compare relational and document-oriented database approaches.
-10. Manage Node.js dependencies using npm.
-11. Test and debug backend applications.
-12. Use Git and GitHub for version control and project documentation.
-# Repository Structure
+
+For detailed instructions, use:
+
+- [LABS/README.md](./LABS/README.md)
+- [Theory/README.md](./Theory/README.md)
+- [Applications/cms-lab/README.md](./Applications/cms-lab/README.md)
+
+# Documentation Map
+
 ```text
-Backend.Develepment.18722/
-├── Application/
-├── LABS/
-│   ├── EXP-1/
-│   ├── Lab Test-1 Experiment/
-│   ├── Lab Test-2 Experiment/
-│   ├── Lab Test-3 Experiment/
-│   ├── Lab Test-4 Experiment/
-│   ├── Relational-vs-Document-Databases-Lab/
+Main README
+│
+├── LABS
 │   └── README.md
-├── Theory/
-├── .gitignore
-└── README.md
+│       ├── EXP-1
+│       ├── Lab Test-1
+│       ├── Lab Test-2
+│       ├── Lab Test-3
+│       ├── Lab Test-4
+│       └── Lab Test-5 — Relational vs Document Databases
+│
+├── Theory
+│   └── README.md
+│       ├── Node.js + Express + EJS
+│       └── Python + Flask
+│
+└── Applications
+    └── cms-lab
+        └── README.md
 ```
+
+# Repository
+
+**GitHub:** [IamBolt7/Backend.Develepment.18722](https://github.com/IamBolt7/Backend.Develepment.18722)
+
+This main README acts as the central index for the repository. Detailed documentation remains inside each section so that the root page stays readable while every project can still be explored independently.
+
 ---
-# Documentation Checklist
-Before considering this README fully finalized:
-- [ ] Replace all experiment-title placeholders.
-- [ ] Add official aims and problem statements.
-- [ ] Confirm technologies used by each experiment.
-- [ ] Add actual project structures.
-- [ ] Add actual entry filenames.
-- [ ] Add actual server ports.
-- [ ] Add actual API endpoints.
-- [ ] Add actual database names and schemas.
-- [ ] Add exact run commands.
-- [ ] Add expected outputs.
-- [ ] Add experiment-specific test cases.
-- [ ] Add experiment-specific viva answers.
-- [ ] Remove sections that do not apply to an experiment.
-Search for unfinished fields using:
+
+## Author
+
+**Arnav Daftuar**
+
+Backend Development coursework and practical implementations.
