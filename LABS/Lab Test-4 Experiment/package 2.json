@@ -1,0 +1,11 @@
+{
+  "name": "lab-test-4-experiment",
+  "version": "1.0.0",
+  "description": "Experiment 13A - Express + Mongoose User Management Tutorial",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.18.0"
+  }
+}
