@@ -3,10 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arnav | B.Tech CSE @ UPES</title>
+  <meta name="description" content="A simple responsive personal introduction webpage created using HTML and CSS.">
+  <title>Arnav | B.Tech CSE Student</title>
   <style>
     :root {
       color-scheme: dark;
+      --bg: #080d1a;
+      --surface: rgba(16, 25, 49, 0.82);
+      --text: #f3f6ff;
+      --muted: #b8c4dc;
+      --accent: #8ec5ff;
+      --border: rgba(255, 255, 255, 0.12);
     }
 
     * {
@@ -19,36 +26,95 @@
       min-height: 100vh;
       display: grid;
       place-items: center;
-      font-family: "Segoe UI", system-ui, sans-serif;
+      padding: 1.5rem;
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background:
-        radial-gradient(circle at top, #1f3b73 0%, transparent 45%),
-        #0b1020;
-      color: #eef3ff;
+        radial-gradient(circle at 50% 0%, #1f3b73 0%, transparent 42%),
+        var(--bg);
+      color: var(--text);
     }
 
-    main {
-      width: min(640px, 90vw);
-      padding: 2.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+    .profile-card {
+      width: min(680px, 100%);
+      padding: clamp(2rem, 6vw, 3.5rem);
+      border: 1px solid var(--border);
       border-radius: 24px;
-      background: rgba(12, 18, 38, 0.8);
+      background: var(--surface);
       box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(12px);
+      text-align: center;
     }
 
-    p {
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      line-height: 1.4;
-      font-weight: 600;
+    .eyebrow {
+      margin-bottom: 0.8rem;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
     }
 
-    span {
-      color: #8ec5ff;
+    h1 {
+      margin-bottom: 1rem;
+      font-size: clamp(2.2rem, 8vw, 4rem);
+      line-height: 1;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .intro {
+      max-width: 520px;
+      margin-inline: auto;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      line-height: 1.7;
+    }
+
+    .details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.65rem;
+      margin-top: 1.7rem;
+      list-style: none;
+    }
+
+    .details li {
+      padding: 0.55rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      color: #dce6fa;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem;
+      }
+
+      .profile-card {
+        border-radius: 18px;
+      }
     }
   </style>
 </head>
 <body>
-  <main>
-    <p>Hi I am <span>Arnav</span>, I am B.Tech CSE Student at UPES</p>
+  <main class="profile-card">
+    <p class="eyebrow">Backend Development · Experiment 1</p>
+    <h1>Hi, I'm <span>Arnav</span>.</h1>
+    <p class="intro">
+      I am a B.Tech Computer Science and Engineering student at UPES.
+      This webpage demonstrates the fundamentals of HTML structure and CSS styling.
+    </p>
+
+    <ul class="details" aria-label="Student details">
+      <li>B.Tech CSE</li>
+      <li>UPES</li>
+      <li>HTML &amp; CSS</li>
+    </ul>
   </main>
 </body>
 </html>
