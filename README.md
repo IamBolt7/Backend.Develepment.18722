@@ -29,7 +29,7 @@ Backend.Develepment.18722/
 │   ├── Lab Test-2 Experiment/
 │   ├── Lab Test-3 Experiment/
 │   ├── Lab Test-4 Experiment/
-│   ├── Relational-vs-Document-Databases-Lab/
+│   ├── Lab Test-5 Experiment/
 │   └── README.md
 ├── Theory/
 │   └── README.md
@@ -88,10 +88,10 @@ This experiment advances into database-oriented backend development. It connects
 
 **Main learning areas:** databases, schemas/data models, backend routes, CRUD concepts and persistent data.
 
-## Relational vs Document Databases Lab
+## Lab Test-5 Experiment — Relational vs Document Databases
 
-**Documentation:** [LABS README — Relational vs Document Databases](./LABS/README.md#6-relational-vs-document-databases-lab)  
-**Project:** [Open Database Lab](./LABS/Relational-vs-Document-Databases-Lab/)
+**Documentation:** [LABS README — Lab Test-5](./LABS/README.md#6-lab-test-5-experiment)  
+**Project:** [Open Database Lab](./LABS/Lab Test-5 Experiment/)
 
 This experiment compares **relational databases** with **document-oriented databases**. It examines how the same information can be represented using tables, rows, columns and relationships in SQL systems versus collections, documents and fields in document databases such as MongoDB.
 
@@ -335,7 +335,7 @@ Main README
 │       ├── Lab Test-2
 │       ├── Lab Test-3
 │       ├── Lab Test-4
-│       └── Relational vs Document Databases
+│       └── Lab Test-5 — Relational vs Document Databases
 │
 ├── Theory
 │   └── README.md
