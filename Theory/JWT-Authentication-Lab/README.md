@@ -1,214 +1,320 @@
-# JWT Authentication – Student Management API
+# JWT Authentication Lab - Student Management API
 
-A complete **FastAPI authentication lab** based on Lecture 20: **Authentication Mechanisms – Basic Auth, Token-based Authentication and JWT**. The project demonstrates password hashing, login, JSON Web Token generation/validation, protected routes, and authorization for deleting student records.
+A GitHub-ready **FastAPI** project based on **Lecture 20: Authentication Mechanisms - Basic Auth, Token-based Authentication, JWT**. It turns the lecture concepts and lab exercise into a working Student Management API with password hashing, JWT login, protected routes, token expiry, and authorization.
 
-## Learning Objectives
+> **Course Outcome (CO3):** Implement secure authentication mechanisms to protect API endpoints.
 
-This lab demonstrates the difference between **authentication** (Who are you?) and **authorization** (What are you allowed to do?), then implements a practical JWT authentication flow for a Student Management API.
+## What this project demonstrates
 
-## Concepts Covered
+The lecture starts with an important distinction: **authentication** asks *"Who are you?"*, while **authorization** asks *"What can you do?"*. This project implements both. A user authenticates with email/password and receives a JWT; protected routes validate that JWT; and the delete route performs an additional permission check.
 
-| Concept | Purpose |
+### Lecture-to-project mapping
+
+| Lecture topic | Implementation in this repository |
 |---|---|
-| Basic Authentication | Sends encoded credentials with requests; simple but unsuitable as the primary production approach shown here. |
-| Token Authentication | Uses a token after login instead of repeatedly sending credentials. |
-| JWT | Compact signed token carrying claims such as user ID and role. |
-| Password Hashing | Passwords are stored as bcrypt hashes rather than plaintext. |
-| Authentication | Verifies a user's identity. |
-| Authorization | Determines whether an authenticated user may perform an action. |
+| Authentication vs Authorization | Login verifies identity; delete route checks permission |
+| HTTP Basic Auth | Explained in `docs/LECTURE_NOTES.md` for comparison |
+| Token-based Authentication | Credentials are exchanged for a token after login |
+| JWT Structure | Header + Payload + Signature |
+| JWT Claims | `sub`, `exp`, `iat`, `iss`, plus `email` and `role` |
+| Password Security | Passwords are hashed with bcrypt through Passlib |
+| Token Expiration | Access tokens expire after 30 minutes |
+| Protected API | `/protected` and `/me` require a Bearer token |
+| Authorization | Admin or account owner can delete a student |
+| API Testing | cURL examples and Swagger UI workflow included |
+
+## Authentication vs Authorization
+
+| Concept | Question | Example in this project |
+|---|---|---|
+| **Authentication** | Who are you? | Login using email and password |
+| **Authorization** | What can you do? | Admin can delete any student; a student can delete only themself |
+
+The complete flow is:
+
+```text
+Register -> Password is hashed -> Login -> Credentials verified
+   -> JWT generated -> Client stores token -> Bearer token sent
+   -> JWT verified -> User loaded -> Permission checked -> Response
+```
+
+## Basic Auth, Token Auth and JWT
+
+HTTP Basic Authentication sends encoded credentials with each request:
+
+```text
+Authorization: Basic base64(username:password)
+```
+
+Base64 is **not encryption**, so Basic Auth must not be treated as secure without HTTPS. Token authentication improves the flow by exchanging credentials once for a token. JWT is a popular signed token format that can carry claims and expiration information.
+
+| Feature | Basic Auth | Token-based Auth | JWT |
+|---|---:|---:|---:|
+| Credentials sent on every request | Yes | No | No |
+| Expiration | Not inherent | Can support it | Built-in `exp` claim |
+| Claims/user metadata | No | Depends on design | Yes |
+| Signed integrity check | No | Depends on design | Yes |
+| Suitable for stateless APIs | Limited | Yes | Yes |
 
 ## JWT Structure
 
-A JWT has three dot-separated parts:
+A JSON Web Token contains three dot-separated parts:
 
 ```text
+xxxxx.yyyyy.zzzzz
 HEADER.PAYLOAD.SIGNATURE
 ```
 
-- **Header** – token type and signing algorithm.
-- **Payload** – claims such as `sub`, `email`, `role`, and `exp`.
-- **Signature** – allows the server to verify that the token was not altered.
+**Header** describes the token type and signing algorithm. **Payload** contains claims. **Signature** allows the API to verify that the header/payload have not been altered.
 
-The payload is encoded, **not encrypted**, so sensitive information should not be placed in it.
+Example conceptual payload:
 
-## Authentication Flow
+```json
+{
+  "sub": "1",
+  "email": "aarav@upes.ac.in",
+  "role": "student",
+  "exp": "<expiration timestamp>",
+  "iat": "<issued-at timestamp>",
+  "iss": "student-api"
+}
+```
 
-1. A student registers with name, email, branch and password.
-2. The server hashes the password using bcrypt before storing it.
-3. The student sends email and password to `POST /login`.
-4. The server verifies the password hash.
-5. A signed JWT access token is generated with a 30-minute expiry.
-6. The client sends the token as `Authorization: Bearer <token>`.
-7. Protected endpoints validate the signature and expiry and identify the user from the `sub` claim.
-8. Authorization rules decide whether the authenticated user can perform the requested operation.
+JWT payloads are encoded, **not encrypted**. Never place passwords or other secrets inside them.
 
 ## Project Structure
 
 ```text
 JWT-Authentication-Lab/
-├── main.py             # FastAPI routes: register, login, protected, delete
-├── auth.py             # Hashing, JWT creation/validation, current-user dependency
-├── models.py           # SQLAlchemy Student model
-├── database.py         # SQLite connection and DB dependency
-├── requirements.txt    # Python dependencies
-├── .env.example        # Example secret configuration
-├── .gitignore
+├── main.py                 # FastAPI routes and request/response models
+├── auth.py                 # Password hashing + JWT creation/validation
+├── models.py               # SQLAlchemy Student model
+├── database.py             # SQLite/SQLAlchemy setup
+├── requirements.txt        # Python dependencies
+├── .env.example            # Secret-key example
+├── .gitignore              # Files Git should ignore
+├── docs/
+│   └── LECTURE_NOTES.md    # Theory from the supplied Lecture 20 screenshots
 └── README.md
 ```
 
-## Setup
+## API Endpoints
 
-### 1. Create and activate a virtual environment
+| Method | Endpoint | Auth required? | Purpose |
+|---|---|---|---|
+| `GET` | `/` | No | API status |
+| `POST` | `/register` | No | Register a new student |
+| `POST` | `/students` | No | Lecture-compatible registration alias |
+| `POST` | `/login` | No | Verify credentials and issue JWT |
+| `GET` | `/protected` | Yes | Demonstrate authenticated access |
+| `GET` | `/me` | Yes | Return the authenticated student |
+| `DELETE` | `/students/{student_id}` | Yes | Admin or same student may delete |
+
+## Installation and Setup
+
+### 1. Open the project
+
+```bash
+cd JWT-Authentication-Lab
+```
+
+### 2. Create a virtual environment
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-On Windows:
+Windows PowerShell:
 
-```bash
-.venv\\Scripts\\activate
+```powershell
+.venv\Scripts\Activate.ps1
 ```
 
-### 2. Install dependencies
+### 3. Install dependencies
+
+The lecture specifically uses `python-jose`, `passlib[bcrypt]`, and `python-multipart`; the project also includes FastAPI, Uvicorn, SQLAlchemy, and email validation.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Set a secret key
+### 4. Configure the JWT secret
 
-For macOS/Linux:
+macOS/Linux:
 
 ```bash
 export SECRET_KEY="replace-this-with-a-long-random-secret"
 ```
 
-For a classroom-only local test, the project has a development fallback key. Do **not** use the fallback in production.
+The fallback key in `auth.py` exists only so the classroom demo can run immediately. **Never use a hard-coded development secret in production.**
 
-### 4. Start the API
+### 5. Run the API
 
 ```bash
 uvicorn main:app --reload
 ```
 
-Open Swagger UI at:
+Then open Swagger UI:
 
 ```text
 http://127.0.0.1:8000/docs
 ```
 
-## API Endpoints
+The SQLite database `students.db` is created automatically on first run.
 
-| Method | Endpoint | Authentication | Description |
-|---|---|---|---|
-| `GET` | `/` | No | API status |
-| `POST` | `/register` | No | Register a student |
-| `POST` | `/students` | No | Lecture-compatible student registration alias |
-| `POST` | `/login` | No | Verify credentials and obtain JWT |
-| `GET` | `/protected` | Bearer JWT | Test authenticated access |
-| `DELETE` | `/students/{student_id}` | Bearer JWT | Admin or same student can delete |
+## Testing the Complete JWT Flow
 
-## Testing the JWT Flow
-
-### Register
+### Step 1 - Register a student
 
 ```bash
 curl -X POST http://localhost:8000/register \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Aarav",
-    "email": "aarav@example.com",
+    "email": "aarav@upes.ac.in",
     "branch": "CSE",
     "password": "securepassword123"
   }'
 ```
 
-### Login
+The password is **hashed before storage**. The API never returns the password hash.
+
+### Step 2 - Login
 
 ```bash
 curl -X POST http://localhost:8000/login \
   -H "Content-Type: application/json" \
-  -d '{"email":"aarav@example.com","password":"securepassword123"}'
+  -d '{"email":"aarav@upes.ac.in","password":"securepassword123"}'
 ```
 
 Example response:
 
 ```json
 {
-  "access_token": "<JWT_TOKEN>",
-  "token_type": "bearer"
+  "access_token": "eyJhbGciOiJIUzI1NiIs...",
+  "token_type": "bearer",
+  "expires_in_minutes": 30
 }
 ```
 
-### Access a Protected Route
+### Step 3 - Access a protected route
 
 ```bash
 curl http://localhost:8000/protected \
-  -H "Authorization: Bearer <JWT_TOKEN>"
+  -H "Authorization: Bearer YOUR_JWT_TOKEN"
 ```
 
-Calling `/protected` without a valid bearer token returns an authentication error.
+Example response:
 
-## Authorization Example
+```json
+{
+  "message": "Hello, Aarav!",
+  "user_id": 1,
+  "email": "aarav@upes.ac.in",
+  "role": "student"
+}
+```
 
-`DELETE /students/{student_id}` demonstrates the difference between authentication and authorization. A valid token proves identity, but the endpoint additionally checks permission. Deletion is permitted only when the current user is an `admin` or when the user is deleting their own student record. Otherwise the API returns **403 Forbidden**.
+### Step 4 - Try without a token
 
-## Important HTTP Status Codes
+```bash
+curl http://localhost:8000/protected
+```
 
-- **201 Created** – registration succeeded.
-- **204 No Content** – deletion succeeded.
-- **401 Unauthorized** – credentials/token are missing, invalid or expired.
-- **403 Forbidden** – identity is known but the user lacks permission.
-- **404 Not Found** – requested student does not exist.
-- **409 Conflict** – email is already registered.
+The request is rejected because the route depends on an authenticated user.
+
+### Step 5 - Test authorization
+
+```bash
+curl -X DELETE http://localhost:8000/students/1 \
+  -H "Authorization: Bearer YOUR_JWT_TOKEN"
+```
+
+The endpoint allows deletion only when the authenticated user is an **admin** or the student whose ID appears in the URL. An authenticated user without permission receives **403 Forbidden**.
+
+## How the Code Works
+
+### Password hashing
+
+`get_password_hash()` converts the plaintext password into a bcrypt hash before database storage. During login, `verify_password()` compares the submitted password against the stored hash. Plaintext passwords are never stored.
+
+### Token creation
+
+`create_access_token()` copies the supplied claims, adds `exp`, `iat`, and `iss`, then signs the token using `HS256` and `SECRET_KEY`.
+
+### Token validation
+
+`OAuth2PasswordBearer` extracts the Bearer token. `decode_token()` verifies the JWT signature, issuer, and expiration. `get_current_user()` reads `sub`, converts it to a student ID, and loads that student from the database.
+
+### Authorization
+
+Authentication alone is not enough for every operation. The delete route checks:
+
+```python
+if current_user.role != "admin" and current_user.id != student_id:
+    # 403 Forbidden
+```
+
+This directly demonstrates the lecture's difference between identity verification and permission checking.
+
+## HTTP Status Codes Used
+
+| Status | Meaning in this lab |
+|---|---|
+| `201 Created` | Student registered successfully |
+| `204 No Content` | Student deleted successfully |
+| `401 Unauthorized` | Login failed or token is missing/invalid/expired |
+| `403 Forbidden` | Authenticated, but not allowed to perform the action |
+| `404 Not Found` | Student does not exist |
+| `409 Conflict` | Email is already registered |
+
+## Token Storage Concepts
+
+The lecture compares memory, `localStorage`, and HttpOnly cookies. This backend returns a Bearer token and leaves client storage to the frontend. For browser applications, token storage is a security design decision: `localStorage` is accessible to JavaScript and therefore exposed if XSS occurs; Secure HttpOnly cookies reduce JavaScript access but require appropriate CSRF defenses.
 
 ## Security Best Practices
 
-- Always use **HTTPS** in deployment.
-- Keep access tokens short-lived; this project uses **30 minutes**.
-- Use refresh tokens when longer sessions are required.
-- Never store plaintext passwords; use bcrypt or Argon2.
-- Keep JWT signing secrets outside source code using environment variables or a secret manager.
-- Validate token signatures and expiration on protected requests.
-- For browser applications, carefully designed **Secure, HttpOnly cookies** can reduce token exposure to JavaScript; cookie-based auth also requires appropriate CSRF protections.
-- Add rate limiting to login endpoints to reduce brute-force attacks.
+The implementation and lecture emphasize:
+
+- Use **HTTPS** so credentials and tokens are encrypted in transit.
+- Keep access tokens **short-lived**; this lab uses **30 minutes**.
+- Use refresh-token designs when longer sessions are needed.
+- Hash passwords; never store plaintext passwords.
+- Keep signing secrets in environment variables or a secret manager.
+- Verify JWT signature, issuer, and expiration on protected requests.
+- Do not place passwords or secrets in JWT payloads.
+- Rate-limit login attempts to reduce brute-force attacks.
 - Configure CORS only for trusted origins.
-- Do not put passwords or other secrets inside a JWT payload.
+- Choose token storage with XSS and CSRF risks in mind.
+- Public registration in this project always creates the `student` role so a client cannot self-register as an admin.
 
 ## Lab Exercise Checklist
 
 - [x] Implement JWT authentication for the Student Management API.
-- [x] Add and store a hashed password for students.
+- [x] Add a password field and store only its hash.
 - [x] Create `/register` and `/login` endpoints.
-- [x] Add a protected endpoint.
-- [x] Protect `DELETE /students/{id}` so only admins or the student themselves can delete it.
-- [x] Return `401` for unauthenticated/invalid-token access.
-- [x] Add JWT expiration.
-- [x] Provide commands for testing the complete authentication flow.
-
-## Basic Auth vs Token Auth vs JWT
-
-| Feature | Basic Auth | Token-based Auth | JWT |
-|---|---|---|---|
-| Credentials sent repeatedly | Yes | No | No |
-| Expiration support | Not inherent | Yes | Yes (`exp`) |
-| Carries claims | No | Depends | Yes |
-| Signed/tamper detection | No | Depends | Yes |
-| Common API use | Limited | Yes | Yes |
-
-> Base64 encoding used by HTTP Basic Authentication is **not encryption**. HTTPS is essential for protecting credentials and tokens in transit.
+- [x] Protect API routes using Bearer JWT authentication.
+- [x] Secure `DELETE /students/{id}` for admins or the student themself.
+- [x] Register a student and login to obtain a JWT.
+- [x] Access a protected route with a token.
+- [x] Reject protected access without a valid token.
+- [x] Implement and validate token expiration.
 
 ## Key Takeaways
 
-**Authentication** verifies identity, while **authorization** controls permissions. JWT provides a convenient signed token format for API authentication. A secure implementation also requires password hashing, HTTPS, short token lifetimes, correct token validation, secure secret management, and appropriate authorization checks.
+**Authentication verifies identity; authorization controls permissions.** Basic Auth is easy to understand but repeatedly sends credentials. Token-based authentication avoids resending credentials after login. JWT provides a compact signed format containing claims such as subject and expiration. Secure authentication still depends on HTTPS, password hashing, short token lifetimes, safe secret management, careful token storage, and authorization checks.
+
+For the expanded theory corresponding to the lecture screenshots, read [`docs/LECTURE_NOTES.md`](docs/LECTURE_NOTES.md).
 
 ## Technologies
 
-Python · FastAPI · SQLAlchemy · SQLite · python-jose · JWT · Passlib · bcrypt · Pydantic
+`Python` · `FastAPI` · `SQLAlchemy` · `SQLite` · `python-jose` · `JWT` · `Passlib` · `bcrypt` · `Pydantic`
 
 ## Academic Context
 
-**Lecture 20 – Authentication Mechanisms: Basic Auth, Token-based Auth, JWT**  
-Course Outcome: **CO3 – Implement secure authentication mechanisms to protect API endpoints.**
+**Lecture 20 - Authentication Mechanisms: Basic Auth, Token-based Auth, JWT**  
+**Unit:** Unit 2 - Database Management  
+**Course Outcome:** CO3  
+**Bloom's Level:** Apply  
+**Application:** API security, user identity verification, secure backend services
