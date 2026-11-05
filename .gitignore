@@ -98,3 +98,18 @@ Desktop.ini
 *.tar
 *.tar.gz
 *.rar
+
+# Node dependencies
+node_modules/
+
+# Docker image archives
+*.tar
+
+# Python virtual environments
+venv/
+
+# Environment files
+.env
+
+# macOS
+.DS_Store
