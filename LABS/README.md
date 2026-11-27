@@ -1,426 +1,636 @@
-# Backend Development Laboratory
-**Repository:** [Backend.Develepment.18722](https://github.com/IamBolt7/Backend.Develepment.18722)  
-**LABS:** [Open LABS](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS)  
-**Course:** Backend Development
-This directory contains practical experiments covering web development, backend programming, APIs, CRUD operations, databases, and relational versus document-oriented data models.
-> Replace `[PLACEHOLDER: ...]` entries with exact details from the experiment source code or official instructions.
+# 🧪 Backend Development Laboratory
+
+> Central documentation and navigation hub for the practical work completed in the **Backend Development** laboratory.
+
+[![Repository](https://img.shields.io/badge/GitHub-Backend.Develepment.18722-181717?logo=github)](https://github.com/IamBolt7/Backend.Develepment.18722)
+![Labs](https://img.shields.io/badge/Lab%20Tests-10-blue)
+![Backend](https://img.shields.io/badge/Focus-Backend%20Development-success)
+
 ---
-## Experiments
-| # | Experiment | GitHub Link | Focus |
-|---:|---|---|---|
-| 1 | EXP-1 | [Open](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/EXP-1) | `[PLACEHOLDER: Exact topic]` |
-| 2 | Lab Test-1 Experiment | [Open](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-1%20Experiment) | `[PLACEHOLDER: Exact topic]` |
-| 3 | Lab Test-2 Experiment | [Open](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-2%20Experiment) | `[PLACEHOLDER: Exact topic]` |
-| 4 | Lab Test-3 Experiment | [Open](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-3%20Experiment) | `[PLACEHOLDER: Exact topic]` |
-| 5 | Lab Test-4 Experiment | [Open](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-4%20Experiment) | `[PLACEHOLDER: Exact topic]` |
-| 6 | Lab Test-5 Experiment | [Open](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-5%20Experiment) | SQL vs document databases |
-## Technology Stack
-- **Frontend:** HTML5, CSS3, JavaScript
-- **Backend:** Node.js, Express.js
-- **APIs/Data:** REST, JSON, CRUD
-- **Databases:** MongoDB, Mongoose, relational database concepts
-- **Tools:** npm, Git, GitHub, Terminal, VS Code
-- **Testing:** `[PLACEHOLDER: Browser / Postman / Thunder Client / other]`
+
+## 📌 About This Directory
+
+The `LABS` directory contains practical work covering web development, backend programming, APIs, middleware, templating, authentication, security, databases, Django, deployment concepts, and real-time communication.
+
+This README acts as the **main index for all laboratory work**. Each experiment can be opened directly from the table below, and its dedicated `README.md` can be used for detailed setup, implementation, testing, and learning outcomes.
+
 ---
-# 1. EXP-1
-**Source:** [Open EXP-1](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/EXP-1)
-## Aim
-`[PLACEHOLDER: Exact EXP-1 aim.]`
-## Problem Statement
-`[PLACEHOLDER: Official EXP-1 problem statement.]`
-## Objectives
-- Understand the experiment's fundamental concepts.
-- Build the required application.
-- Organize source files correctly.
-- Run and test the implementation.
-## Concepts and Technologies
-`[PLACEHOLDER: Add the exact concepts and technologies.]`
-Possible introductory topics include HTML, CSS, JavaScript, responsive design, forms, and basic application structure.
-## Project Structure
+
+# 🗂️ Lab Index
+
+| # | Experiment | Focus | Project | Documentation |
+|---:|---|---|---|---|
+| — | **Django To-Do App** | Django CRUD, forms, templates, CSRF, SQLite | [Open Project](./django_todo_app/) | [README](./django_todo_app/README.md) |
+| 1 | **EXP-1** | Introductory web/backend practical | [Open Project](./EXP-1/) | [README](./EXP-1/README.md) |
+| 2 | **Lab Test-1 Experiment** | Backend/web development fundamentals | [Open Project](./Lab%20Test-1%20Experiment/) | [README](./Lab%20Test-1%20Experiment/README.md) |
+| 3 | **Lab Test-2 Experiment** | Routing and backend application structure | [Open Project](./Lab%20Test-2%20Experiment/) | [README](./Lab%20Test-2%20Experiment/README.md) |
+| 4 | **Lab Test-3 Experiment** | REST APIs, JSON and CRUD | [Open Project](./Lab%20Test-3%20Experiment/) | [README](./Lab%20Test-3%20Experiment/README.md) |
+| 5 | **Lab Test-4 Experiment** | Database-backed backend development | [Open Project](./Lab%20Test-4%20Experiment/) | [README](./Lab%20Test-4%20Experiment/README.md) |
+| 6 | **Lab Test-5 Experiment** | Relational vs Document Databases | [Open Project](./Lab%20Test-5%20Experiment/) | [README](./Lab%20Test-5%20Experiment/README.md) |
+| 7 | **Lab Test-6 Experiment** | Express Middleware | [Open Project](./Lab%20Test-6%20Experiment/) | [README](./Lab%20Test-6%20Experiment/README.md) |
+| 8 | **Lab Test-7 Experiment** | EJS Templating | [Open Project](./Lab%20Test-7%20Experiment/) | [README](./Lab%20Test-7%20Experiment/README.md) |
+| 9 | **Lab Test-8 Experiment** | REST API & JWT Authentication | [Open Project](./Lab%20Test-8%20Experiment/) | [README](./Lab%20Test-8%20Experiment/README.md) |
+| 10 | **Lab Test-9 Experiment** | Security, Rate Limiting & Deployment | [Open Project](./Lab%20Test-9%20Experiment/) | [README](./Lab%20Test-9%20Experiment/README.md) |
+| 11 | **Lab Test-10 Experiment** | Socket.IO Real-Time Chat | [Open Project](./Lab%20Test-10%20Experiment/) | [README](./Lab%20Test-10%20Experiment/README.md) |
+
+> **Note:** The numbering column reflects the sequence of projects shown here; the folder names remain exactly `EXP-1` and `Lab Test-1 Experiment` through `Lab Test-10 Experiment`.
+
+---
+
+# 🐍 Django To-Do App
+
+**Project:** [Open Django To-Do App](./django_todo_app/)  
+**Detailed README:** [django_todo_app/README.md](./django_todo_app/README.md)
+
+A Django-based task-management application demonstrating a complete server-rendered CRUD-style workflow.
+
+### Main Concepts
+
+- Django project/app structure
+- Models and migrations
+- Django forms
+- Templates and template inheritance
+- Static CSS
+- SQLite
+- CSRF protection
+- POST-based state changes
+- Validation
+- Django messages
+- Django Admin
+- Automated tests
+
+### Application Flow
+
 ```text
-EXP-1/
-├── [PLACEHOLDER: main file]
-├── [PLACEHOLDER: stylesheet/script]
-└── [PLACEHOLDER: other files]
+Browser
+   │
+   ▼
+Django URL Router
+   │
+   ▼
+View
+   │
+   ├── Form Validation
+   ├── Business Logic
+   └── ORM
+        │
+        ▼
+      SQLite
+   │
+   ▼
+Template
+   │
+   ▼
+HTML Response
 ```
-## How to Run
-For a static project, open its main HTML file. For Node.js:
-```bash
-cd "EXP-1"
-npm install
-npm start
-```
-## Expected Output
-`[PLACEHOLDER: Describe the expected output.]`
-## Learning Outcomes
-- Understand the experiment's main concepts.
-- Explain the purpose of important files.
-- Execute and test the project.
-- Debug basic implementation problems.
-## Conclusion
-`[PLACEHOLDER: EXP-1 conclusion.]`
+
 ---
-# 2. Lab Test-1 Experiment
-**Source:** [Open Lab Test-1](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-1%20Experiment)
-## Aim
-`[PLACEHOLDER: Exact Lab Test-1 aim.]`
-## Problem Statement
-`[PLACEHOLDER: Official Lab Test-1 problem statement.]`
-## Concepts and Technologies
-- `[PLACEHOLDER: Primary concept]`
-- `[PLACEHOLDER: Technologies used]`
-- Application structure
+
+# 1️⃣ EXP-1
+
+**Project:** [Open EXP-1](./EXP-1/)  
+**README:** [EXP-1/README.md](./EXP-1/README.md)
+
+The introductory experiment establishes the basic project workflow used throughout the laboratory.
+
+### Key Areas
+
+- Project organisation
+- Web-development fundamentals
+- Application execution
 - Testing and debugging
-## Implementation
-1. Analyse the requirements.
-2. Create the required project structure.
-3. Implement the primary functionality.
-4. Add frontend/backend logic as required.
-5. Test all required features.
-6. Verify the expected output.
-## Project Structure
-```text
-Lab Test-1 Experiment/
-├── [PLACEHOLDER: entry file]
-├── [PLACEHOLDER: supporting files]
-└── [PLACEHOLDER: other files]
-```
-## How to Run
-```bash
-cd "Lab Test-1 Experiment"
-```
-If Node.js is used:
-```bash
-npm install
-npm start
-```
-Otherwise open `[PLACEHOLDER: main file]`.
-## Expected Output
-`[PLACEHOLDER: Describe expected output.]`
-## Learning Outcomes
-- Apply course concepts to a practical task.
-- Understand program flow.
-- Run, test, and debug the implementation.
-- Explain the purpose of major files.
-## Conclusion
-`[PLACEHOLDER: Lab Test-1 conclusion.]`
+- Understanding application flow
+
 ---
-# 3. Lab Test-2 Experiment
-**Source:** [Open Lab Test-2](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-2%20Experiment)
-## Aim
-`[PLACEHOLDER: Exact Lab Test-2 aim.]`
-## Concepts
-If applicable, this experiment may cover:
-- Node.js
-- Express.js
+
+# 2️⃣ Lab Test-1 Experiment
+
+**Project:** [Open Lab Test-1](./Lab%20Test-1%20Experiment/)  
+**README:** [Lab Test-1 README](./Lab%20Test-1%20Experiment/README.md)
+
+This experiment reinforces the foundational workflow for developing and testing web/backend applications.
+
+### Key Areas
+
+- Application structure
+- Backend fundamentals
+- Request-response concepts
+- Implementation workflow
+- Testing and debugging
+
+---
+
+# 3️⃣ Lab Test-2 Experiment
+
+**Project:** [Open Lab Test-2](./Lab%20Test-2%20Experiment/)  
+**README:** [Lab Test-2 README](./Lab%20Test-2%20Experiment/README.md)
+
+This experiment progresses toward structured server-side development and routing.
+
+### Key Areas
+
+- Backend routing
 - HTTP requests and responses
-- Routing
-- Middleware
-- npm dependencies
-## Theory
-**Node.js** is a JavaScript runtime commonly used for server-side development. **Express.js** is a Node.js framework that simplifies server creation, routing, middleware, and HTTP handling.
-```javascript
-const express = require("express");
-const app = express();
-app.get("/", (req, res) => {
-  res.send("Server is running");
-});
-app.listen(3000, () => console.log("Server running"));
-```
-## Request-Response Flow
-```text
-Client -> HTTP Request -> Express Server
-       -> Middleware -> Route -> Logic
-       -> HTTP Response -> Client
-```
-## Project Structure
-```text
-Lab Test-2 Experiment/
-├── package.json
-├── [PLACEHOLDER: server.js/app.js]
-├── [PLACEHOLDER: routes/public]
-└── [PLACEHOLDER: other files]
-```
-## How to Run
-```bash
-cd "Lab Test-2 Experiment"
-npm install
-npm start
-```
-Or:
-```bash
-node [PLACEHOLDER: server filename]
-```
-Open `http://localhost:[PLACEHOLDER: port]`.
-## Learning Outcomes
-- Understand server-side JavaScript.
-- Create and run a backend server.
-- Understand HTTP communication.
-- Understand routing and middleware.
-- Manage dependencies with npm.
-## Conclusion
-`[PLACEHOLDER: Lab Test-2 conclusion.]`
+- Server-side application logic
+- Data handling
+- Project organisation
+- Error handling
+
 ---
-# 4. Lab Test-3 Experiment
-**Source:** [Open Lab Test-3](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-3%20Experiment)
-## Aim
-`[PLACEHOLDER: Exact Lab Test-3 aim.]`
-## REST and CRUD
-REST APIs commonly use HTTP methods to operate on resources.
-| CRUD | HTTP | Purpose |
+
+# 4️⃣ Lab Test-3 Experiment
+
+**Project:** [Open Lab Test-3](./Lab%20Test-3%20Experiment/)  
+**README:** [Lab Test-3 README](./Lab%20Test-3%20Experiment/README.md)
+
+This experiment focuses on API-oriented backend development and CRUD-style resource operations.
+
+### CRUD Reference
+
+| Operation | HTTP Method | Purpose |
 |---|---|---|
-| Create | POST | Create data |
-| Read | GET | Retrieve data |
-| Update | PUT/PATCH | Modify data |
-| Delete | DELETE | Remove data |
-## API Endpoints
-`[PLACEHOLDER: Replace with actual routes.]`
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `[PLACEHOLDER]` | Retrieve resource(s) |
-| POST | `[PLACEHOLDER]` | Create resource |
-| PUT/PATCH | `[PLACEHOLDER]` | Update resource |
-| DELETE | `[PLACEHOLDER]` | Delete resource |
-## API Flow
-```text
-Client -> HTTP Request -> Express Route
-       -> Application Logic -> Data Source
-       -> JSON Response -> Client
-```
-## Project Structure
-```text
-Lab Test-3 Experiment/
-├── package.json
-├── [PLACEHOLDER: entry file]
-├── [PLACEHOLDER: routes]
-├── [PLACEHOLDER: models/controllers]
-└── [PLACEHOLDER: other files]
-```
-## How to Run
-```bash
-cd "Lab Test-3 Experiment"
-npm install
-npm start
-```
-Open `http://localhost:[PLACEHOLDER: port]`.
-## Testing
-Test GET, POST, UPDATE, DELETE, invalid input, and missing-resource cases using `[PLACEHOLDER: testing tool]`.
-## Learning Outcomes
-- Understand REST architecture.
-- Design API endpoints.
-- Use HTTP methods correctly.
-- Work with JSON.
-- Implement and test CRUD operations.
-## Conclusion
-`[PLACEHOLDER: Lab Test-3 conclusion.]`
+| Create | `POST` | Create a resource |
+| Read | `GET` | Retrieve resource data |
+| Update | `PUT` / `PATCH` | Modify a resource |
+| Delete | `DELETE` | Remove a resource |
+
+### Key Areas
+
+- REST concepts
+- JSON
+- API routes
+- HTTP methods
+- CRUD
+- Request/response handling
+
 ---
-# 5. Lab Test-4 Experiment
-**Source:** [Open Lab Test-4](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-4%20Experiment)
-## Aim
-`[PLACEHOLDER: Exact Lab Test-4 aim.]`
-## Concepts
-If applicable:
+
+# 5️⃣ Lab Test-4 Experiment
+
+**Project:** [Open Lab Test-4](./Lab%20Test-4%20Experiment/)  
+**README:** [Lab Test-4 README](./Lab%20Test-4%20Experiment/README.md)
+
+This experiment moves into persistent data and database-backed backend applications.
+
+### Key Areas
+
 - Database connectivity
 - Persistent storage
-- MongoDB
-- Mongoose
-- Schemas and models
+- Schemas and data models
+- Backend/database integration
 - CRUD operations
-- API/database integration
-## MongoDB and Mongoose
-MongoDB is a document-oriented database that stores JSON-like documents in collections. Mongoose can provide schemas, models, validation, and convenient database operations for Node.js applications.
-```javascript
-const mongoose = require("mongoose");
-mongoose.connect("mongodb://127.0.0.1:27017/[DATABASE]")
-  .then(() => console.log("Connected"))
-  .catch(console.error);
-```
-## Architecture
-```text
-Client -> Express API -> Routes/Logic
-       -> Mongoose Model -> MongoDB
-       -> Response -> Client
-```
-## Database Schema
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `[PLACEHOLDER]` | `[TYPE]` | `[YES/NO]` | `[DESCRIPTION]` |
-| `[PLACEHOLDER]` | `[TYPE]` | `[YES/NO]` | `[DESCRIPTION]` |
-## How to Run
-```bash
-cd "Lab Test-4 Experiment"
-npm install
-npm start
-```
-Ensure the required database service is running.
-## Expected Output
-`[PLACEHOLDER: Describe API/UI/database output.]`
-## Learning Outcomes
-- Connect a backend to a database.
-- Understand persistent storage.
-- Define schemas and models.
-- Perform database CRUD operations.
-- Integrate database operations with API routes.
-## Conclusion
-`[PLACEHOLDER: Lab Test-4 conclusion.]`
----
-# 6. Lab Test-5 Experiment
 
-## Topic
-Relational vs Document Databases
-**Source:** [Open Lab Test-5](https://github.com/IamBolt7/Backend.Develepment.18722/tree/main/LABS/Lab%20Test-5%20Experiment)
-## Aim
-To understand and compare relational and document-oriented databases, including their structures, schemas, relationships, queries, and common use cases.
-## Relational Databases
-Relational databases organize information into **tables** containing rows and columns. Relationships can be represented with primary keys, foreign keys, and joins.
-Examples include MySQL, PostgreSQL, SQLite, Oracle Database, and Microsoft SQL Server.
-```sql
-SELECT * FROM users;
-```
-## Document Databases
-Document databases store information as documents. MongoDB stores JSON-like BSON documents inside collections.
-```json
-{
-  "name": "Example User",
-  "email": "example@example.com",
-  "skills": ["JavaScript", "Node.js"]
-}
-```
-```javascript
-db.users.find({})
-```
-## Comparison
-| Feature | Relational | Document |
+---
+
+# 6️⃣ Lab Test-5 Experiment
+
+**Project:** [Open Lab Test-5](./Lab%20Test-5%20Experiment/)  
+**README:** [Lab Test-5 README](./Lab%20Test-5%20Experiment/README.md)
+
+## Relational vs Document Databases
+
+This experiment compares relational and document-oriented database models.
+
+| Concept | Relational Database | Document Database |
 |---|---|---|
 | Structure | Tables | Collections |
 | Record | Row | Document |
 | Attribute | Column | Field |
 | Schema | Usually predefined | Often flexible |
-| Relationships | Keys/joins | Embedding/references |
-| Query style | SQL | Document query API |
-| Example | MySQL/PostgreSQL | MongoDB |
-Neither model is universally better. Selection depends on data relationships, consistency requirements, query patterns, scale, and operational needs.
-## Implementation
-**Relational:** `[PLACEHOLDER: Add actual tables and SQL queries.]`  
-**Document:** `[PLACEHOLDER: Add actual collections and MongoDB operations.]`
-## Learning Outcomes
-- Understand relational and document databases.
-- Compare tables/rows with collections/documents.
-- Understand schemas and relationships.
-- Understand joins, embedding, and references.
-- Compare SQL and document queries.
-- Choose a data model based on application requirements.
-## Conclusion
-This experiment demonstrates the structural and conceptual differences between relational and document-oriented databases and provides a foundation for selecting an appropriate model.
+| Relationships | Keys and joins | Embedding/references |
+| Example | PostgreSQL / MySQL | MongoDB |
+
+### Key Areas
+
+- SQL vs NoSQL
+- Tables and collections
+- Rows and documents
+- Primary/foreign keys
+- Joins
+- Embedded documents
+- References
+- Schema design
+- Data-model selection
+
 ---
-# Backend Development Reference
-## HTTP Methods
-| Method | Purpose |
+
+# 7️⃣ Lab Test-6 Experiment
+
+**Project:** [Open Lab Test-6](./Lab%20Test-6%20Experiment/)  
+**README:** [Lab Test-6 README](./Lab%20Test-6%20Experiment/README.md)
+
+## Express Middleware
+
+Lab Test-6 demonstrates the Express middleware pipeline.
+
+### Implemented Concepts
+
+- Custom request logger
+- `express.json()`
+- `express.urlencoded()`
+- Static file middleware
+- Route-level authentication guard
+- Public and protected routes
+- 401 responses
+- 404 middleware
+- Centralized error handling
+- cURL API testing
+
+### Middleware Flow
+
+```text
+Request
+  │
+  ▼
+Logger
+  │
+  ▼
+Body Parser
+  │
+  ▼
+Static Middleware
+  │
+  ▼
+Route
+  │
+  ├── Public
+  │
+  └── Protected → Auth Guard
+  │
+  ▼
+Response
+
+No route → 404
+Error    → Error Handler
+```
+
+---
+
+# 8️⃣ Lab Test-7 Experiment
+
+**Project:** [Open Lab Test-7](./Lab%20Test-7%20Experiment/)  
+**README:** [Lab Test-7 README](./Lab%20Test-7%20Experiment/README.md)
+
+## EJS Templating
+
+This experiment demonstrates dynamic server-side HTML generation using Express and EJS.
+
+### Key Areas
+
+- EJS templates
+- Express views
+- Dynamic data rendering
+- Forms
+- Input validation
+- Server-side HTML generation
+- Node.js/Express project structure
+
+---
+
+# 9️⃣ Lab Test-8 Experiment
+
+**Project:** [Open Lab Test-8](./Lab%20Test-8%20Experiment/)  
+**README:** [Lab Test-8 README](./Lab%20Test-8%20Experiment/README.md)
+
+## REST API & JWT Authentication
+
+This experiment combines REST API concepts with token-based authentication.
+
+### Key Areas
+
+- RESTful routes
+- CRUD operations
+- JSON requests/responses
+- JWT authentication
+- Protected endpoints
+- Bearer tokens
+- Environment configuration
+- API testing
+
+### Authentication Flow
+
+```text
+Credentials
+    │
+    ▼
+Login
+    │
+    ▼
+JWT Issued
+    │
+    ▼
+Bearer Token
+    │
+    ▼
+Protected API
+```
+
+---
+
+# 🔟 Lab Test-9 Experiment
+
+**Project:** [Open Lab Test-9](./Lab%20Test-9%20Experiment/)  
+**README:** [Lab Test-9 README](./Lab%20Test-9%20Experiment/README.md)
+
+## Security, Rate Limiting & Deployment
+
+This experiment focuses on strengthening and preparing an Express backend for deployment.
+
+### Key Areas
+
+- Helmet
+- CORS
+- Rate limiting
+- Environment variables
+- Backend security
+- Deployment configuration
+- Docker concepts
+- Production-oriented configuration
+
+---
+
+# 1️⃣1️⃣ Lab Test-10 Experiment
+
+**Project:** [Open Lab Test-10](./Lab%20Test-10%20Experiment/)  
+**README:** [Lab Test-10 README](./Lab%20Test-10%20Experiment/README.md)
+
+## Socket.IO Real-Time Chat
+
+This experiment introduces real-time, event-driven communication using Socket.IO.
+
+### Key Areas
+
+- Socket.IO
+- WebSockets / real-time communication concepts
+- Client-server events
+- Chat messages
+- User connections
+- Input normalization
+- Express + Socket.IO integration
+
+### Real-Time Flow
+
+```text
+Client A ──┐
+           │
+           ▼
+      Socket.IO Server
+           │
+           ├──── Broadcast ────► Client A
+           ├───────────────────► Client B
+           └───────────────────► Client C
+```
+
+---
+
+# 🛠️ Technology Stack
+
+The laboratory work collectively uses technologies including:
+
+| Area | Technologies / Concepts |
 |---|---|
-| GET | Retrieve data |
-| POST | Create data |
-| PUT | Replace/update data |
-| PATCH | Partially update data |
-| DELETE | Remove data |
-## Typical Workflow
-```text
-User -> Browser/API Client -> HTTP Request
-     -> Node.js/Express -> Routes/Logic
-     -> Database -> HTTP Response -> Client
-```
-## CRUD
-```text
-Create -> POST
-Read   -> GET
-Update -> PUT / PATCH
-Delete -> DELETE
-```
+| **Frontend** | HTML5, CSS3, JavaScript |
+| **JavaScript Backend** | Node.js, Express.js |
+| **Python Backend** | Python, Django |
+| **Templating** | EJS, Django Templates |
+| **APIs** | REST, JSON, CRUD |
+| **Authentication** | JWT, Bearer tokens, route guards |
+| **Databases** | SQLite, MongoDB/document concepts, relational database concepts |
+| **Security** | Helmet, CORS, rate limiting, CSRF |
+| **Real-Time** | Socket.IO |
+| **Deployment** | Environment configuration, Docker concepts |
+| **Tools** | npm, pip, Git, GitHub, VS Code, Terminal, cURL |
+
 ---
-# Git and GitHub
-## Add an Individual Experiment
-```bash
-git add "LABS/Lab Test-2 Experiment"
-git commit -m "Add Lab Test-2 Experiment"
-git push origin main
+
+# 🌐 Overall Backend Flow
+
+```text
+                 User / Client
+                       │
+                       ▼
+                HTTP Request
+                       │
+                       ▼
+             Backend Application
+             ┌─────────┴─────────┐
+             │                   │
+         Middleware            Routes
+             │                   │
+             └─────────┬─────────┘
+                       │
+                       ▼
+                Application Logic
+                       │
+             ┌─────────┴─────────┐
+             │                   │
+         Database             Services
+             │                   │
+             └─────────┬─────────┘
+                       │
+                       ▼
+              HTML / JSON Response
+                       │
+                       ▼
+                     Client
 ```
-## Update This README
+
+Real-time projects additionally use persistent socket connections and event-based communication.
+
+---
+
+# 🎯 Overall Learning Outcomes
+
+Through the work in this directory, I have practised how to:
+
+1. Understand client-server architecture.
+2. Build and run backend applications.
+3. Work with Node.js and Express.js.
+4. Build applications with Django.
+5. Understand HTTP requests and responses.
+6. Configure routes and middleware.
+7. Build REST APIs.
+8. Work with JSON.
+9. Implement CRUD operations.
+10. Connect applications to persistent data.
+11. Compare relational and document database models.
+12. Use server-side templates such as EJS and Django templates.
+13. Implement route protection and JWT authentication.
+14. Apply backend security controls.
+15. Understand deployment-oriented configuration.
+16. Build real-time applications using Socket.IO.
+17. Test and debug backend applications.
+18. Manage dependencies using npm and pip.
+19. Use Git and GitHub for version control.
+20. Document projects with Markdown.
+
+---
+
+# ▶️ Running Experiments
+
+Because the experiments use different technology stacks, use each project's linked README for its exact setup.
+
+### Typical Node.js Project
+
 ```bash
-git add "LABS/README.md"
-git commit -m "Update LABS README"
-git push origin main
+npm install
+npm start
 ```
-## Recommended `.gitignore`
+
+or:
+
+```bash
+npm run dev
+```
+
+### Typical Django Project
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+> Always use the experiment-specific README when its commands differ from these general examples.
+
+---
+
+# 📂 Current LABS Structure
+
+```text
+LABS/
+│
+├── django_todo_app/
+│   └── README.md
+│
+├── EXP-1/
+│   └── README.md
+│
+├── Lab Test-1 Experiment/
+│   └── README.md
+│
+├── Lab Test-2 Experiment/
+│   └── README.md
+│
+├── Lab Test-3 Experiment/
+│   └── README.md
+│
+├── Lab Test-4 Experiment/
+│   └── README.md
+│
+├── Lab Test-5 Experiment/
+│   └── README.md
+│
+├── Lab Test-6 Experiment/
+│   └── README.md
+│
+├── Lab Test-7 Experiment/
+│   └── README.md
+│
+├── Lab Test-8 Experiment/
+│   └── README.md
+│
+├── Lab Test-9 Experiment/
+│   └── README.md
+│
+├── Lab Test-10 Experiment/
+│   └── README.md
+│
+└── README.md
+```
+
+---
+
+# 🔗 Documentation Directory
+
+Use these links to jump directly to the detailed documentation:
+
+- 🐍 [Django To-Do App README](./django_todo_app/README.md)
+- 🧪 [EXP-1 README](./EXP-1/README.md)
+- 🧪 [Lab Test-1 README](./Lab%20Test-1%20Experiment/README.md)
+- 🧪 [Lab Test-2 README](./Lab%20Test-2%20Experiment/README.md)
+- 🧪 [Lab Test-3 README](./Lab%20Test-3%20Experiment/README.md)
+- 🧪 [Lab Test-4 README](./Lab%20Test-4%20Experiment/README.md)
+- 🗄️ [Lab Test-5 README](./Lab%20Test-5%20Experiment/README.md)
+- 🔄 [Lab Test-6 README — Express Middleware](./Lab%20Test-6%20Experiment/README.md)
+- 🖼️ [Lab Test-7 README — EJS Templating](./Lab%20Test-7%20Experiment/README.md)
+- 🔐 [Lab Test-8 README — REST API & JWT](./Lab%20Test-8%20Experiment/README.md)
+- 🛡️ [Lab Test-9 README — Security & Deployment](./Lab%20Test-9%20Experiment/README.md)
+- 💬 [Lab Test-10 README — Socket.IO Chat](./Lab%20Test-10%20Experiment/README.md)
+
+---
+
+# 🧹 Repository Hygiene
+
+Generated dependencies and local development files should generally stay out of Git.
+
+Recommended exclusions include:
+
 ```gitignore
+# Node.js
 node_modules/
+
+# Python / Django
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+db.sqlite3
+
+# Environment variables
 .env
 .env.local
 .env.*.local
+
+# OS / Editors
 .DS_Store
+.vscode/
+.idea/
+
+# Build / Logs
 *.log
 coverage/
 dist/
 build/
-.vscode/
-.idea/
 ```
+
 ---
-# Troubleshooting
-### Missing dependencies
+
+# 🔧 Git & GitHub
+
+To update the complete `LABS` directory:
+
 ```bash
-npm install
-```
-### MongoDB connection error
-Check that MongoDB is running, the connection URI is correct, credentials are valid, and required environment variables are loaded.
-### Git repository error
-Run `git status` from the root of the cloned repository.
-### Changes not appearing on GitHub
-```bash
+git add -A LABS
 git status
-git log --oneline -5
-git remote -v
+git commit -m "Update backend laboratory experiments and documentation"
+git pull --rebase origin main
 git push origin main
 ```
----
-# Overall Learning Outcomes
-Students should be able to:
-1. Understand web and backend application architecture.
-2. Understand client-server communication.
-3. Develop server-side applications where applicable.
-4. Understand HTTP, routing, and middleware.
-5. Design and test REST APIs.
-6. Work with JSON and CRUD operations.
-7. Connect applications to databases.
-8. Understand persistent storage.
-9. Compare relational and document-oriented databases.
-10. Test and debug backend applications.
-11. Manage dependencies using npm.
-12. Use Git and GitHub for version control and documentation.
----
-# Repository Structure
-```text
-Backend.Develepment.18722/
-├── Application/
-├── LABS/
-│   ├── EXP-1/
-│   ├── Lab Test-1 Experiment/
-│   ├── Lab Test-2 Experiment/
-│   ├── Lab Test-3 Experiment/
-│   ├── Lab Test-4 Experiment/
-│   ├── Lab Test-5 Experiment/
-│   └── README.md
-├── Theory/
-├── .gitignore
-└── README.md
+
+To update only this README:
+
+```bash
+git add "LABS/README.md"
+git commit -m "Update LABS documentation"
+git push origin main
 ```
-# Final Checklist
-- [ ] Replace remaining placeholders.
-- [ ] Confirm exact experiment titles and aims.
-- [ ] Confirm technologies and project structures.
-- [ ] Add actual API endpoints and server ports.
-- [ ] Add database/schema details.
-- [ ] Confirm run commands and expected outputs.
-- [ ] Verify every GitHub experiment link.
+
 ---
-# Conclusion
-The **Backend Development Laboratory** provides practical experience with web and backend development, progressing through application structure, server-side programming, HTTP communication, REST APIs, CRUD operations, persistent databases, and database modelling.
-The direct GitHub links above provide quick access to every experiment, while this README summarizes their important concepts, execution process, and learning outcomes.
+
+# 🏠 Repository Navigation
+
+- [Main Repository README](../README.md)
+- [Applications](../Applications/)
+- [Theory](../Theory/)
+- [LABS](./)
+
+---
+
+## 👨‍💻 Author
+
+**Arnav Daftuar**
+
+Backend Development — Laboratory experiments and practical implementations.
