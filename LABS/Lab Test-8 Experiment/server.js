@@ -1,6 +1,4 @@
-// Exp07+08 – RESTful API with JWT Authentication
-// Exp 07: CRUD REST API for Books resource
-// Exp 08: JWT-based login & protected routes
+// Lab Test-8 – RESTful Books API with JWT Authentication
 
 const express = require('express');
 const jwt = require('jsonwebtoken');
@@ -10,7 +8,7 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 
-const PORT = 3007;
+const PORT = Number(process.env.PORT) || 3007;
 const SECRET = process.env.JWT_SECRET || 'mySuperSecretKey2026';
 
 // ─── In-Memory Data ───────────────────────────────────────────────────────────
@@ -102,7 +100,7 @@ app.delete('/api/books/:id', protect, (req, res) => {
 // ─── API Index ────────────────────────────────────────────────────────────────
 app.get('/', (req, res) => {
   res.json({
-    message: 'Exp07+08 – RESTful Books API with JWT Auth',
+    message: 'Lab Test-8 – RESTful Books API with JWT Authentication',
     auth: { login: 'POST /auth/login', me: 'GET /auth/me (protected)' },
     books: {
       list:   'GET  /api/books?genre=Tech',
@@ -114,4 +112,4 @@ app.get('/', (req, res) => {
   });
 });
 
-app.listen(PORT, () => console.log(`Exp07+08 API running at http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Lab Test-8 API running at http://localhost:${PORT}`));

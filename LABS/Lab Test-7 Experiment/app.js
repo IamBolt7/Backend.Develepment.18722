@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 3005;
+const PORT = Number(process.env.PORT) || 3005;
 
 // Set EJS as template engine
 app.set('view engine', 'ejs');
@@ -21,7 +21,7 @@ const students = [
 ];
 
 // Routes
-app.get('/', (req, res) => res.render('index', { title: 'Exp05 – EJS Templating' }));
+app.get('/', (req, res) => res.render('index', { title: 'Lab Test-7 – EJS Templating' }));
 
 app.get('/students', (req, res) => {
   res.render('students', { title: 'Student List', students });
@@ -37,11 +37,15 @@ app.get('/form', (req, res) => res.render('form', { title: 'Add Student', messag
 
 app.post('/form', (req, res) => {
   const { name, branch, marks } = req.body;
+  const numericMarks = Number(marks);
+  if (!name?.trim() || !branch?.trim() || !Number.isFinite(numericMarks) || numericMarks < 0 || numericMarks > 100) {
+    return res.status(400).render('form', { title: 'Add Student', message: 'Enter a valid name, branch, and marks between 0 and 100.' });
+  }
   const grade = marks >= 90 ? 'A+' : marks >= 80 ? 'A' : marks >= 70 ? 'B' : 'C';
-  students.push({ id: students.length + 1, name, branch, marks: parseInt(marks), grade });
+  students.push({ id: students.length + 1, name: name.trim(), branch: branch.trim(), marks: numericMarks, grade });
   res.render('form', { title: 'Add Student', message: `Student "${name}" added successfully!` });
 });
 
 app.use((req, res) => res.status(404).render('404', { title: '404 Not Found' }));
 
-app.listen(PORT, () => console.log(`Exp05-Templating running at http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Lab Test-7 EJS app running at http://localhost:${PORT}`));

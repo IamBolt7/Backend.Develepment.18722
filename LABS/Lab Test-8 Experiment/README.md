@@ -1,20 +1,20 @@
-# Exp 07 & 08 – RESTful API + JWT Authentication (Combined)
+# 🔐 Lab Test-8 Experiment — RESTful API + JWT Authentication
 
-> **Note:** These two experiments are implemented together in one Express server.
+> A combined **RESTful Books CRUD API** and **JWT authentication** exercise built with Express.
 
 ## Summary
-- **Exp 07:** Builds a full RESTful CRUD API for a `Books` resource with filtering by query string.
-- **Exp 08:** Adds JWT (JSON Web Token) based login and protected routes using Bearer token authentication.
+- Builds a RESTful CRUD API for a `Books` resource with query-string filtering.
+- Adds JWT login and Bearer-token protection for write operations and user identity.
 
 ## API Routes
 
-### Auth (Exp 08)
+### 🔑 Authentication
 | Method | Route | Auth | Description |
 |--------|-------|------|-------------|
 | POST | `/auth/login` | Public | Login with username & password, receive JWT token |
 | GET | `/auth/me` | 🔒 Protected | View logged-in user info from token |
 
-### Books CRUD (Exp 07)
+### 📚 Books CRUD
 | Method | Route | Auth | Description |
 |--------|-------|------|-------------|
 | GET | `/api/books` | Public | List all books (supports `?genre=Tech&author=Martin`) |
@@ -25,7 +25,7 @@
 
 ## Files
 ```
-Exp07-REST-API-and-Auth/
+Lab Test-8 Experiment/
 ├── server.js        ← Combined REST API + JWT Auth
 ├── package.json
 └── .env.example     ← Copy to .env before running
@@ -33,7 +33,7 @@ Exp07-REST-API-and-Auth/
 
 ## How to Run
 ```bash
-cd Exp07-REST-API-and-Auth
+cd "Lab Test-8 Experiment"
 cp .env.example .env
 npm install
 npm run dev
@@ -87,3 +87,16 @@ curl -X DELETE http://localhost:3007/api/books/1 \
   ]
 }
 ```
+
+
+## 🎯 Learning Outcomes
+- Design RESTful CRUD endpoints
+- Filter resources with query parameters
+- Hash and verify passwords with bcrypt
+- Issue and verify JWT access tokens
+- Protect routes with Bearer authentication
+- Keep signing secrets in environment variables
+
+## 👨‍💻 Author
+**Arnav Daftuar**  
+Backend Development — Lab Test-8

@@ -1,4 +1,4 @@
-# Exp 15 – Real-time Chat with Socket.IO
+# 💬 Lab Test-10 Experiment — Real-time Chat with Socket.IO
 
 ## Summary
 A fully functional **real-time group chat application** using `socket.io` and Express. Demonstrates WebSocket-based bidirectional communication, user sessions, online user list, system notifications (join/leave), and a styled dark-themed chat UI.
@@ -15,16 +15,17 @@ A fully functional **real-time group chat application** using `socket.io` and Ex
 
 ## Files
 ```
-Exp15-Realtime-Chat-SocketIO/
+Lab Test-10 Experiment/
 ├── server.js           ← Socket.IO + Express server
 ├── package.json
+├── .gitignore
 └── public/
     └── index.html      ← Full chat UI (HTML + CSS + Socket.IO client)
 ```
 
 ## How to Run
 ```bash
-cd Exp15-Realtime-Chat-SocketIO
+cd "Lab Test-10 Experiment"
 npm install
 npm run dev
 ```
@@ -39,3 +40,22 @@ Client A                Server               Client B
    |                       |──── message ─────────►|
    |◄──────────────────────|──── message           |
 ```
+
+
+## ✨ Features
+- Real-time bidirectional messaging
+- Join/leave system notifications
+- Live online-user list
+- Username normalization and message length limits
+- Responsive browser chat interface
+
+## 🎯 Learning Outcomes
+- Create an HTTP server shared with Socket.IO
+- Handle socket connection and disconnect events
+- Broadcast events to all clients or everyone except the sender
+- Track connected users by `socket.id`
+- Build a real-time UI without page refreshes
+
+## 👨‍💻 Author
+**Arnav Daftuar**  
+Backend Development — Lab Test-10

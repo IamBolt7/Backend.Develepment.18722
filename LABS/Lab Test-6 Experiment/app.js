@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 3004;
+const PORT = Number(process.env.PORT) || 3004;
 
 // ─── 1. Custom Logger Middleware ───────────────────────────────────────────────
 app.use((req, res, next) => {
@@ -29,7 +29,7 @@ function authGuard(req, res, next) {
 // ─── Routes ───────────────────────────────────────────────────────────────────
 app.get('/', (req, res) => {
   res.json({
-    message: 'Exp04 – Express Middleware Demo',
+    message: 'Lab Test-6 – Express Middleware Demo',
     routes: ['GET /', 'GET /public-data', 'GET /private-data', 'POST /echo']
   });
 });
@@ -58,7 +58,7 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Exp04-Middleware server running at http://localhost:${PORT}`);
+  console.log(`Lab Test-6 server running at http://localhost:${PORT}`);
   console.log('Try:');
   console.log('  GET  http://localhost:3004/public-data');
   console.log('  GET  http://localhost:3004/private-data  (needs header x-auth-token: secret123)');

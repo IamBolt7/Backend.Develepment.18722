@@ -1,28 +1,29 @@
-# Exp 09, 10 & 11 – Environment Config, Security, Rate Limiting & Deployment (Combined)
+# 🛡️ Lab Test-9 Experiment — Security, Rate Limiting & Deployment
 
-> These three experiments are implemented together as one production-ready Express server.
+> An Express server demonstrating environment-based configuration, HTTP security headers, CORS, rate limiting, health checks, and Docker packaging.
 
 ## Summary
 
 | Exp | Topic | Implementation |
 |-----|-------|----------------|
-| **09** | Environment & Security | `dotenv`, `helmet` (11 security headers), `cors` with allowlist |
-| **10** | Rate Limiting | `express-rate-limit` – global (100/15min) + strict auth (5/15min) |
-| **11** | Deployment | `Dockerfile`, `docker-compose.yml`, `/health` endpoint |
+| **Configuration** | Environment & Security | `dotenv`, `helmet` (11 security headers), `cors` with allowlist |
+| **Protection** | Rate Limiting | `express-rate-limit` – global (100/15min) + strict auth (5/15min) |
+| **Deployment** | Deployment | `Dockerfile`, `docker-compose.yml`, `/health` endpoint |
 
 ## Files
 ```
-Exp09-11-Security-RateLimit-Deploy/
+Lab Test-9 Experiment/
 ├── server.js           ← Main Express server (Exp09+10+11 combined)
 ├── package.json
 ├── .env.example        ← Copy to .env before running
 ├── Dockerfile          ← Docker image definition
-└── docker-compose.yml  ← Spins up API + MongoDB containers
+├── docker-compose.yml  ← Spins up API + MongoDB containers
+└── .gitignore          ← Excludes local secrets and dependencies
 ```
 
 ## How to Run (Local)
 ```bash
-cd Exp09-11-Security-RateLimit-Deploy
+cd "Lab Test-9 Experiment"
 cp .env.example .env
 npm install
 npm run dev
@@ -72,3 +73,21 @@ X-Content-Type-Options: nosniff
 Referrer-Policy: no-referrer
 ...
 ```
+
+
+## 🔒 Security Notes
+- Keep `.env` out of Git; commit only `.env.example`.
+- Helmet applies defensive HTTP headers.
+- CORS is restricted to configured origins.
+- Global and login-specific rate limits reduce abusive request volume.
+
+## 🎯 Learning Outcomes
+- Configure applications with environment variables
+- Apply Helmet and CORS middleware
+- Implement global and route-specific rate limiting
+- Expose a deployment health endpoint
+- Containerize a Node.js service with Docker
+
+## 👨‍💻 Author
+**Arnav Daftuar**  
+Backend Development — Lab Test-9

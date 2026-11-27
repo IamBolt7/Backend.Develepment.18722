@@ -21,7 +21,8 @@ Demonstrates the full Express middleware pipeline: **custom logger**, **body par
 
 ## 📂 Project Files
 - [`app.js`](app.js) – All middleware + routes in one file
-- [`package.json`](package.json) – Dependencies
+- [`package.json`](package.json) – Dependencies and npm scripts
+- [`.gitignore`](.gitignore) – Excludes dependencies, environment files and OS artifacts
 
 ## ⚙️ How to Run
 ```bash
@@ -29,7 +30,7 @@ cd "Lab Test-6 Experiment"
 npm install
 npm run dev
 ```
-Server starts on **http://localhost:3004**
+Server starts on **http://localhost:3004** by default. Set `PORT` to override it.
 
 ## 🧪 Test the Routes
 ```bash

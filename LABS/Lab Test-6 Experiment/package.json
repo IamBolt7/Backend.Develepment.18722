@@ -1,7 +1,7 @@
 {
-  "name": "exp04-middleware",
+  "name": "lab-test-6-express-middleware",
   "version": "1.0.0",
-  "description": "Exp04 – Express Middleware Demo (logger, auth-guard, body-parser, static, error-handler)",
+  "description": "Lab Test-6 \u2013 Express middleware pipeline: logging, parsing, static files, auth guard, 404 and error handling",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

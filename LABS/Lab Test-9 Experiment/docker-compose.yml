@@ -9,7 +9,6 @@ services:
       - NODE_ENV=production
       - PORT=3009
       - DB_URI=mongodb://mongo:27017/lab
-      - JWT_SECRET=mySuperSecretKey2026
       - ALLOWED_ORIGINS=http://localhost:3000
     depends_on:
       - mongo

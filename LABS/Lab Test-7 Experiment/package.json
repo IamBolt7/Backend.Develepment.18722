@@ -1,9 +1,17 @@
 {
-  "name": "exp05-ejs-templating",
+  "name": "lab-test-7-ejs-templating",
   "version": "1.0.0",
-  "description": "Exp05 – EJS Templating Engine with Express",
+  "description": "Lab Test-7 \u2013 Server-side rendering with Express and EJS",
   "main": "app.js",
-  "scripts": { "start": "node app.js", "dev": "nodemon app.js" },
-  "dependencies": { "ejs": "^3.1.9", "express": "^4.18.2" },
-  "devDependencies": { "nodemon": "^3.0.1" }
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }

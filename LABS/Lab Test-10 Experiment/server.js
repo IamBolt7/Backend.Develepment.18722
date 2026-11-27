@@ -1,4 +1,4 @@
-// Exp15 – Advanced Feature: Real-time Chat using Socket.IO
+// Lab Test-10 – Real-time Chat using Socket.IO
 const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
@@ -7,7 +7,7 @@ const path = require('path');
 const app    = express();
 const server = http.createServer(app);
 const io     = new Server(server);
-const PORT   = 3015;
+const PORT   = Number(process.env.PORT) || 3015;
 
 // Track connected users
 const users = {};
@@ -23,16 +23,19 @@ io.on('connection', (socket) => {
 
   // User joins with a username
   socket.on('join', (username) => {
-    users[socket.id] = username;
-    socket.broadcast.emit('system', `${username} joined the chat`);
+    const cleanName = String(username || '').trim().slice(0, 30) || 'Anonymous';
+    users[socket.id] = cleanName;
+    socket.broadcast.emit('system', `${cleanName} joined the chat`);
     io.emit('userList', Object.values(users));
-    console.log(`User "${username}" joined`);
+    console.log(`User "${cleanName}" joined`);
   });
 
   // User sends a message
   socket.on('message', (msg) => {
     const username = users[socket.id] || 'Anonymous';
-    const payload = { username, message: msg, time: new Date().toLocaleTimeString() };
+    const message = String(msg || '').trim().slice(0, 500);
+    if (!message) return;
+    const payload = { username, message, time: new Date().toLocaleTimeString() };
     io.emit('message', payload);  // broadcast to ALL clients
     console.log(`[${payload.time}] ${username}: ${msg}`);
   });
@@ -50,6 +53,6 @@ io.on('connection', (socket) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Exp15-Chat running at http://localhost:${PORT}`);
+  console.log(`Lab Test-10 chat running at http://localhost:${PORT}`);
   console.log('Open two browser tabs to test real-time messaging!');
 });

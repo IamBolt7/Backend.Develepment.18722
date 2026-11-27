@@ -1,12 +1,17 @@
 {
-  "name": "exp15-realtime-chat-socketio",
+  "name": "lab-test-10-socketio-chat",
   "version": "1.0.0",
-  "description": "Exp15 – Real-time chat application using Socket.IO and Express",
+  "description": "Lab Test-10 \u2013 Real-time group chat with Express and Socket.IO",
   "main": "server.js",
-  "scripts": { "start": "node server.js", "dev": "nodemon server.js" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
   "dependencies": {
     "express": "^4.18.2",
     "socket.io": "^4.6.1"
   },
-  "devDependencies": { "nodemon": "^3.0.1" }
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }

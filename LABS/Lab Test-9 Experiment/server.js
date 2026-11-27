@@ -1,6 +1,4 @@
-// Exp09 – Environment Variables & Security (dotenv + helmet + cors)
-// Exp10 – Rate Limiting (express-rate-limit)
-// Exp11 – Deployment-ready server with all best practices combined
+// Lab Test-9 – Environment Configuration, Security, Rate Limiting & Deployment
 
 require('dotenv').config();
 const express = require('express');
@@ -61,7 +59,7 @@ app.get('/health', (req, res) => {
 // ─── Routes ───────────────────────────────────────────────────────────────────
 app.get('/', (req, res) => {
   res.json({
-    message: 'Exp 09+10+11 – Security, Rate Limiting & Deployment',
+    message: 'Lab Test-9 – Security, Rate Limiting & Deployment',
     features: {
       exp09: ['dotenv config', 'helmet security headers', 'CORS policy'],
       exp10: ['Global rate limiter: 100 req/15min', 'Auth limiter: 5 req/15min'],
@@ -91,7 +89,7 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Exp09+10+11 server running at http://localhost:${PORT}`);
+  console.log(`Lab Test-9 server running at http://localhost:${PORT}`);
   console.log(`  GET  http://localhost:${PORT}/health  → health check`);
   console.log(`  GET  http://localhost:${PORT}/headers → security headers`);
   console.log(`  POST http://localhost:${PORT}/auth/login → rate-limited login`);
