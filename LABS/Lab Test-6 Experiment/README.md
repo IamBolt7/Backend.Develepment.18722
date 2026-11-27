@@ -1,9 +1,14 @@
-# Exp 04 – Express Middleware
+# 🚀 Exp 04 — Express Middleware
 
-## Summary
+> A practical **Express.js middleware experiment** covering the complete request-processing pipeline — from logging and body parsing to authentication, 404 handling, and centralized error management.
+
+---
+
+
+## 📌 Overview
 Demonstrates the full Express middleware pipeline: **custom logger**, **body parser**, **static file serving**, **route-level auth guard**, **404 handler**, and **central error handler**.
 
-## Concepts Covered
+## 🧠 Concepts Covered
 | Middleware Type | Purpose |
 |---|---|
 | Logger | Logs method + URL + timestamp for every request |
@@ -14,11 +19,11 @@ Demonstrates the full Express middleware pipeline: **custom logger**, **body par
 | 404 Handler | Catches unmatched routes |
 | Error Handler | 4-param `(err,req,res,next)` catches all thrown errors |
 
-## Files
+## 📂 Project Files
 - [`app.js`](app.js) – All middleware + routes in one file
 - [`package.json`](package.json) – Dependencies
 
-## How to Run
+## ⚙️ How to Run
 ```bash
 cd Exp04-Middleware
 npm install
@@ -26,7 +31,7 @@ npm run dev
 ```
 Server starts on **http://localhost:3004**
 
-## Test the Routes
+## 🧪 Test the Routes
 ```bash
 # Public route (no token needed)
 curl http://localhost:3004/public-data
@@ -40,3 +45,109 @@ curl -H "x-auth-token: secret123" http://localhost:3004/private-data
 # POST echo
 curl -X POST http://localhost:3004/echo -H "Content-Type: application/json" -d "{\"name\":\"Satyam\"}"
 ```
+
+---
+
+## 🔄 Middleware Pipeline
+
+```text
+Client Request
+      │
+      ▼
+Custom Logger
+      │
+      ▼
+Body Parsers
+(JSON + URL Encoded)
+      │
+      ▼
+Static File Middleware
+      │
+      ▼
+Route Matching
+      │
+      ├── Public Route
+      │
+      └── Protected Route
+              │
+              ▼
+           Auth Guard
+              │
+              ▼
+         Route Handler
+              │
+              ▼
+        HTTP Response
+
+Unmatched Route → 404 Handler
+Application Error → Central Error Handler
+```
+
+## 🔐 Authentication Flow
+
+The protected route checks the `x-auth-token` request header before allowing access:
+
+```text
+/private-data
+      │
+      ▼
+Check x-auth-token
+      │
+ ┌────┴────┐
+ │         │
+Invalid   Valid
+ │         │
+ ▼         ▼
+401      next()
+           │
+           ▼
+      Private Route
+           │
+           ▼
+         200 OK
+```
+
+> The `secret123` token used in this experiment is suitable for demonstrating middleware behavior only. Production applications should use a proper authentication mechanism.
+
+## 🎯 Learning Outcomes
+
+After completing this experiment, you can demonstrate:
+
+- Custom Express middleware
+- Middleware execution order
+- The purpose of `next()`
+- JSON and URL-encoded body parsing
+- Static file serving
+- Route-level authentication
+- Public and protected endpoints
+- `401 Unauthorized` responses
+- `404 Not Found` handling
+- Centralized Express error handling
+- API testing using cURL
+
+## ✅ Experiment Checklist
+
+- [x] Custom request logger
+- [x] JSON body parser
+- [x] URL-encoded body parser
+- [x] Static file middleware
+- [x] Public route
+- [x] Protected route
+- [x] Authentication guard
+- [x] 404 handler
+- [x] Central error handler
+- [x] cURL route testing
+
+## 💡 Key Takeaway
+
+Express middleware forms a **request-processing pipeline**. Each middleware function can inspect the request, modify the request or response, terminate processing, or call `next()` to pass control to the next middleware.
+
+This experiment brings those pieces together in one compact application covering **logging, parsing, static files, route protection, not-found handling, and error management**.
+
+---
+
+## 👨‍💻 Author
+
+**Arnav Daftuar**
+
+Backend Development — Express Middleware Experiment
