@@ -1,25 +1,50 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>To-Do List</title>
-</head>
-<body>
-    <h1>My To-Do List</h1>
-    <a href="{% url 'add_task' %}">Add New Task</a>
-    <ul>
-        {% for task in tasks %}
-        <li>
-            {% if task.completed %}
-                <s>{{ task.title }}</s>
-            {% else %}
-                {{ task.title }}
-            {% endif %}
-            <a href="{% url 'toggle_task' task.id %}">Toggle</a>
-            <a href="{% url 'delete_task' task.id %}">Delete</a>
-        </li>
-        {% empty %}
-        <li>No tasks yet.</li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends "todo/base.html" %}
+{% block title %}Tasks · Django To-Do{% endblock %}
+{% block content %}
+<section class="stats" aria-label="Task statistics">
+    <div><strong>{{ total_count }}</strong><span>Total</span></div>
+    <div><strong>{{ pending_count }}</strong><span>Pending</span></div>
+    <div><strong>{{ completed_count }}</strong><span>Completed</span></div>
+</section>
+
+<section class="card">
+    <div class="section-heading">
+        <h2>Tasks</h2>
+        <span>{{ total_count }} item{{ total_count|pluralize }}</span>
+    </div>
+
+    {% if tasks %}
+        <ul class="task-list">
+            {% for task in tasks %}
+                <li class="task-item {% if task.completed %}is-complete{% endif %}">
+                    <div class="task-copy">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        <div>
+                            <p>{{ task.title }}</p>
+                            <small>Created {{ task.created_at|date:"M j, Y · g:i A" }}</small>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <form method="post" action="{% url 'toggle_task' task.id %}">
+                            {% csrf_token %}
+                            <button class="button secondary" type="submit">
+                                {% if task.completed %}Mark Pending{% else %}Complete{% endif %}
+                            </button>
+                        </form>
+                        <form method="post" action="{% url 'delete_task' task.id %}" onsubmit="return confirm('Delete this task?');">
+                            {% csrf_token %}
+                            <button class="button danger" type="submit">Delete</button>
+                        </form>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div class="empty-state">
+            <h3>No tasks yet</h3>
+            <p>Add your first task to get started.</p>
+            <a class="button primary" href="{% url 'add_task' %}">Create a Task</a>
+        </div>
+    {% endif %}
+</section>
+{% endblock %}
