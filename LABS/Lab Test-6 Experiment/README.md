@@ -1,4 +1,4 @@
-# 🚀 Exp 04 — Express Middleware
+# 🚀 Lab Test-6 Experiment — Express Middleware
 
 > A practical **Express.js middleware experiment** covering the complete request-processing pipeline — from logging and body parsing to authentication, 404 handling, and centralized error management.
 
@@ -25,7 +25,7 @@ Demonstrates the full Express middleware pipeline: **custom logger**, **body par
 
 ## ⚙️ How to Run
 ```bash
-cd Exp04-Middleware
+cd "Lab Test-6 Experiment"
 npm install
 npm run dev
 ```
@@ -150,4 +150,4 @@ This experiment brings those pieces together in one compact application covering
 
 **Arnav Daftuar**
 
-Backend Development — Express Middleware Experiment
+Backend Development — Lab Test-6 Express Middleware Experiment
