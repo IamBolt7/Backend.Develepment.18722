@@ -263,6 +263,20 @@
       kicker: 'Application',
       summary: 'Full Blog CMS built with Express, EJS, and MongoDB featuring validation, custom 404s, and demo fallback mode.',
       tags: ['Node.js', 'Express', 'EJS', 'MongoDB']
+    },
+    {
+      path: 'EXTERNAL:DockerAPI',
+      isExternal: true,
+      externalUrl: 'https://iambolt7.github.io/DockerAPI/',
+      repoUrl: 'https://github.com/IamBolt7/DockerAPI',
+      title: 'PBL Assignment — DockerAPI',
+      group: 'Applications',
+      category: 'apps',
+      badge: 'PBL',
+      featured: 'black',
+      kicker: 'PBL Project',
+      summary: 'Containerized FastAPI Student Management API with SQLAlchemy, JWT auth, Docker Compose, Nginx scaling, pytest automation, and CI/CD.',
+      tags: ['FastAPI', 'Docker', 'JWT', 'CI/CD']
     }
   ];
 
@@ -522,23 +536,25 @@
   function renderFeatured() {
     const featured = DOCS.filter((d) => d.featured);
     els.featuredTrack.innerHTML = featured
-      .map(
-        (d) => `
-      <article class="feature-card tone-${d.featured}" data-doc="${escapeHtml(d.path)}">
-        <div>
-          <div class="feature-kicker">${escapeHtml(d.kicker || d.group)}</div>
-          <h3 class="feature-title">${escapeHtml(d.title)}</h3>
-          <p class="feature-desc">${escapeHtml(d.summary)}</p>
-        </div>
-        <div class="feature-bottom">
-          <div class="feature-tags">
-            ${d.tags.slice(0, 3).map((t) => `<span class="feature-tag">${escapeHtml(t)}</span>`).join('')}
+      .map((d) => {
+        const inner = `
+          <div>
+            <div class="feature-kicker">${escapeHtml(d.kicker || d.group)}</div>
+            <h3 class="feature-title">${escapeHtml(d.title)}</h3>
+            <p class="feature-desc">${escapeHtml(d.summary)}</p>
           </div>
-          <span class="feature-cta">${d.demo ? 'Explore & Demo' : 'Read guide'} &rsaquo;</span>
-        </div>
-      </article>
-    `
-      )
+          <div class="feature-bottom">
+            <div class="feature-tags">
+              ${d.tags.slice(0, 3).map((t) => `<span class="feature-tag">${escapeHtml(t)}</span>`).join('')}
+            </div>
+            <span class="feature-cta">${d.isExternal ? 'Open Portal' : d.demo ? 'Explore & Demo' : 'Read guide'} &rsaquo;</span>
+          </div>
+        `;
+        if (d.isExternal) {
+          return `<a class="feature-card tone-${d.featured}" style="text-decoration:none;" href="${escapeHtml(d.externalUrl)}" target="_blank" rel="noopener noreferrer">${inner}</a>`;
+        }
+        return `<article class="feature-card tone-${d.featured}" data-doc="${escapeHtml(d.path)}">${inner}</article>`;
+      })
       .join('');
   }
 
@@ -597,13 +613,17 @@
                   <p>${escapeHtml(d.summary)}</p>
                 </div>
                 <div class="module-actions">
-                  <button class="link-btn" type="button" data-doc="${escapeHtml(d.path)}">Read Docs &rsaquo;</button>
+                  ${
+                    d.isExternal
+                      ? `<a class="link-btn" href="${escapeHtml(d.externalUrl)}" target="_blank" rel="noopener noreferrer">Hosted Portal &rsaquo;</a>`
+                      : `<button class="link-btn" type="button" data-doc="${escapeHtml(d.path)}">Read Docs &rsaquo;</button>`
+                  }
                   ${
                     d.demo
                       ? `<a class="link-btn" href="${encodeRepoPath(d.demo)}" target="_blank" rel="noopener noreferrer">Live Demo &rsaquo;</a>`
                       : ''
                   }
-                  <a class="link-btn muted" href="${GITHUB_BASE}/blob/main/${encodeRepoPath(d.path)}" target="_blank" rel="noopener noreferrer">GitHub &rsaquo;</a>
+                  <a class="link-btn muted" href="${d.isExternal ? escapeHtml(d.repoUrl) : `${GITHUB_BASE}/blob/main/${encodeRepoPath(d.path)}`}" target="_blank" rel="noopener noreferrer">GitHub &rsaquo;</a>
                 </div>
               </article>
             `
@@ -628,10 +648,10 @@
           <div>
             <div class="side-group-label">${escapeHtml(group)}</div>
             ${items
-              .map(
-                (d) => `
-              <button class="side-link ${d.path === state.currentDoc ? 'active' : ''}" type="button" data-doc="${escapeHtml(d.path)}">${escapeHtml(d.title)}</button>
-            `
+              .map((d) =>
+                d.isExternal
+                  ? `<a class="side-link" style="text-decoration:none;" href="${escapeHtml(d.externalUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(d.title)}</a>`
+                  : `<button class="side-link ${d.path === state.currentDoc ? 'active' : ''}" type="button" data-doc="${escapeHtml(d.path)}">${escapeHtml(d.title)}</button>`
               )
               .join('')}
           </div>
@@ -656,9 +676,10 @@
   }
 
   function renderPager(docPath) {
-    const idx = DOCS.findIndex((d) => d.path === docPath);
-    const prev = idx > 0 ? DOCS[idx - 1] : null;
-    const next = idx >= 0 && idx < DOCS.length - 1 ? DOCS[idx + 1] : null;
+    const localDocs = DOCS.filter((d) => !d.isExternal);
+    const idx = localDocs.findIndex((d) => d.path === docPath);
+    const prev = idx > 0 ? localDocs[idx - 1] : null;
+    const next = idx >= 0 && idx < localDocs.length - 1 ? localDocs[idx + 1] : null;
 
     els.pagerNav.innerHTML = `
       ${
@@ -750,8 +771,18 @@
 
     els.searchResults.innerHTML = matches.length
       ? matches
-          .map(
-            (d) => `
+          .map((d) =>
+            d.isExternal
+              ? `
+          <a class="search-result-item" style="text-decoration:none;" href="${escapeHtml(d.externalUrl)}" target="_blank" rel="noopener noreferrer">
+            <div>
+              <strong>${escapeHtml(d.title)}</strong>
+              <small>${escapeHtml(d.summary)}</small>
+            </div>
+            <span class="search-result-badge">${escapeHtml(d.badge)}</span>
+          </a>
+        `
+              : `
           <button class="search-result-item" type="button" data-doc="${escapeHtml(d.path)}">
             <div>
               <strong>${escapeHtml(d.title)}</strong>
