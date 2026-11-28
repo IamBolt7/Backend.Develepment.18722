@@ -1,38 +1,42 @@
-# 🛡️ Lab Test-9 Experiment — Security, Rate Limiting & Deployment
+# Lab Test-9 Experiment — Security, Rate Limiting, and Deployment
 
-> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-9%20Experiment/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
+> **Navigation:** [Main README](../../README.md) · [LABS README](../README.md) · [Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-9%20Experiment/README.md) · [GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
 
-> An Express server demonstrating environment-based configuration, HTTP security headers, CORS, rate limiting, health checks, and Docker packaging.
+An Express server demonstrating environment-based configuration, HTTP security headers, CORS, rate limiting, health checks, and Docker packaging.
 
 ## Summary
 
-| Exp | Topic | Implementation |
+| Area | Topic | Implementation |
 |-----|-------|----------------|
-| **Configuration** | Environment & Security | `dotenv`, `helmet` (11 security headers), `cors` with allowlist |
-| **Protection** | Rate Limiting | `express-rate-limit` – global (100/15min) + strict auth (5/15min) |
-| **Deployment** | Deployment | `Dockerfile`, `docker-compose.yml`, `/health` endpoint |
+| Configuration | Environment and Security | `dotenv`, `helmet` (11 security headers), `cors` with allowlist |
+| Protection | Rate Limiting | `express-rate-limit` — global (100/15 min) + strict auth (5/15 min) |
+| Deployment | Containerization | `Dockerfile`, `docker-compose.yml`, `/health` endpoint |
 
 ## Files
-```
+
+```text
 Lab Test-9 Experiment/
-├── server.js           ← Main Express server (Exp09+10+11 combined)
+├── server.js           # Main Express server
 ├── package.json
-├── .env.example        ← Copy to .env before running
-├── Dockerfile          ← Docker image definition
-├── docker-compose.yml  ← Spins up API + MongoDB containers
-└── .gitignore          ← Excludes local secrets and dependencies
+├── .env.example        # Copy to .env before running
+├── Dockerfile          # Docker image definition
+├── docker-compose.yml  # Spins up API + MongoDB containers
+└── .gitignore          # Excludes local secrets and dependencies
 ```
 
 ## How to Run (Local)
+
 ```bash
 cd "Lab Test-9 Experiment"
 cp .env.example .env
 npm install
 npm run dev
 ```
+
 Server on **http://localhost:3009**
 
 ## How to Run (Docker)
+
 ```bash
 # Build and start both API and MongoDB containers
 docker compose up --build
@@ -42,6 +46,7 @@ docker compose down
 ```
 
 ## Endpoints
+
 | Method | Route | Description |
 |--------|-------|-------------|
 | GET | `/` | Feature overview |
@@ -52,6 +57,7 @@ docker compose down
 ## Expected Output
 
 **GET /health:**
+
 ```json
 {
   "status": "OK",
@@ -62,12 +68,14 @@ docker compose down
 ```
 
 **Too many requests (rate limit hit):**
+
 ```json
-{ "error": "Too many requests – please wait 15 minutes and try again." }
+{ "error": "Too many requests - please wait 15 minutes and try again." }
 ```
 
-**Security headers added by helmet (visible in browser DevTools → Network → Response Headers):**
-```
+**Security headers added by Helmet (visible in browser DevTools under Network > Response Headers):**
+
+```text
 Content-Security-Policy: ...
 X-DNS-Prefetch-Control: off
 X-Frame-Options: SAMEORIGIN
@@ -76,28 +84,30 @@ Referrer-Policy: no-referrer
 ...
 ```
 
+## Security Notes
 
-## 🔒 Security Notes
 - Keep `.env` out of Git; commit only `.env.example`.
-- Helmet applies defensive HTTP headers.
+- Helmet applies defensive HTTP headers automatically.
 - CORS is restricted to configured origins.
 - Global and login-specific rate limits reduce abusive request volume.
 
-## 🎯 Learning Outcomes
+## Learning Outcomes
+
 - Configure applications with environment variables
 - Apply Helmet and CORS middleware
 - Implement global and route-specific rate limiting
 - Expose a deployment health endpoint
 - Containerize a Node.js service with Docker
 
-## 👨‍💻 Author
+## Author
+
 **Arnav Daftuar**  
 Backend Development — Lab Test-9
 
 ---
 
-## 🔗 Connected Navigation
+## Connected Navigation
 
-- [🏠 Back to Main Repository README](../../README.md)
-- [🧪 Back to LABS README](../README.md)
-- [🌐 Open Website Portal](../../index.html)
+- [Back to Main Repository README](../../README.md)
+- [Back to LABS README](../README.md)
+- [Open Website Portal](../../index.html)

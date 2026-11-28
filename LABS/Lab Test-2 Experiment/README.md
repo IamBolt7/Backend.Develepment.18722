@@ -1,8 +1,8 @@
-# Lab Test-2 Experiment — Responsive Web Page (HTML & CSS)
+# Lab Test-2 Experiment — Responsive Web Page (HTML and CSS)
 
-> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🚀 Open Live Page](./index.html) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-2%20Experiment/README.md)
+> **Navigation:** [Main README](../../README.md) · [LABS README](../README.md) · [Open Live Page](./index.html) · [Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-2%20Experiment/README.md)
 
-A polished, responsive webpage for the **Backend Development Lab**, built entirely with HTML5 and CSS3. The experiment demonstrates semantic HTML, Flexbox, CSS Grid, fluid sizing, and media queries without Bootstrap or another framework.
+A polished, responsive webpage for the Backend Development Lab, built entirely with HTML5 and CSS3. The experiment demonstrates semantic HTML, Flexbox, CSS Grid, fluid sizing, and media queries without Bootstrap or any other framework.
 
 ## Objective
 
@@ -35,8 +35,8 @@ No external framework or JavaScript is required.
 |---|---|
 | `> 768px` | Three-column card layout |
 | `561px–768px` | Two-column card layout |
-| `≤ 560px` | Single-column layout and compact navigation |
-| `≤ 360px` | Extra-small phone navigation adjustments |
+| `<= 560px` | Single-column layout and compact navigation |
+| `<= 360px` | Extra-small phone navigation adjustments |
 
 ## Features
 
@@ -56,93 +56,78 @@ No external framework or JavaScript is required.
 
 ## Core Concepts
 
-### Viewport
+### Viewport Meta Tag
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-This makes the page use the actual device width on mobile browsers.
+This instructs the browser to set the page width to the device width and prevent automatic zooming on mobile.
 
 ### CSS Grid
 
-The desktop card area uses three equal columns:
+Grid is used for the card section so the number of columns adjusts automatically:
 
 ```css
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+```
+
+### Flexbox
+
+Flexbox is used for the navigation bar so items align horizontally and wrap when space is limited:
+
+```css
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 ```
 
 ### Media Queries
 
-At tablet width the grid becomes two columns:
-
-```css
-@media (max-width: 768px) {
-  .cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-```
-
-At phone width it becomes one column:
+Explicit breakpoints handle layout changes at specific screen widths:
 
 ```css
 @media (max-width: 560px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
+  .hero h1 { font-size: clamp(1.4rem, 6vw, 2rem); }
 }
 ```
 
-## How to Run
+### Fluid Typography
 
-1. Extract `Lab Test-2 Experiment.zip`.
-2. Open the extracted folder.
-3. Double-click `index.html`.
-4. The page will open in Safari, Chrome, Firefox, or another modern browser.
+`clamp()` produces font sizes that scale smoothly between a minimum and maximum value:
 
-There are no dependencies to install and no server is required.
-
-## How to Test Responsiveness
-
-Resize the browser window from desktop width down to phone width. You should see the cards change from **3 → 2 → 1 columns**, while the navigation, typography, and spacing adapt automatically.
-
-You can also use browser responsive-design tools. In Safari, use **Develop → Enter Responsive Design Mode**. In Chrome, open Developer Tools and enable the device toolbar.
-
-Suggested widths to test: **1440px, 1024px, 768px, 560px, 480px, and 375px**.
-
-## Expected Result
-
-The page should remain readable and visually balanced across screen sizes without horizontal scrolling. The layout should reorganize rather than simply scale down.
+```css
+h1 { font-size: clamp(1.8rem, 5vw, 3rem); }
+```
 
 ## Learning Outcomes
 
 After completing this experiment, you should be able to:
 
-- explain responsive web design;
-- configure the viewport for mobile devices;
-- use Flexbox for flexible alignment;
-- use CSS Grid for responsive multi-column layouts;
-- create and apply media queries;
-- design useful breakpoints for different screen widths;
-- build a webpage without relying on a CSS framework.
+1. Add a correct viewport meta tag for mobile display.
+2. Use semantic HTML5 elements.
+3. Build a sticky responsive navigation bar using Flexbox.
+4. Create a responsive card grid with CSS Grid.
+5. Apply fluid typography using `clamp()`.
+6. Write media queries that adjust layout at specific breakpoints.
+7. Avoid horizontal overflow on small screens.
+8. Build a complete page without a CSS framework.
 
-## Conclusion
+## Author
 
-This experiment shows how HTML5 and modern CSS can produce a professional responsive interface. CSS Grid manages the main content layout, Flexbox manages flexible navigation, and media queries adapt the design to the available viewport.
-
----
-
-**Experiment:** 03 — Create a Responsive Web Page with HTML and CSS  
-**Course:** Backend Development Lab
+**Arnav Daftuar**  
+Backend Development — Lab Test-2 Responsive Web Page
 
 ---
 
-## 🔗 Connected Navigation
+## Connected Navigation
 
-- [🏠 Back to Main Repository README](../../README.md)
-- [🧪 Back to LABS README](../README.md)
-- [🚀 Launch Live Webpage (`index.html`)](./index.html)
+- [Back to Main Repository README](../../README.md)
+- [Back to LABS README](../README.md)
+- [Open Website Portal](../../index.html)

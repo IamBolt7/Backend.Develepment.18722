@@ -1,10 +1,10 @@
 # Lab Test-4 Experiment — Express + Mongoose User Management System
 
-> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-4%20Experiment/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
+> **Navigation:** [Main README](../../README.md) · [LABS README](../README.md) · [Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-4%20Experiment/README.md) · [GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
 
 ## Experiment 13A — Express + Mongoose User Management System
 
-A beginner-friendly backend development experiment that demonstrates how **Node.js**, **Express.js**, **MongoDB**, and **Mongoose** work together. The project provides a small browser-based user management system where users can register, log in, and view records stored in MongoDB.
+A beginner-friendly backend development experiment that demonstrates how Node.js, Express.js, MongoDB, and Mongoose work together. The project provides a small browser-based user management system where users can register, log in, and view records stored in MongoDB.
 
 > **Academic note:** This project intentionally keeps authentication simple so the Mongoose workflow is easy to study. Passwords are stored as plain text for demonstration only and this approach must not be used in a production application.
 
@@ -80,10 +80,10 @@ npm --version
 
 ### 1. Open the project directory
 
-On macOS, open Terminal and move into the extracted folder. For example:
+On macOS, open Terminal and move into the extracted folder:
 
 ```bash
-cd "/path/to/Lab Test-4 Experiment"
+cd "path/to/Lab Test-4 Experiment"
 ```
 
 ### 2. Install dependencies
@@ -162,153 +162,88 @@ A schema describes the expected structure and validation rules for a document:
 ```js
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
-  email: { type: String, required: true, unique: true },
+  email:    { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  createdAt: { type: Date, default: Date.now }
+  createdAt:{ type: Date, default: Date.now }
 });
 ```
 
 ### 3. Mongoose Model
 
+The model turns the schema into a MongoDB collection:
+
 ```js
 const User = mongoose.model('User', userSchema);
 ```
 
-The `User` model is the interface used to create and query user documents. Mongoose normally maps this model to a MongoDB collection named `users`.
+### 4. Register Route
 
-### 4. Express Routes
+The register route creates and saves a new user document:
 
-| Method | Route | Purpose |
-| --- | --- | --- |
-| `GET` | `/` | Display registration, login, and user-list controls |
-| `POST` | `/signup` | Validate and save a new user |
-| `POST` | `/login` | Find a user and check the supplied credentials |
-| `GET` | `/users` | Retrieve and display all users |
+```js
+app.post('/register', async (req, res) => {
+  const { username, email, password } = req.body;
+  const user = new User({ username, email, password });
+  await user.save();
+  res.redirect('/users');
+});
+```
 
-## Mongoose Methods Covered
+### 5. Login Route
 
-| Method | Purpose | Example |
-| --- | --- | --- |
-| `.save()` | Save a document instance | `await user.save()` |
-| `.create()` | Create and save a document | `await User.create(data)` |
-| `.find()` | Retrieve multiple documents | `await User.find()` |
-| `.findOne()` | Retrieve one matching document | `await User.findOne({ username })` |
-| `.findById()` | Retrieve a document by its ID | `await User.findById(id)` |
-| `.updateOne()` | Update one matching document | `await User.updateOne(filter, update)` |
-| `.deleteOne()` | Delete one matching document | `await User.deleteOne(filter)` |
+The login route checks for a matching username and password:
 
-The application directly demonstrates `create()`, `findOne()`, and `find()`. The remaining methods are included because they are important CRUD operations covered by the Mongoose topic.
+```js
+app.post('/login', async (req, res) => {
+  const user = await User.findOne({ username, password });
+  if (!user) return res.send('Invalid credentials');
+  res.redirect('/users');
+});
+```
 
-## Testing Procedure
+### 6. View All Users Route
 
-### Test 1 — Register a User
+```js
+app.get('/users', async (req, res) => {
+  const users = await User.find({}, '-password').sort({ createdAt: -1 });
+  // render table
+});
+```
 
-1. Open `http://localhost:3000`.
-2. Enter a username, email, and password.
-3. Select **Create Account**.
-4. A success page should appear.
-5. MongoDB should now contain the new document.
+## Routes Summary
 
-### Test 2 — Duplicate User
+| Method | Route | Action |
+|---|---|---|
+| GET | `/` | Home page with register and login links |
+| GET | `/register` | Registration form |
+| POST | `/register` | Create a new user |
+| GET | `/login` | Login form |
+| POST | `/login` | Verify credentials |
+| GET | `/users` | View all registered users |
 
-Try registering the same username or email again. MongoDB's unique index should cause error code `11000`, and the application displays a readable duplicate-user message.
+## Error Handling
 
-### Test 3 — Login
+**Duplicate key errors** (error code 11000) are caught and a user-friendly message is returned instead of a stack trace:
 
-Enter the username and password of a registered account. Correct credentials display the user's details; incorrect credentials display a login error.
-
-### Test 4 — View All Users
-
-Select **View All Users**. The application uses `User.find()` and displays the users stored in the database without displaying passwords.
-
-## Expected Database Document
-
-A user document is conceptually similar to:
-
-```json
-{
-  "_id": "MongoDB-generated ObjectId",
-  "username": "student01",
-  "email": "student01@example.com",
-  "password": "demo-password",
-  "createdAt": "automatically generated date"
+```js
+if (err.code === 11000) {
+  return res.send('Username or email already exists.');
 }
 ```
 
-MongoDB automatically creates `_id`. Mongoose supplies `createdAt` using the schema's default value.
+## Learning Summary
 
-## Common Mongoose Concepts
+This experiment teaches how Mongoose models map to MongoDB collections, how schemas enforce data structure and validation, how `async`/`await` simplifies asynchronous database calls, and how duplicate-key errors can be handled gracefully in a web application.
 
-**Schema:** Defines fields, types, defaults, and validation rules for documents.
+## Author
 
-**Model:** A JavaScript interface created from a schema and used to interact with a MongoDB collection.
-
-**Document:** One stored record in a MongoDB collection. Each registered user is a document.
-
-**Collection:** A group of related MongoDB documents. This experiment uses the `users` collection.
-
-**Query:** An operation used to find, insert, update, or delete data.
-
-**Async/Await:** Database operations take time and are asynchronous. `await` allows the program to wait for the operation inside an `async` function without using deeply nested callbacks.
-
-## Troubleshooting
-
-### `MongoDB connection error` / `ECONNREFUSED`
-
-MongoDB is probably not running, or the connection URL is incorrect. Start the MongoDB service and then restart the Node.js application.
-
-### `npm: command not found`
-
-Install Node.js, reopen Terminal, and verify with `node --version` and `npm --version`.
-
-### `EADDRINUSE: address already in use :::3000`
-
-Another application is already using port 3000. On macOS you can run the project on another port without editing the file:
-
-```bash
-PORT=3001 npm start
-```
-
-Then open `http://localhost:3001`.
-
-### Duplicate key / error code `11000`
-
-A username or email already exists. Both fields are marked `unique` in the schema, so MongoDB rejects duplicates.
-
-### Application opens but database actions fail
-
-Check the Terminal where `npm start` is running. Database and server errors are printed there and usually reveal whether MongoDB is disconnected or validation failed.
-
-## MongoDB Atlas (Optional)
-
-Instead of a local database, obtain a MongoDB Atlas connection string and provide it as `DB_URL`. For example on macOS/Linux:
-
-```bash
-DB_URL="your-mongodb-connection-string" npm start
-```
-
-Do **not** commit a real database username, password, or connection secret to GitHub.
-
-## Security Note
-
-This lab compares passwords directly because its purpose is to teach Express and Mongoose fundamentals. Real authentication systems should use password hashing (for example, bcrypt or Argon2), sessions or secure tokens, server-side validation, rate limiting, secure cookies, environment variables, and appropriate production security controls.
-
-## Possible Extensions
-
-After completing the basic experiment, you can extend it with update/delete routes, password hashing, sessions, stronger validation, separate models/controllers/routes, a frontend template engine, REST APIs, MongoDB Atlas, and automated tests.
-
-## Result
-
-The experiment successfully demonstrates how an Express application can connect to MongoDB through Mongoose, define a schema and model, save user documents, retrieve data with queries, process HTML forms, and handle common database errors.
-
-## Conclusion
-
-This project provides a foundation for MongoDB-backed Node.js applications. It connects the main concepts—**Express routes → Mongoose model → MongoDB documents**—in a small application that can be run and tested locally.
+**Arnav Daftuar**  
+Backend Development — Lab Test-4
 
 ---
 
-## 🔗 Connected Navigation
+## Connected Navigation
 
-- [🏠 Back to Main Repository README](../../README.md)
-- [🧪 Back to LABS README](../README.md)
-- [🌐 Open Website Portal](../../index.html)
+- [Back to Main Repository README](../../README.md)
+- [Back to LABS README](../README.md)
+- [Open Website Portal](../../index.html)

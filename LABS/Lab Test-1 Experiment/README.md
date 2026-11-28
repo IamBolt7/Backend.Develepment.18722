@@ -1,10 +1,10 @@
 # Lab Test-1 Experiment — Simple CMS Blog
 
-> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [📄 Lab Report](./Report.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-1%20Experiment/README.md)
+> **Navigation:** [Main README](../../README.md) · [LABS README](../README.md) · [Lab Report](./Report.md) · [Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-1%20Experiment/README.md)
 
 ## 1. Project Description
 
-Simple CMS is a simple Blog Content Management System developed using Node.js, Express.js, EJS and MongoDB.
+Simple CMS is a blog content management system developed using Node.js, Express.js, EJS, and MongoDB.
 
 The application allows users to:
 
@@ -33,7 +33,7 @@ The application uses EJS for server-side rendering.
 - View an individual blog post
 - Store posts in MongoDB
 - Automatically generate creation date and time
-- Validate title, content and author
+- Validate title, content, and author
 - Server-side rendering using EJS
 
 ## 4. Database
@@ -146,7 +146,7 @@ Open this URL in a web browser.
 
 1. Open the home page.
 2. Click **Create New Post**.
-3. Enter the title, content and author.
+3. Enter the title, content, and author.
 4. Click **Create Post**.
 5. The post is stored in MongoDB.
 6. All posts are displayed on the home page.
@@ -166,26 +166,26 @@ EJS is used for server-side rendering.
 
 The application contains the following EJS templates:
 
-- `posts.ejs` - Displays all posts
-- `new-post.ejs` - Displays the create-post form
-- `post.ejs` - Displays an individual post
+- `posts.ejs` — Displays all posts
+- `new-post.ejs` — Displays the create-post form
+- `post.ejs` — Displays an individual post
 
 ## 12. Project Structure
 
 ```text
 Lab Test-1 Experiment/
-│
+|
 ├── app.js
 ├── package.json
 ├── package-lock.json
 ├── README.md
 ├── report.md
-│
+|
 ├── views/
 │   ├── posts.ejs
 │   ├── new-post.ejs
 │   └── post.ejs
-│
+|
 └── public/
     └── style.css
 ```
@@ -206,20 +206,20 @@ The following features were tested:
 
 ## 14. Result
 
-The Simple CMS Blog was successfully developed using Node.js, Express.js, EJS and MongoDB.
+The Simple CMS Blog was successfully developed using Node.js, Express.js, EJS, and MongoDB.
 
-The application successfully supports creating, storing, listing and viewing individual blog posts.
+The application successfully supports creating, storing, listing, and viewing individual blog posts.
 
 ## 15. Author
 
-**Saanvi Singh**
+**Arnav Daftuar**
 
 B.Tech CSE
 
 ---
 
-## 🔗 Connected Navigation
+## Connected Navigation
 
-- [🏠 Back to Main Repository README](../../README.md)
-- [🧪 Back to LABS README](../README.md)
-- [📄 Full Lab Report](./Report.md)
+- [Back to Main Repository README](../../README.md)
+- [Back to LABS README](../README.md)
+- [Full Lab Report](./Report.md)

@@ -1,12 +1,12 @@
-# Unit 4 — Docker & Containerized Express
+# Unit 4 — Docker and Containerized Express
 
-> **Navigation:** [🏠 Main README](../../README.md) · [📚 Theory README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Theory/Unit%204/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
+Navigation: [Main README](../../README.md) · [Theory README](../README.md) · [Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Theory/Unit%204/README.md) · [GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
 
-Theory Unit 4 covers **Docker containerization fundamentals** across two hands-on folders: preserving changes inside containers and containerizing a Node.js Express API.
+Theory Unit 4 covers Docker container fundamentals across two folders: persisting changes inside a container and packaging an Express API into a Docker image.
 
 ---
 
-## 📂 Structure
+## Structure
 
 ```text
 Unit 4/
@@ -24,7 +24,7 @@ Unit 4/
 
 ## 1. Preserve Changes inside a Container
 
-Demonstrates compiling and running `Hello.java` inside a container (`Hello from Docker container!`) and persisting container filesystem state into a reusable image.
+A minimal Java program (`Hello.java`) used to demonstrate compiling code inside a running container and committing container changes into a new image.
 
 ```bash
 javac Hello.java
@@ -35,14 +35,12 @@ java Hello
 
 ## 2. Containerized Express Project (`express-project/`)
 
-A lightweight Express server configured to bind to `0.0.0.0:3000` inside a Docker container.
-
-### Endpoints
+An Express server bound to `0.0.0.0:3000` with a `Dockerfile` built on `ubuntu:18.04`.
 
 | Method | Route | Response |
 | --- | --- | --- |
 | `GET` | `/` | `"Hello! Express is running inside Docker."` |
-| `GET` | `/api/students` | JSON array of sample students |
+| `GET` | `/api/students` | JSON list of sample students |
 
 ### Run with Docker
 
@@ -62,10 +60,10 @@ node app.js
 
 ---
 
-## 🔗 Connected Navigation
+## Navigation
 
-- [🏠 Back to Main Repository README](../../README.md)
-- [📚 Back to Theory README](../README.md)
-- [🛡️ Related: Lab Test-9 Docker & Security](../../LABS/Lab%20Test-9%20Experiment/README.md)
+- [Back to Main README](../../README.md)
+- [Theory README](../README.md)
+- [Related: Lab Test-9 Security and Docker](../../LABS/Lab%20Test-9%20Experiment/README.md)
 
-**Made by Arnav Daftuar** · Backend Development (18722)
+Made by **Arnav Daftuar**

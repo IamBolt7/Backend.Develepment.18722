@@ -1,13 +1,13 @@
-# ✅ Django To-Do App
+# Django To-Do App
 
-> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/django_todo_app/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
+> **Navigation:** [Main README](../../README.md) · [LABS README](../README.md) · [Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/django_todo_app/README.md) · [GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
 
-A clean, database-backed **To-Do List application built with Django** for Backend Development practice. The project demonstrates Django models, forms, views, URL routing, templates, static files, CSRF protection, messages, SQLite persistence, and basic automated testing.
+A database-backed to-do list application built with Django for backend development practice. The project demonstrates Django models, forms, views, URL routing, templates, static files, CSRF protection, messages framework, SQLite persistence, and basic automated testing.
 
-## ✨ Features
+## Features
 
-- Add new tasks with validation
-- View tasks newest-first
+- Add new tasks with server-side validation
+- View tasks sorted newest-first
 - Mark tasks complete or pending
 - Delete tasks with confirmation
 - Dashboard counters for total, pending, and completed tasks
@@ -17,11 +17,11 @@ A clean, database-backed **To-Do List application built with Django** for Backen
 - Django Admin integration
 - Automated view tests
 
-## 🧰 Tech Stack
+## Technology Stack
 
 `Python` · `Django` · `SQLite` · `HTML5` · `CSS3`
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 django_todo_app/
@@ -50,7 +50,7 @@ django_todo_app/
 └── README.md
 ```
 
-## 🧠 Django Concepts Demonstrated
+## Django Concepts Demonstrated
 
 | Concept | Implementation |
 | --- | --- |
@@ -61,38 +61,38 @@ django_todo_app/
 | Templates | Reusable base template and task pages |
 | Static Files | Responsive CSS in `todo/static/todo/` |
 | CSRF | All state-changing forms include CSRF tokens |
-| HTTP Methods | Toggle and delete operations require `POST` |
+| HTTP Methods | Toggle and delete operations require POST |
 | Messages | Success feedback after task actions |
 | Admin | Tasks can be searched and filtered in Django Admin |
 | Tests | Core list/add/toggle/delete behavior is tested |
 
-## 🔄 Application Flow
+## Application Flow
 
 ```text
 Browser
-   │
-   │ HTTP Request
-   ▼
+   |
+   | HTTP Request
+   v
 Django URL Router
-   │
-   ▼
+   |
+   v
 View Function
-   │
-   ├── TaskForm validation
-   │
-   ├── Task model
-   │      │
-   │      ▼
-   │   SQLite DB
-   │
-   ▼
+   |
+   |-- TaskForm validation
+   |
+   |-- Task model
+   |      |
+   |      v
+   |   SQLite DB
+   |
+   v
 Django Template
-   │
-   ▼
+   |
+   v
 HTML Response
 ```
 
-## 🚀 Setup and Run
+## Setup and Run
 
 ### 1. Enter the project
 
@@ -137,7 +137,7 @@ Open:
 http://127.0.0.1:8000/
 ```
 
-## 🧪 Run Tests
+## Run Tests
 
 ```bash
 python manage.py test
@@ -145,15 +145,15 @@ python manage.py test
 
 The tests cover loading the task list, adding a task, rejecting blank input, requiring POST for task toggling, toggling status, and deleting tasks.
 
-## 🛡️ Improvements Over the Basic Version
+## Improvements Over the Basic Version
 
 The original classroom version was intentionally minimal. This version keeps the same core task manager while improving its implementation:
 
 - Uses `ModelForm` instead of manually reading raw form input
-- Strips and validates task titles
+- Strips and validates task titles before saving
 - Uses `get_object_or_404()` for safe object retrieval
-- Uses POST instead of GET for toggle/delete actions
-- Adds CSRF protection to state-changing actions
+- Uses POST instead of GET for toggle and delete actions
+- Adds CSRF protection to all state-changing actions
 - Uses `update_fields` for the small toggle update
 - Moves default ordering into the model
 - Adds reusable templates and static CSS
@@ -161,7 +161,7 @@ The original classroom version was intentionally minimal. This version keeps the
 - Adds automated tests and Django Admin configuration
 - Excludes local virtual environments, caches, SQLite databases, and editor files from Git
 
-## 🗃️ Data Model
+## Data Model
 
 ```text
 Task
@@ -171,29 +171,29 @@ Task
 └── created_at  DateTimeField(auto_now_add=True)
 ```
 
-## 🔗 Main Routes
+## Main Routes
 
 | Method | Route | Purpose |
 | --- | --- | --- |
-| `GET` | `/` | Display all tasks |
-| `GET`, `POST` | `/add/` | Show form / create a task |
-| `POST` | `/toggle/<id>/` | Toggle completion state |
-| `POST` | `/delete/<id>/` | Delete a task |
-| `GET` | `/admin/` | Django Admin |
+| GET | `/` | Display all tasks |
+| GET, POST | `/add/` | Show form / create a task |
+| POST | `/toggle/<id>/` | Toggle completion state |
+| POST | `/delete/<id>/` | Delete a task |
+| GET | `/admin/` | Django Admin |
 
-## 🎯 Learning Outcomes
+## Learning Outcomes
 
 This project provides practice with Django's MVT architecture, ORM, models, forms, templates, routing, static assets, database migrations, CSRF protection, HTTP method handling, testing, and project organization.
 
-## 👨‍💻 Author
+## Author
 
 **Arnav Daftuar**  
 Backend Development — Django To-Do Application
 
 ---
 
-## 🔗 Connected Navigation
+## Connected Navigation
 
-- [🏠 Back to Main Repository README](../../README.md)
-- [🧪 Back to LABS README](../README.md)
-- [🌐 Open Website Portal](../../index.html)
+- [Back to Main Repository README](../../README.md)
+- [Back to LABS README](../README.md)
+- [Open Website Portal](../../index.html)

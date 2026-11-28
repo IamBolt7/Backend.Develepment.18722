@@ -1,9 +1,8 @@
-# Lab Test-5 Experiment
-## Relational vs Document Databases — PostgreSQL & MongoDB
+# Lab Test-5 Experiment — Relational vs Document Databases (PostgreSQL and MongoDB)
 
-> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🚀 Open Companion UI](./ui/index.html) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-5%20Experiment/README.md)
+> **Navigation:** [Main README](../../README.md) · [LABS README](../README.md) · [Open Companion UI](./ui/index.html) · [Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-5%20Experiment/README.md)
 
-A complete Backend Development lab comparing a **relational database (PostgreSQL)** with a **document database (MongoDB)** through the same student-management use case. The experiment also demonstrates how PostgreSQL **JSONB** can provide document-style flexibility inside a relational database.
+A complete backend development lab comparing a relational database (PostgreSQL) with a document database (MongoDB) through the same student-management use case. The experiment also demonstrates how PostgreSQL JSONB can provide document-style flexibility inside a relational database.
 
 ## Objectives
 
@@ -95,14 +94,14 @@ SET profile = '{"skills":["python","sql"],"clubs":{"robotics":true}}'
 WHERE email = 'alice@example.com';
 ```
 
-It demonstrates `->`, `->>`, `@>` and a GIN index for JSONB lookup.
+It demonstrates `->`, `->>`, `@>`, and a GIN index for JSONB lookup.
 
 ## Browser UI
 
 A responsive presentation UI is included in `ui/`. It does not replace PostgreSQL or MongoDB; it is a visual companion for the lab. It contains:
 
 - experiment overview and technology cards;
-- searchable/filterable student table;
+- searchable and filterable student table;
 - PostgreSQL and MongoDB query examples;
 - relational-vs-document comparison;
 - JSONB explanation;
@@ -125,7 +124,7 @@ Then open `http://localhost:8000`.
 
 ## Quick Start on macOS
 
-Detailed instructions are in [`RUN_ON_MAC.md`](RUN_ON_MAC.md). The short version is:
+Detailed instructions are in [RUN_ON_MAC.md](RUN_ON_MAC.md). The short version:
 
 ```bash
 brew install postgresql@16
@@ -151,7 +150,7 @@ mongosh mongodb_lab.js
 - Update: **Bilal Khan** changes from `ECE` to `AI/ML`.
 - PostgreSQL delete: **Divya Nair** is removed.
 - MongoDB script demonstrates equivalent document CRUD operations.
-- JSONB query returns Alice's skills/profile and can match the nested robotics membership.
+- JSONB query returns Alice's skills and profile, and can match the nested robotics membership.
 
 ## PostgreSQL vs MongoDB Summary
 
@@ -165,9 +164,9 @@ mongosh mongodb_lab.js
 | Flexible fields | JSON/JSONB | Native BSON documents |
 | Good fit here | Core structured student data | Variable/nested student metadata |
 
-For the complete discussion, see [`comparison.md`](comparison.md).
+For the complete discussion, see [comparison.md](comparison.md).
 
-## Useful `psql` Commands
+## Useful psql Commands
 
 ```text
 \l                       list databases
@@ -194,13 +193,19 @@ This experiment shows that PostgreSQL is a natural fit when the main data has a 
 
 ## Submission Notes
 
-Run the scripts locally and capture genuine terminal output/screenshots if your instructor requires execution evidence. The repository contains executable source files rather than fabricated result screenshots.
+Run the scripts locally and capture genuine terminal output or screenshots if your instructor requires execution evidence. The repository contains executable source files rather than fabricated result screenshots.
+
+## Author
+
+**Arnav Daftuar**  
+Backend Development — Lab Test-5
 
 ---
 
-## 🔗 Connected Navigation
+## Connected Navigation
 
-- [🏠 Back to Main Repository README](../../README.md)
-- [🧪 Back to LABS README](../README.md)
-- [🚀 Launch Companion Web UI](./ui/index.html)
-- [📘 Mac Setup Guide](./RUN_ON_MAC.md) · [📊 Detailed Comparison](./comparison.md)
+- [Back to Main Repository README](../../README.md)
+- [Back to LABS README](../README.md)
+- [Launch Companion Web UI](./ui/index.html)
+- [Mac Setup Guide](./RUN_ON_MAC.md)
+- [Detailed Comparison](./comparison.md)

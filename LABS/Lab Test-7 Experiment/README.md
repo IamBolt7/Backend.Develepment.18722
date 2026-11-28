@@ -1,25 +1,28 @@
-# 🎨 Lab Test-7 Experiment — EJS Templating Engine
+# Lab Test-7 Experiment — EJS Templating Engine
 
-> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-7%20Experiment/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
+> **Navigation:** [Main README](../../README.md) · [LABS README](../README.md) · [Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-7%20Experiment/README.md) · [GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
 
-> A server-side rendering project using **Express.js + EJS** to build dynamic student pages, reusable templates, forms, and route-driven views.
+A server-side rendering project using Express.js and EJS to build dynamic student pages, reusable templates, forms, and route-driven views.
 
-## 📌 Overview
+## Overview
+
 This experiment demonstrates EJS output tags, JavaScript logic inside templates, dynamic routing, form submission, static CSS, and custom 404 rendering.
 
-## ✨ Features
+## Features
+
 | Feature | Implementation |
 |---|---|
 | Dynamic output | `<%= %>` |
-| Loops / conditions | `<% %>` |
+| Loops and conditions | `<% %>` |
 | Server-side rendering | `res.render()` |
 | Student list | `/students` |
 | Student details | `/student/:id` |
 | Add-student form | `GET/POST /form` |
-| Validation | Marks must be 0–100; name/branch required |
+| Validation | Marks must be 0–100; name and branch required |
 | 404 page | Custom `404.ejs` |
 
-## 📂 Structure
+## Structure
+
 ```text
 Lab Test-7 Experiment/
 ├── app.js
@@ -35,15 +38,18 @@ Lab Test-7 Experiment/
     └── 404.ejs
 ```
 
-## ▶️ Run
+## Run
+
 ```bash
 cd "Lab Test-7 Experiment"
 npm install
 npm run dev
 ```
+
 Open **http://localhost:3005**.
 
-## 🧭 Routes
+## Routes
+
 | Method | Route | Purpose |
 |---|---|---|
 | GET | `/` | Home page |
@@ -52,7 +58,8 @@ Open **http://localhost:3005**.
 | GET | `/form` | Add-student form |
 | POST | `/form` | Validate and add a student |
 
-## 🎯 Learning Outcomes
+## Learning Outcomes
+
 - Configure EJS as an Express view engine
 - Pass server data into templates
 - Use loops and conditions in EJS
@@ -61,14 +68,15 @@ Open **http://localhost:3005**.
 - Serve static CSS
 - Validate user input and render errors
 
-## 👨‍💻 Author
+## Author
+
 **Arnav Daftuar**  
 Backend Development — Lab Test-7
 
 ---
 
-## 🔗 Connected Navigation
+## Connected Navigation
 
-- [🏠 Back to Main Repository README](../../README.md)
-- [🧪 Back to LABS README](../README.md)
-- [🌐 Open Website Portal](../../index.html)
+- [Back to Main Repository README](../../README.md)
+- [Back to LABS README](../README.md)
+- [Open Website Portal](../../index.html)

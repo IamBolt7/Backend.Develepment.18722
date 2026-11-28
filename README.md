@@ -1,206 +1,182 @@
 # Backend Development — 18722
 
-> **Made by Arnav Daftuar**  
-> Complete documentation hub and interactive web portal for **Backend Development (18722)** coursework — spanning web fundamentals, browser storage, Node.js, Express, EJS, Python, Flask, Django, FastAPI, JWT authentication, MongoDB, PostgreSQL + JSONB, Socket.IO real-time apps, security, and Docker.
+Made by **Arnav Daftuar**
 
-[![Made by Arnav Daftuar](https://img.shields.io/badge/Made%20by-Arnav%20Daftuar-4f46e5?style=for-the-badge)](https://github.com/IamBolt7/Backend.Develepment.18722)
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Backend.Develepment.18722-181717?style=for-the-badge&logo=github)](https://github.com/IamBolt7/Backend.Develepment.18722)
-[![Documentation Website](https://img.shields.io/badge/Website-Live%20Docs%20Portal-0ea5e9?style=for-the-badge&logo=googlechrome&logoColor=white)](https://iambolt7.github.io/Backend.Develepment.18722/)
+This repository brings together my coursework, laboratory experiments, theory assignments, and full-stack projects for Backend Development (18722). It starts from plain HTML and CSS, moves into browser storage, Node.js, Express, EJS, Flask, Django, and FastAPI, and finishes with relational and document databases, JWT authentication, security hardening, WebSockets, and Docker.
 
-> **View as a Website:** Open [`index.html`](./index.html) locally or visit the **[Backend Development Website Portal](https://iambolt7.github.io/Backend.Develepment.18722/)** for a modern, searchable web UI that renders every `README.md` and links directly to interactive demos.
+[![Made by Arnav Daftuar](https://img.shields.io/badge/Made%20by-Arnav%20Daftuar-1d1d1f?style=flat-square)](https://github.com/IamBolt7/Backend.Develepment.18722)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Backend.Develepment.18722-3a3a3c?style=flat-square)](https://github.com/IamBolt7/Backend.Develepment.18722)
+[![Documentation Website](https://img.shields.io/badge/Website-Documentation%20Portal-6e6e73?style=flat-square)](https://iambolt7.github.io/Backend.Develepment.18722/)
+
+You can read everything directly here on GitHub, open [`index.html`](./index.html) locally, or browse the **[Documentation Website](https://iambolt7.github.io/Backend.Develepment.18722/)** for a monochrome, searchable web interface that renders every `README.md` in one place.
 
 ---
 
-## 📌 Quick Navigation
+## Quick Navigation
 
 | Section | Coverage | Section README | Website Portal |
 | --- | --- | --- | --- |
-| **LABS** | Django To-Do App, `EXP-1`, and Lab Tests 1–10 | [LABS/README.md](./LABS/README.md) | [Open Labs in Website](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/README.md) |
-| **Theory** | Assignments 1–2, JWT Lab, Theory 1, Unit 3 & Unit 4 | [Theory/README.md](./Theory/README.md) | [Open Theory in Website](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Theory/README.md) |
-| **Applications** | Full CMS Lab Web Application | [Applications/README.md](./Applications/README.md) | [Open Apps in Website](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Applications/README.md) |
+| **LABS** | Django To-Do App, EXP-1, and Lab Tests 1–10 | [LABS/README.md](./LABS/README.md) | [Open Labs](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/README.md) |
+| **Theory** | Assignments 1–2, JWT Lab, Theory 1, Unit 3, Unit 4 | [Theory/README.md](./Theory/README.md) | [Open Theory](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Theory/README.md) |
+| **Applications** | Full CMS Lab Web Application | [Applications/README.md](./Applications/README.md) | [Open Applications](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Applications/README.md) |
 
 ---
 
-## 🔗 Complete Connected README Directory
+## Connected README Directory
 
-Every `README.md` in this repository is cross-linked to this main hub so you can navigate seamlessly on **GitHub** and in the **Website UI**:
+Every `README.md` in the repository is linked here and links back to this main hub.
 
-| Category | Project / Module | Folder | Connected `README.md` | Interactive Demo / App |
+| Section | Module | Folder | Connected README | Live Preview / Runtime |
 | --- | --- | --- | --- | --- |
-| **Root** | Main Repository Hub | [Root](./) | [README.md](./README.md) | [Website Portal](./index.html) |
-| **LABS** | Labs Overview Index | [LABS/](./LABS/) | [LABS/README.md](./LABS/README.md) | — |
-| **LABS** | Django To-Do App | [django_todo_app/](./LABS/django_todo_app/) | [LABS/django_todo_app/README.md](./LABS/django_todo_app/README.md) | Django (`localhost:8000`) |
-| **LABS** | EXP-1 — HTML & CSS Intro | [EXP-1/](./LABS/EXP-1/) | [LABS/EXP-1/README.md](./LABS/EXP-1/README.md) | [arnav.html](./LABS/EXP-1/arnav.html) |
-| **LABS** | Lab Test-1 — Simple CMS Blog | [Lab Test-1 Experiment/](./LABS/Lab%20Test-1%20Experiment/) | [Lab Test-1 README](./LABS/Lab%20Test-1%20Experiment/README.md) | [Lab Report](./LABS/Lab%20Test-1%20Experiment/Report.md) |
-| **LABS** | Lab Test-2 — Responsive Web Page | [Lab Test-2 Experiment/](./LABS/Lab%20Test-2%20Experiment/) | [Lab Test-2 README](./LABS/Lab%20Test-2%20Experiment/README.md) | [index.html](./LABS/Lab%20Test-2%20Experiment/index.html) |
-| **LABS** | Lab Test-3 — Node, Express & EJS | [Lab Test-3 Experiment/](./LABS/Lab%20Test-3%20Experiment/) | [Lab Test-3 README](./LABS/Lab%20Test-3%20Experiment/README.md) | Express (`localhost:3000`) |
-| **LABS** | Lab Test-4 — Express + Mongoose | [Lab Test-4 Experiment/](./LABS/Lab%20Test-4%20Experiment/) | [Lab Test-4 README](./LABS/Lab%20Test-4%20Experiment/README.md) | Express (`localhost:3000`) |
-| **LABS** | Lab Test-5 — PostgreSQL vs MongoDB | [Lab Test-5 Experiment/](./LABS/Lab%20Test-5%20Experiment/) | [Lab Test-5 README](./LABS/Lab%20Test-5%20Experiment/README.md) | [Visual UI](./LABS/Lab%20Test-5%20Experiment/ui/index.html) |
-| **LABS** | Lab Test-6 — Express Middleware | [Lab Test-6 Experiment/](./LABS/Lab%20Test-6%20Experiment/) | [Lab Test-6 README](./LABS/Lab%20Test-6%20Experiment/README.md) | Express (`localhost:3004`) |
-| **LABS** | Lab Test-7 — EJS Templating Engine | [Lab Test-7 Experiment/](./LABS/Lab%20Test-7%20Experiment/) | [Lab Test-7 README](./LABS/Lab%20Test-7%20Experiment/README.md) | Express (`localhost:3005`) |
-| **LABS** | Lab Test-8 — REST API & JWT Auth | [Lab Test-8 Experiment/](./LABS/Lab%20Test-8%20Experiment/) | [Lab Test-8 README](./LABS/Lab%20Test-8%20Experiment/README.md) | Express (`localhost:3007`) |
-| **LABS** | Lab Test-9 — Security, Rate Limit & Docker | [Lab Test-9 Experiment/](./LABS/Lab%20Test-9%20Experiment/) | [Lab Test-9 README](./LABS/Lab%20Test-9%20Experiment/README.md) | Express / Docker (`3009`) |
-| **LABS** | Lab Test-10 — Socket.IO Real-Time Chat | [Lab Test-10 Experiment/](./LABS/Lab%20Test-10%20Experiment/) | [Lab Test-10 README](./LABS/Lab%20Test-10%20Experiment/README.md) | Socket.IO (`localhost:3015`) |
-| **Theory** | Theory Overview Index | [Theory/](./Theory/) | [Theory/README.md](./Theory/README.md) | — |
-| **Theory** | Assignment 1 — NoteSpace (Web Storage) | [Assignment-1-Notes-App/](./Theory/Assignment-1-Notes-App/) | [Assignment 1 README](./Theory/Assignment-1-Notes-App/README.md) | [index.html](./Theory/Assignment-1-Notes-App/index.html) |
-| **Theory** | Assignment 2 — PostgreSQL JSONB Lab | [Assignment 2/](./Theory/Assignment%202/) | [Assignment 2 README](./Theory/Assignment%202/README.md) | [index.html](./Theory/Assignment%202/index.html) |
-| **Theory** | JWT Authentication Lab (FastAPI) | [JWT-Authentication-Lab/](./Theory/JWT-Authentication-Lab/) | [JWT Auth Lab README](./Theory/JWT-Authentication-Lab/README.md) | [Lecture Notes](./Theory/JWT-Authentication-Lab/docs/LECTURE_NOTES.md) |
-| **Theory** | Theory 1 — Express/EJS & Flask | [Theory 1/](./Theory/Theory%201/) | [Theory 1 README](./Theory/Theory%201/README.md) | Express (`3000`) / Flask (`5000`) |
-| **Theory** | Unit 3 — Django Student System | [Unit 3/](./Theory/Unit%203/) | [Unit 3 README](./Theory/Unit%203/README.md) | Django (`localhost:8000`) |
-| **Theory** | Unit 4 — Docker & Containerized Express | [Unit 4/](./Theory/Unit%204/) | [Unit 4 README](./Theory/Unit%204/README.md) | Docker (`localhost:3000`) |
-| **Applications** | Applications Overview Index | [Applications/](./Applications/) | [Applications/README.md](./Applications/README.md) | — |
-| **Applications** | CMS Lab (Express + EJS + MongoDB) | [cms-lab/](./Applications/cms-lab/) | [Applications/cms-lab/README.md](./Applications/cms-lab/README.md) | Express (`localhost:3000`) |
+| Root | Main Repository Hub | [Root](./) | [README.md](./README.md) | [Website Portal](./index.html) |
+| LABS | Labs Overview Index | [LABS/](./LABS/) | [LABS/README.md](./LABS/README.md) | — |
+| LABS | Django To-Do App | [django_todo_app/](./LABS/django_todo_app/) | [LABS/django_todo_app/README.md](./LABS/django_todo_app/README.md) | Django (`127.0.0.1:8000`) |
+| LABS | EXP-1 — HTML and CSS Intro | [EXP-1/](./LABS/EXP-1/) | [LABS/EXP-1/README.md](./LABS/EXP-1/README.md) | [arnav.html](./LABS/EXP-1/arnav.html) |
+| LABS | Lab Test-1 — Simple CMS Blog | [Lab Test-1 Experiment/](./LABS/Lab%20Test-1%20Experiment/) | [Lab Test-1 README](./LABS/Lab%20Test-1%20Experiment/README.md) | [Lab Report](./LABS/Lab%20Test-1%20Experiment/Report.md) |
+| LABS | Lab Test-2 — Responsive Web Page | [Lab Test-2 Experiment/](./LABS/Lab%20Test-2%20Experiment/) | [Lab Test-2 README](./LABS/Lab%20Test-2%20Experiment/README.md) | [index.html](./LABS/Lab%20Test-2%20Experiment/index.html) |
+| LABS | Lab Test-3 — Node, Express and EJS | [Lab Test-3 Experiment/](./LABS/Lab%20Test-3%20Experiment/) | [Lab Test-3 README](./LABS/Lab%20Test-3%20Experiment/README.md) | Express (`localhost:3000`) |
+| LABS | Lab Test-4 — Express and Mongoose | [Lab Test-4 Experiment/](./LABS/Lab%20Test-4%20Experiment/) | [Lab Test-4 README](./LABS/Lab%20Test-4%20Experiment/README.md) | Express (`localhost:3000`) |
+| LABS | Lab Test-5 — PostgreSQL vs MongoDB | [Lab Test-5 Experiment/](./LABS/Lab%20Test-5%20Experiment/) | [Lab Test-5 README](./LABS/Lab%20Test-5%20Experiment/README.md) | [Visual UI](./LABS/Lab%20Test-5%20Experiment/ui/index.html) |
+| LABS | Lab Test-6 — Express Middleware | [Lab Test-6 Experiment/](./LABS/Lab%20Test-6%20Experiment/) | [Lab Test-6 README](./LABS/Lab%20Test-6%20Experiment/README.md) | Express (`localhost:3004`) |
+| LABS | Lab Test-7 — EJS Templating Engine | [Lab Test-7 Experiment/](./LABS/Lab%20Test-7%20Experiment/) | [Lab Test-7 README](./LABS/Lab%20Test-7%20Experiment/README.md) | Express (`localhost:3005`) |
+| LABS | Lab Test-8 — REST API and JWT Auth | [Lab Test-8 Experiment/](./LABS/Lab%20Test-8%20Experiment/) | [Lab Test-8 README](./LABS/Lab%20Test-8%20Experiment/README.md) | Express (`localhost:3007`) |
+| LABS | Lab Test-9 — Security, Rate Limit and Docker | [Lab Test-9 Experiment/](./LABS/Lab%20Test-9%20Experiment/) | [Lab Test-9 README](./LABS/Lab%20Test-9%20Experiment/README.md) | Express / Docker (`3009`) |
+| LABS | Lab Test-10 — Socket.IO Real-Time Chat | [Lab Test-10 Experiment/](./LABS/Lab%20Test-10%20Experiment/) | [Lab Test-10 README](./LABS/Lab%20Test-10%20Experiment/README.md) | Socket.IO (`localhost:3015`) |
+| Theory | Theory Overview Index | [Theory/](./Theory/) | [Theory/README.md](./Theory/README.md) | — |
+| Theory | Assignment 1 — NoteSpace | [Assignment-1-Notes-App/](./Theory/Assignment-1-Notes-App/) | [Assignment 1 README](./Theory/Assignment-1-Notes-App/README.md) | [index.html](./Theory/Assignment-1-Notes-App/index.html) |
+| Theory | Assignment 2 — PostgreSQL JSONB | [Assignment 2/](./Theory/Assignment%202/) | [Assignment 2 README](./Theory/Assignment%202/README.md) | [index.html](./Theory/Assignment%202/index.html) |
+| Theory | JWT Authentication Lab | [JWT-Authentication-Lab/](./Theory/JWT-Authentication-Lab/) | [JWT Auth Lab README](./Theory/JWT-Authentication-Lab/README.md) | [Lecture Notes](./Theory/JWT-Authentication-Lab/docs/LECTURE_NOTES.md) |
+| Theory | Theory 1 — Express/EJS and Flask | [Theory 1/](./Theory/Theory%201/) | [Theory 1 README](./Theory/Theory%201/README.md) | Express (`3000`) / Flask (`5000`) |
+| Theory | Unit 3 — Django Student System | [Unit 3/](./Theory/Unit%203/) | [Unit 3 README](./Theory/Unit%203/README.md) | Django (`127.0.0.1:8000`) |
+| Theory | Unit 4 — Docker and Express | [Unit 4/](./Theory/Unit%204/) | [Unit 4 README](./Theory/Unit%204/README.md) | Docker (`localhost:3000`) |
+| Applications | Applications Overview Index | [Applications/](./Applications/) | [Applications/README.md](./Applications/README.md) | — |
+| Applications | CMS Lab | [cms-lab/](./Applications/cms-lab/) | [Applications/cms-lab/README.md](./Applications/cms-lab/README.md) | Express (`localhost:3000`) |
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 Backend.Develepment.18722/
-│
-├── index.html                        # Modernised documentation & portfolio website
-├── .nojekyll                          # Enables clean static serving on GitHub Pages
+├── index.html                        # Monochrome documentation website
+├── .nojekyll                          # Static GitHub Pages hosting
 ├── assets/
-│   ├── css/site.css                  # Website dark/light theme & responsive styling
+│   ├── css/site.css                  # Website layout and monochrome theme
 │   └── js/
-│       ├── docs-bundle.js            # Offline-safe embedded Markdown fallback
-│       └── site.js                   # Interactive Markdown renderer, search & router
-│
+│       ├── docs-bundle.js            # Embedded Markdown fallback for local viewing
+│       └── site.js                   # Markdown renderer, search, and router
 ├── Applications/
-│   ├── README.md                     # Applications section index
-│   └── cms-lab/
-│       └── README.md                 # Full CMS Lab documentation
-│
+│   ├── README.md
+│   └── cms-lab/README.md
 ├── LABS/
-│   ├── README.md                     # Complete LABS index
+│   ├── README.md
 │   ├── django_todo_app/README.md
 │   ├── EXP-1/README.md
-│   ├── Lab Test-1 Experiment/README.md
-│   ├── Lab Test-2 Experiment/README.md
-│   ├── Lab Test-3 Experiment/README.md
-│   ├── Lab Test-4 Experiment/README.md
-│   ├── Lab Test-5 Experiment/README.md
-│   ├── Lab Test-6 Experiment/README.md
-│   ├── Lab Test-7 Experiment/README.md
-│   ├── Lab Test-8 Experiment/README.md
-│   ├── Lab Test-9 Experiment/README.md
-│   └── Lab Test-10 Experiment/README.md
-│
+│   └── Lab Test-1..10 Experiment/README.md
 ├── Theory/
-│   ├── README.md                     # Complete Theory index
+│   ├── README.md
 │   ├── Assignment-1-Notes-App/README.md
 │   ├── Assignment 2/README.md
 │   ├── JWT-Authentication-Lab/README.md
 │   ├── Theory 1/README.md
 │   ├── Unit 3/README.md
 │   └── Unit 4/README.md
-│
-├── .gitignore
-└── README.md                         # You are here
+└── README.md
 ```
 
 ---
 
-## 🧪 Laboratory Work Summary
+## Laboratory Work
 
-The [`LABS`](./LABS/README.md) directory tracks the progression from foundational HTML/CSS pages to full middleware pipelines, JWT-protected REST APIs, hardened production servers, Django CRUD, and real-time WebSockets:
+The [`LABS`](./LABS/README.md) folder holds twelve practical projects built across the semester:
 
-1. **[Django To-Do App](./LABS/django_todo_app/README.md)** — Server-rendered task manager using Django MVT, `ModelForm`, CSRF protection, SQLite, and automated tests.
-2. **[EXP-1](./LABS/EXP-1/README.md)** — Semantic HTML5 and responsive CSS card introduction page ([preview](./LABS/EXP-1/arnav.html)).
-3. **[Lab Test-1 Experiment](./LABS/Lab%20Test-1%20Experiment/README.md)** — Simple CMS Blog with Node.js, Express, EJS, and MongoDB.
-4. **[Lab Test-2 Experiment](./LABS/Lab%20Test-2%20Experiment/README.md)** — Zero-framework responsive landing page using Flexbox, CSS Grid, and media queries ([preview](./LABS/Lab%20Test-2%20Experiment/index.html)).
-5. **[Lab Test-3 Experiment](./LABS/Lab%20Test-3%20Experiment/README.md)** — Node.js, Express routing, query/route params, POST handlers, EJS views, and Nodemon.
-6. **[Lab Test-4 Experiment](./LABS/Lab%20Test-4%20Experiment/README.md)** — Express + Mongoose user registration, login, and MongoDB persistence.
-7. **[Lab Test-5 Experiment](./LABS/Lab%20Test-5%20Experiment/README.md)** — PostgreSQL vs MongoDB CRUD comparison with JSONB extensions and [companion UI](./LABS/Lab%20Test-5%20Experiment/ui/index.html).
-8. **[Lab Test-6 Experiment](./LABS/Lab%20Test-6%20Experiment/README.md)** — Custom Express middleware pipeline, auth guards, 404, and centralized error handling.
-9. **[Lab Test-7 Experiment](./LABS/Lab%20Test-7%20Experiment/README.md)** — Server-side rendering with EJS templates, validation, and dynamic student routes.
-10. **[Lab Test-8 Experiment](./LABS/Lab%20Test-8%20Experiment/README.md)** — RESTful Books CRUD API protected with bcrypt + JWT Bearer tokens.
-11. **[Lab Test-9 Experiment](./LABS/Lab%20Test-9%20Experiment/README.md)** — Helmet security headers, CORS allowlists, rate limiting, `/health`, and Docker Compose.
-12. **[Lab Test-10 Experiment](./LABS/Lab%20Test-10%20Experiment/README.md)** — Real-time group chat powered by Express and Socket.IO WebSockets.
-
----
-
-## 📚 Theory & Units Summary
-
-The [`Theory`](./Theory/README.md) directory connects client-side state, hybrid SQL/NoSQL modeling, multi-framework APIs, authentication, Django, and Docker:
-
-1. **[Assignment 1 — NoteSpace](./Theory/Assignment-1-Notes-App/README.md)** — Browser-first Notes App built with `localStorage`, `sessionStorage`, and JSON ([open app](./Theory/Assignment-1-Notes-App/index.html)).
-2. **[Assignment 2 — PostgreSQL JSONB](./Theory/Assignment%202/README.md)** — Hybrid relational + document design using `jsonb`, GIN indexes, and an [interactive query UI](./Theory/Assignment%202/index.html).
-3. **[JWT Authentication Lab](./Theory/JWT-Authentication-Lab/README.md)** — FastAPI + SQLAlchemy Student Management API with bcrypt hashing, JWT tokens, and RBAC ([lecture notes](./Theory/JWT-Authentication-Lab/docs/LECTURE_NOTES.md)).
-4. **[Theory 1](./Theory/Theory%201/README.md)** — Parallel backend practice servers in Node.js (Express + EJS) and Python (Flask).
-5. **[Unit 3 — Django Student System](./Theory/Unit%203/README.md)** — Django views returning HTTP and JSON responses with URL routing.
-6. **[Unit 4 — Docker & Containers](./Theory/Unit%204/README.md)** — Java container state preservation and a Dockerized Express API (`Dockerfile`).
+1. **[Django To-Do App](./LABS/django_todo_app/README.md)** — Server-rendered task manager using Django models, `ModelForm`, CSRF protection, SQLite, and view tests.
+2. **[EXP-1](./LABS/EXP-1/README.md)** — Single-card profile webpage built with semantic HTML5 and responsive CSS ([preview](./LABS/EXP-1/arnav.html)).
+3. **[Lab Test-1 Experiment](./LABS/Lab%20Test-1%20Experiment/README.md)** — Simple CMS blog backed by Node.js, Express, EJS, and MongoDB.
+4. **[Lab Test-2 Experiment](./LABS/Lab%20Test-2%20Experiment/README.md)** — Responsive landing page built with CSS Grid, Flexbox, and media queries ([preview](./LABS/Lab%20Test-2%20Experiment/index.html)).
+5. **[Lab Test-3 Experiment](./LABS/Lab%20Test-3%20Experiment/README.md)** — Express routing, route and query parameters, POST requests, EJS views, and Nodemon.
+6. **[Lab Test-4 Experiment](./LABS/Lab%20Test-4%20Experiment/README.md)** — User signup, login, and user listing with Express and Mongoose.
+7. **[Lab Test-5 Experiment](./LABS/Lab%20Test-5%20Experiment/README.md)** — Side-by-side comparison of PostgreSQL and MongoDB CRUD with a JSONB extension and [companion UI](./LABS/Lab%20Test-5%20Experiment/ui/index.html).
+8. **[Lab Test-6 Experiment](./LABS/Lab%20Test-6%20Experiment/README.md)** — Express middleware pipeline with custom logging, body parsing, header auth guard, 404, and central error handling.
+9. **[Lab Test-7 Experiment](./LABS/Lab%20Test-7%20Experiment/README.md)** — Dynamic EJS student pages, parameterized routes, form validation, and 404 rendering.
+10. **[Lab Test-8 Experiment](./LABS/Lab%20Test-8%20Experiment/README.md)** — RESTful Books CRUD API secured with bcrypt password hashing and JWT Bearer tokens.
+11. **[Lab Test-9 Experiment](./LABS/Lab%20Test-9%20Experiment/README.md)** — Express hardening using Helmet, CORS allowlists, rate limiting, `/health`, and Docker Compose.
+12. **[Lab Test-10 Experiment](./LABS/Lab%20Test-10%20Experiment/README.md)** — Real-time group chat built with Express and Socket.IO.
 
 ---
 
-## 🖥️ Applications Summary
+## Theory and Units
 
-The [`Applications`](./Applications/README.md) directory houses larger integrated projects:
+The [`Theory`](./Theory/README.md) folder covers conceptual assignments, lecture labs, and unit exercises:
 
-- **[CMS Lab](./Applications/cms-lab/README.md)** — Full-featured Content Management System with Express.js, EJS, responsive CSS, MongoDB persistence, and automatic in-memory demo fallback.
+1. **[Assignment 1 — NoteSpace](./Theory/Assignment-1-Notes-App/README.md)** — Client-side Notes App built with `localStorage`, `sessionStorage`, and JSON ([open app](./Theory/Assignment-1-Notes-App/index.html)).
+2. **[Assignment 2 — PostgreSQL JSONB](./Theory/Assignment%202/README.md)** — Hybrid relational and document modeling in PostgreSQL with `jsonb`, GIN indexes, and an [interactive query UI](./Theory/Assignment%202/index.html).
+3. **[JWT Authentication Lab](./Theory/JWT-Authentication-Lab/README.md)** — FastAPI and SQLAlchemy Student Management API with bcrypt hashing, JWT expiry, and authorization ([lecture notes](./Theory/JWT-Authentication-Lab/docs/LECTURE_NOTES.md)).
+4. **[Theory 1](./Theory/Theory%201/README.md)** — Two separate backend examples comparing Node.js (Express + EJS) with Python (Flask).
+5. **[Unit 3 — Django Student System](./Theory/Unit%203/README.md)** — Minimal Django project exposing HTTP and JSON views.
+6. **[Unit 4 — Docker and Containers](./Theory/Unit%204/README.md)** — Java container state preservation and a containerized Express API.
 
 ---
 
-## 🛠️ Technologies Used
+## Applications
 
-| Category | Technologies |
+The [`Applications`](./Applications/README.md) folder contains larger integrated builds:
+
+- **[CMS Lab](./Applications/cms-lab/README.md)** — Content Management System built with Node.js, Express, EJS, and MongoDB, with automatic fallback to in-memory demo posts if MongoDB is offline.
+
+---
+
+## Technologies Used
+
+| Area | Stack |
 | --- | --- |
-| **Frontend & Docs UI** | HTML5, CSS3, Responsive Grid/Flexbox, Vanilla JavaScript, LocalStorage, SessionStorage |
+| **Frontend and UI** | HTML5, CSS3, Responsive Grid/Flexbox, Vanilla JavaScript, LocalStorage, SessionStorage |
 | **Node.js Backend** | Node.js, Express.js, EJS, Nodemon, Socket.IO |
 | **Python Backend** | Python 3, Django, FastAPI, Flask, Uvicorn, Pydantic, Passlib / bcrypt |
-| **Databases & ORM/ODM** | PostgreSQL, JSONB, MongoDB, Mongoose, SQLite, SQLAlchemy |
-| **Auth & Security** | JWT (`jsonwebtoken`, `python-jose`), Bearer tokens, CSRF protection, Helmet, CORS, Rate Limiting |
-| **DevOps & Tooling** | Docker, Docker Compose, Git, GitHub, GitHub Pages |
+| **Databases** | PostgreSQL, JSONB, MongoDB, Mongoose, SQLite, SQLAlchemy |
+| **Security and Auth** | JWT (`jsonwebtoken`, `python-jose`), Bearer tokens, CSRF protection, Helmet, CORS, Rate Limiting |
+| **DevOps and Tooling** | Docker, Docker Compose, Git, GitHub, GitHub Pages |
 
 ---
 
-## 🌐 General Backend Architecture
+## General Architecture
 
 ```text
-                 USER / BROWSER
-                       │
-          HTTP Request │ WebSocket
-                       ▼
-           ┌───────────────────────┐
-           │   Backend Framework   │
-           │ Express / Django /    │
-           │ FastAPI / Flask       │
-           └───────────┬───────────┘
-                       │
-         ┌─────────────┴─────────────┐
-         ▼                           ▼
-  Middleware / Auth           Data Layer
-  Logger · Helmet · JWT       MongoDB · PostgreSQL/JSONB · SQLite
-         │                           │
-         └─────────────┬─────────────┘
-                       ▼
-             HTML (EJS/Django) / JSON
-                       │
-                       ▼
-                 Client Browser
+User / Browser
+      │
+      │  HTTP Request / WebSocket
+      ▼
+Backend Server (Express / Django / FastAPI / Flask)
+      ├── Middleware & Auth (Logger, Helmet, CORS, JWT, CSRF)
+      └── Routes & Business Logic
+            │
+            ▼
+Data Layer (MongoDB / PostgreSQL + JSONB / SQLite)
+            │
+            ▼
+HTML Template (EJS / Django) or JSON / Socket Event
 ```
 
 ---
 
-## ▶️ Running the Website & Projects
+## Running Locally
 
-### Open the Documentation Website Locally
+### Open the Documentation Website
 
 ```bash
-# Serve the root website locally
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000` (or open [`index.html`](./index.html) directly in a browser).
+Then visit `http://localhost:8000` (or open [`index.html`](./index.html) directly).
 
-### Typical Node.js Project
+### Node.js Projects
 
 ```bash
 npm install
 npm start       # or: npm run dev
 ```
 
-### Typical Python / Django / FastAPI Project
+### Python / Django / FastAPI Projects
 
 ```bash
 python3 -m venv .venv
@@ -208,12 +184,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Check each linked project `README.md` above for exact ports, environment variables (`.env.example`), and database setup instructions.
+Check each linked project `README.md` for its exact port, environment variables, and database setup.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Made by Arnav Daftuar**  
-B.Tech Computer Science & Engineering · Backend Development (18722)  
+B.Tech Computer Science and Engineering — Backend Development (18722)  
 GitHub: [@IamBolt7](https://github.com/IamBolt7) · Repository: [Backend.Develepment.18722](https://github.com/IamBolt7/Backend.Develepment.18722)

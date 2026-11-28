@@ -1,6 +1,11 @@
 (() => {
   const GITHUB_BASE = 'https://github.com/IamBolt7/Backend.Develepment.18722';
 
+  const GRID_SVG =
+    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>';
+  const READER_SVG =
+    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>';
+
   const DOCS = [
     {
       path: 'README.md',
@@ -8,8 +13,7 @@
       group: 'Overview',
       category: 'all',
       badge: 'Root',
-      icon: '🏠',
-      summary: 'Master documentation hub connecting every Lab, Theory module, and Application in Backend Development (18722). Made by Arnav Daftuar.',
+      summary: 'Master documentation index connecting every lab, theory module, and application in Backend Development 18722. Made by Arnav Daftuar.',
       tags: ['Hub', 'Architecture', 'Node.js', 'Python', 'Databases']
     },
     {
@@ -18,8 +22,7 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Index',
-      icon: '🧪',
-      summary: 'Complete overview of all 12 practical laboratory projects from HTML/CSS fundamentals to Socket.IO and Docker.',
+      summary: 'Overview of all 12 practical laboratory projects spanning HTML and CSS fundamentals, Express, Django, databases, Socket.IO, and Docker.',
       tags: ['Labs', 'Express', 'Django', 'MongoDB', 'PostgreSQL']
     },
     {
@@ -28,8 +31,7 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Django',
-      icon: '✅',
-      summary: 'Server-rendered To-Do manager built with Django MVT, ModelForm validation, CSRF protection, SQLite, and tests.',
+      summary: 'Database-backed task manager built with Django MVT, ModelForm validation, CSRF protection, SQLite persistence, and view tests.',
       tags: ['Python', 'Django', 'SQLite', 'CSRF']
     },
     {
@@ -38,7 +40,6 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'HTML/CSS',
-      icon: '🎨',
       demo: 'LABS/EXP-1/arnav.html',
       summary: 'Semantic HTML5 and responsive CSS card introduction webpage.',
       tags: ['HTML5', 'CSS3', 'Responsive']
@@ -49,8 +50,7 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Express',
-      icon: '📝',
-      summary: 'Blog CMS built with Node.js, Express.js, EJS templates, and MongoDB.',
+      summary: 'Blog content management system built with Node.js, Express.js, EJS templates, and MongoDB.',
       tags: ['Node.js', 'Express', 'EJS', 'MongoDB']
     },
     {
@@ -59,7 +59,6 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Report',
-      icon: '📄',
       summary: 'Detailed project report documenting the Simple CMS Blog implementation and testing.',
       tags: ['Report', 'CMS', 'MongoDB']
     },
@@ -69,9 +68,8 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Grid/Flex',
-      icon: '📱',
       demo: 'LABS/Lab Test-2 Experiment/index.html',
-      summary: 'Zero-framework responsive landing page using CSS Grid, Flexbox, clamp(), and media queries.',
+      summary: 'Zero-framework responsive webpage using CSS Grid, Flexbox, clamp(), and media queries.',
       tags: ['HTML5', 'CSS Grid', 'Flexbox', 'Media Queries']
     },
     {
@@ -80,8 +78,7 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Express',
-      icon: '⚡',
-      summary: 'Express routing, URL/query parameters, POST handling, dynamic EJS templates, and Nodemon.',
+      summary: 'Express routing, URL and query parameters, POST handling, dynamic EJS templates, and Nodemon.',
       tags: ['Node.js', 'Express', 'EJS', 'Nodemon']
     },
     {
@@ -90,8 +87,7 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Mongoose',
-      icon: '🍃',
-      summary: 'User registration, login, and MongoDB schema/model persistence using Mongoose ODM.',
+      summary: 'User registration, login, and MongoDB schema and model persistence using Mongoose ODM.',
       tags: ['Node.js', 'Express', 'Mongoose', 'MongoDB']
     },
     {
@@ -100,9 +96,8 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'SQL/NoSQL',
-      icon: '🗄️',
       demo: 'LABS/Lab Test-5 Experiment/ui/index.html',
-      summary: 'Side-by-side comparison of relational PostgreSQL, MongoDB documents, JSONB, and interactive companion UI.',
+      summary: 'Comparison of relational PostgreSQL, MongoDB documents, JSONB extensions, and an interactive companion UI.',
       tags: ['PostgreSQL', 'MongoDB', 'JSONB', 'CRUD']
     },
     {
@@ -111,8 +106,7 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Notes',
-      icon: '📊',
-      summary: 'Detailed comparison between relational and document-oriented persistence models.',
+      summary: 'Comparison between relational and document-oriented persistence models.',
       tags: ['PostgreSQL', 'MongoDB', 'Architecture']
     },
     {
@@ -121,7 +115,6 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Guide',
-      icon: '📘',
       summary: 'Step-by-step macOS installation and execution guide for PostgreSQL 16 and MongoDB Community.',
       tags: ['macOS', 'Homebrew', 'PostgreSQL', 'MongoDB']
     },
@@ -131,8 +124,7 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Middleware',
-      icon: '🔄',
-      summary: 'Custom request logger, body parsers, static serving, header auth guard, 404, and central error handling.',
+      summary: 'Custom request logger, body parsers, static serving, header authentication guard, 404, and central error handling.',
       tags: ['Express', 'Middleware', 'Auth Guard', 'Error Handling']
     },
     {
@@ -141,8 +133,7 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'EJS',
-      icon: '🖼️',
-      summary: 'Dynamic server-rendered student directory, parameterized detail views, form validation, and 404 pages.',
+      summary: 'Server-rendered student directory, parameterized detail views, form validation, and custom 404 pages.',
       tags: ['Express', 'EJS', 'SSR', 'Forms']
     },
     {
@@ -151,7 +142,6 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'JWT',
-      icon: '🔐',
       summary: 'RESTful Books CRUD API with query filtering, bcrypt password hashing, and JWT Bearer protection.',
       tags: ['REST API', 'JWT', 'bcrypt', 'Express']
     },
@@ -161,8 +151,7 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Docker',
-      icon: '🛡️',
-      summary: 'Helmet security headers, CORS allowlist, rate limiting, /health checks, and Docker Compose setup.',
+      summary: 'Helmet security headers, CORS allowlist, rate limiting, health checks, and Docker Compose setup.',
       tags: ['Helmet', 'CORS', 'Rate Limit', 'Docker']
     },
     {
@@ -171,7 +160,6 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'WebSocket',
-      icon: '💬',
       summary: 'Real-time bidirectional group chat with online user tracking and join/leave system events.',
       tags: ['Socket.IO', 'WebSockets', 'Express', 'Real-Time']
     },
@@ -181,8 +169,7 @@
       group: 'Theory & Units',
       category: 'theory',
       badge: 'Index',
-      icon: '📚',
-      summary: 'Overview of all theory assignments, lecture labs, and unit exercises across storage, databases, auth, Django, and Docker.',
+      summary: 'Overview of all theory assignments, lecture labs, and unit exercises covering storage, databases, authentication, Django, and Docker.',
       tags: ['Theory', 'Web Storage', 'JSONB', 'JWT', 'Docker']
     },
     {
@@ -191,9 +178,8 @@
       group: 'Theory & Units',
       category: 'theory',
       badge: 'Storage',
-      icon: '🗒️',
       demo: 'Theory/Assignment-1-Notes-App/index.html',
-      summary: 'Client-side Notes App with localStorage persistence, sessionStorage drafts, JSON playground, and export/import.',
+      summary: 'Client-side notes application with localStorage persistence, sessionStorage drafts, a JSON playground, and export/import.',
       tags: ['JavaScript', 'localStorage', 'sessionStorage', 'JSON']
     },
     {
@@ -202,9 +188,8 @@
       group: 'Theory & Units',
       category: 'theory',
       badge: 'JSONB',
-      icon: '🧩',
       demo: 'Theory/Assignment 2/index.html',
-      summary: 'PostgreSQL SQL + NoSQL hybrid experiment with JSONB operators, GIN indexes, and interactive query playground.',
+      summary: 'PostgreSQL hybrid experiment with JSONB operators, GIN indexes, and an interactive query playground.',
       tags: ['PostgreSQL', 'JSONB', 'GIN Index', 'SQL']
     },
     {
@@ -213,8 +198,7 @@
       group: 'Theory & Units',
       category: 'theory',
       badge: 'FastAPI',
-      icon: '🔑',
-      summary: 'FastAPI + SQLAlchemy Student Management API implementing bcrypt hashing, JWT tokens, expiry, and authorization.',
+      summary: 'FastAPI and SQLAlchemy Student Management API implementing bcrypt hashing, JWT tokens, expiry, and authorization.',
       tags: ['Python', 'FastAPI', 'SQLAlchemy', 'JWT']
     },
     {
@@ -223,8 +207,7 @@
       group: 'Theory & Units',
       category: 'theory',
       badge: 'Notes',
-      icon: '📖',
-      summary: 'Comprehensive Lecture 20 theory notes on Basic Auth, Token Auth, JWT structure, and security practices.',
+      summary: 'Lecture 20 theory notes on Basic Auth, Token Auth, JWT structure, and security practices.',
       tags: ['Lecture Notes', 'JWT', 'Security']
     },
     {
@@ -233,7 +216,6 @@
       group: 'Theory & Units',
       category: 'theory',
       badge: 'Dual Stack',
-      icon: '⚙️',
       summary: 'Parallel server implementations comparing Node.js (Express + EJS) and Python (Flask) side-by-side.',
       tags: ['Express', 'EJS', 'Python', 'Flask']
     },
@@ -243,7 +225,6 @@
       group: 'Theory & Units',
       category: 'theory',
       badge: 'Django',
-      icon: '🐍',
       summary: 'Django project architecture exposing HTTP and JSON API routes for student management.',
       tags: ['Python', 'Django', 'JsonResponse']
     },
@@ -253,7 +234,6 @@
       group: 'Theory & Units',
       category: 'theory',
       badge: 'Docker',
-      icon: '🐳',
       summary: 'Container filesystem preservation with Java and containerizing an Express API with Dockerfile.',
       tags: ['Docker', 'Ubuntu', 'Express', 'Java']
     },
@@ -263,8 +243,7 @@
       group: 'Applications',
       category: 'apps',
       badge: 'Index',
-      icon: '🖥️',
-      summary: 'Overview of complete integrated backend applications in this repository.',
+      summary: 'Overview of integrated backend applications in this repository.',
       tags: ['Applications', 'Full-Stack']
     },
     {
@@ -273,8 +252,7 @@
       group: 'Applications',
       category: 'apps',
       badge: 'Full App',
-      icon: '📰',
-      summary: 'Full Blog CMS built with Express, EJS, and MongoDB featuring validation, custom 404s, and demo fallback mode.',
+      summary: 'Blog CMS built with Express, EJS, and MongoDB featuring validation, custom 404s, and demo fallback mode.',
       tags: ['Node.js', 'Express', 'EJS', 'MongoDB']
     }
   ];
@@ -293,6 +271,7 @@
     sidebarNav: document.getElementById('sidebarNav'),
     searchInput: document.getElementById('searchInput'),
     themeToggle: document.getElementById('themeToggle'),
+    themeToggleLabel: document.getElementById('themeToggleLabel'),
     viewToggle: document.getElementById('viewToggle'),
     viewToggleIcon: document.getElementById('viewToggleIcon'),
     viewToggleLabel: document.getElementById('viewToggleLabel'),
@@ -349,12 +328,10 @@
   function parseInline(text, currentDocPath) {
     let out = escapeHtml(text);
 
-    // Inline images (badges / shields)
     out = out.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, src) => {
       return `<img class="badge-img" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy">`;
     });
 
-    // Links
     out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
       const isExt = /^https?:\/\//i.test(href);
       const docMatch = href.match(/#doc=([^&]+)/);
@@ -369,17 +346,15 @@
           return `<a href="#doc=${encodeRepoPath(normalized)}" data-doc="${escapeHtml(normalized)}">${label}</a>`;
         }
         if (normalized.endsWith('.html')) {
-          return `<a href="${encodeRepoPath(normalized)}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`;
+          return `<a href="${encodeRepoPath(normalized)}" target="_blank" rel="noopener noreferrer">${label}</a>`;
         }
         const ghType = href.endsWith('/') ? 'tree' : 'blob';
-        return `<a href="${GITHUB_BASE}/${ghType}/main/${encodeRepoPath(resolved)}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`;
+        return `<a href="${GITHUB_BASE}/${ghType}/main/${encodeRepoPath(resolved)}" target="_blank" rel="noopener noreferrer">${label}</a>`;
       }
       return `<a href="${escapeHtml(href)}"${isExt ? ' target="_blank" rel="noopener noreferrer"' : ''}>${label}</a>`;
     });
 
-    // Inline code
     out = out.replace(/`([^`]+)`/g, '<code>$1</code>');
-    // Bold & italic
     out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
     out = out.replace(/\*([^*]+)\*/g, '<em>$1</em>');
     return out;
@@ -394,7 +369,6 @@
     while (i < lines.length) {
       const line = lines[i];
 
-      // Fenced code blocks
       const fenceMatch = line.match(/^```([a-zA-Z0-9_-]*)\s*$/);
       if (fenceMatch) {
         const lang = fenceMatch[1] || 'text';
@@ -412,14 +386,12 @@
         continue;
       }
 
-      // Horizontal rule
       if (/^---+\s*$/.test(line)) {
         html.push('<hr>');
         i++;
         continue;
       }
 
-      // Headings
       const headingMatch = line.match(/^(#{1,6})\s+(.+)$/);
       if (headingMatch) {
         const level = headingMatch[1].length;
@@ -433,7 +405,6 @@
         continue;
       }
 
-      // Blockquote
       if (/^>\s?/.test(line)) {
         const quoteLines = [];
         while (i < lines.length && /^>\s?/.test(lines[i])) {
@@ -444,7 +415,6 @@
         continue;
       }
 
-      // Tables
       if (line.includes('|') && i + 1 < lines.length && /^\s*\|?[:\s-|]+\|[:\s-|]*$/.test(lines[i + 1])) {
         const parseRow = (row) =>
           row
@@ -469,7 +439,6 @@
         continue;
       }
 
-      // Unordered or task list
       if (/^\s*[-*]\s+/.test(line)) {
         const items = [];
         while (i < lines.length && /^\s*[-*]\s+/.test(lines[i])) {
@@ -478,7 +447,7 @@
           if (taskMatch) {
             const checked = taskMatch[1].toLowerCase() === 'x';
             items.push(
-              `<li class="task-item"><span class="task-box ${checked ? 'checked' : ''}">${checked ? '✓' : ''}</span>${parseInline(taskMatch[2], currentDocPath)}</li>`
+              `<li class="task-item"><span class="task-box ${checked ? 'checked' : ''}" aria-hidden="true"></span>${parseInline(taskMatch[2], currentDocPath)}</li>`
             );
           } else {
             items.push(`<li>${parseInline(itemText, currentDocPath)}</li>`);
@@ -489,7 +458,6 @@
         continue;
       }
 
-      // Ordered list
       if (/^\s*\d+\.\s+/.test(line)) {
         const items = [];
         while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) {
@@ -500,13 +468,11 @@
         continue;
       }
 
-      // Blank line
       if (line.trim() === '') {
         i++;
         continue;
       }
 
-      // Paragraph
       const paraLines = [];
       while (
         i < lines.length &&
@@ -569,7 +535,7 @@
                 (d) => `
               <li>
                 <button class="nav-item ${d.path === state.currentDoc ? 'active' : ''}" type="button" data-doc="${escapeHtml(d.path)}">
-                  <span class="nav-item-label"><span>${d.icon}</span><span>${escapeHtml(d.title)}</span></span>
+                  <span class="nav-item-label"><span>${escapeHtml(d.title)}</span></span>
                   <span class="nav-badge">${escapeHtml(d.badge)}</span>
                 </button>
               </li>
@@ -583,7 +549,7 @@
 
     els.sidebarNav.innerHTML = parts.length
       ? parts.join('')
-      : '<p style="color:var(--muted);font-size:0.85rem;padding:8px;">No matching docs found.</p>';
+      : '<p style="color:var(--muted);font-size:0.85rem;padding:8px;">No matching documents found.</p>';
   }
 
   function renderGrid() {
@@ -595,7 +561,7 @@
       <article class="project-card">
         <div class="project-card-top">
           <span class="cat-tag">${escapeHtml(d.group)}</span>
-          <span class="nav-badge">${d.icon} ${escapeHtml(d.badge)}</span>
+          <span class="nav-badge">${escapeHtml(d.badge)}</span>
         </div>
         <h3>${escapeHtml(d.title)}</h3>
         <p>${escapeHtml(d.summary)}</p>
@@ -603,13 +569,13 @@
           ${d.tags.map((t) => `<span class="tech-pill">${escapeHtml(t)}</span>`).join('')}
         </div>
         <div class="card-actions">
-          <button class="btn btn-primary" style="padding:7px 12px;font-size:0.8rem;" type="button" data-doc="${escapeHtml(d.path)}">Read Docs</button>
+          <button class="btn btn-primary" style="padding:7px 14px;font-size:0.79rem;" type="button" data-doc="${escapeHtml(d.path)}">Read Docs</button>
           ${
             d.demo
-              ? `<a class="btn btn-secondary" style="padding:7px 12px;font-size:0.8rem;" href="${encodeRepoPath(d.demo)}" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>`
+              ? `<a class="btn btn-secondary" style="padding:7px 14px;font-size:0.79rem;" href="${encodeRepoPath(d.demo)}" target="_blank" rel="noopener noreferrer">Live Demo</a>`
               : ''
           }
-          <a class="btn btn-ghost" style="padding:7px 12px;font-size:0.8rem;" href="${GITHUB_BASE}/blob/main/${encodeRepoPath(d.path)}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="btn btn-ghost" style="padding:7px 14px;font-size:0.79rem;" href="${GITHUB_BASE}/blob/main/${encodeRepoPath(d.path)}" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </article>
     `
@@ -621,13 +587,13 @@
     const crumbs = [`<button type="button" data-doc="README.md">Main README</button>`];
     if (docMeta.path !== 'README.md') {
       if (docMeta.path.startsWith('LABS/') && docMeta.path !== 'LABS/README.md') {
-        crumbs.push('<span>›</span>', `<button type="button" data-doc="LABS/README.md">LABS</button>`);
+        crumbs.push('<span>/</span>', `<button type="button" data-doc="LABS/README.md">LABS</button>`);
       } else if (docMeta.path.startsWith('Theory/') && docMeta.path !== 'Theory/README.md') {
-        crumbs.push('<span>›</span>', `<button type="button" data-doc="Theory/README.md">Theory</button>`);
+        crumbs.push('<span>/</span>', `<button type="button" data-doc="Theory/README.md">Theory</button>`);
       } else if (docMeta.path.startsWith('Applications/') && docMeta.path !== 'Applications/README.md') {
-        crumbs.push('<span>›</span>', `<button type="button" data-doc="Applications/README.md">Applications</button>`);
+        crumbs.push('<span>/</span>', `<button type="button" data-doc="Applications/README.md">Applications</button>`);
       }
-      crumbs.push('<span>›</span>', `<span>${escapeHtml(docMeta.title)}</span>`);
+      crumbs.push('<span>/</span>', `<span>${escapeHtml(docMeta.title)}</span>`);
     }
     els.breadcrumbs.innerHTML = crumbs.join(' ');
   }
@@ -640,12 +606,12 @@
     els.pagerNav.innerHTML = `
       ${
         prev
-          ? `<a class="pager-card prev" href="#doc=${encodeRepoPath(prev.path)}" data-doc="${escapeHtml(prev.path)}"><small>← Previous</small><strong>${prev.icon} ${escapeHtml(prev.title)}</strong></a>`
+          ? `<a class="pager-card prev" href="#doc=${encodeRepoPath(prev.path)}" data-doc="${escapeHtml(prev.path)}"><small>Previous</small><strong>${escapeHtml(prev.title)}</strong></a>`
           : '<div></div>'
       }
       ${
         next
-          ? `<a class="pager-card next" href="#doc=${encodeRepoPath(next.path)}" data-doc="${escapeHtml(next.path)}"><small>Next →</small><strong>${next.icon} ${escapeHtml(next.title)}</strong></a>`
+          ? `<a class="pager-card next" href="#doc=${encodeRepoPath(next.path)}" data-doc="${escapeHtml(next.path)}"><small>Next</small><strong>${escapeHtml(next.title)}</strong></a>`
           : '<div></div>'
       }
     `;
@@ -673,7 +639,7 @@
       els.liveDemoBtn.hidden = true;
     }
 
-    els.markdownBody.innerHTML = '<p style="color:var(--muted);">Loading documentation…</p>';
+    els.markdownBody.innerHTML = '<p style="color:var(--muted);">Loading documentation...</p>';
     const rawMd = await loadDocContent(normalized);
     const { html, toc } = renderMarkdown(rawMd, normalized);
     els.markdownBody.innerHTML = html;
@@ -692,17 +658,20 @@
     const isGrid = mode === 'grid';
     els.gridView.hidden = !isGrid;
     els.readerView.hidden = isGrid;
-    els.viewToggleIcon.textContent = isGrid ? '📖' : '▦';
+    els.viewToggleIcon.innerHTML = isGrid ? READER_SVG : GRID_SVG;
     els.viewToggleLabel.textContent = isGrid ? 'Docs Reader' : 'Project Grid';
     if (isGrid) renderGrid();
   }
 
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('b18-theme', theme);
+    els.themeToggleLabel.textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+
   function toggleTheme() {
-    const htmlEl = document.documentElement;
-    const next = htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    htmlEl.setAttribute('data-theme', next);
-    localStorage.setItem('b18-theme', next);
-    els.themeToggle.textContent = next === 'dark' ? '☀︎' : '☾';
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    applyTheme(current === 'dark' ? 'light' : 'dark');
   }
 
   function openMobileSidebar() {
@@ -731,7 +700,7 @@
         const pre = copyBtn.closest('.code-block')?.querySelector('pre');
         if (pre) {
           navigator.clipboard?.writeText(pre.textContent).then(() => {
-            copyBtn.textContent = 'Copied!';
+            copyBtn.textContent = 'Copied';
             setTimeout(() => (copyBtn.textContent = 'Copy'), 1500);
           });
         }
@@ -774,9 +743,9 @@
   }
 
   function bootstrap() {
-    const savedTheme = localStorage.getItem('b18-theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    els.themeToggle.textContent = savedTheme === 'dark' ? '☀︎' : '☾';
+    const savedTheme = localStorage.getItem('b18-theme') || 'light';
+    applyTheme(savedTheme);
+    els.viewToggleIcon.innerHTML = GRID_SVG;
     els.statTotalDocs.textContent = String(DOCS.length);
 
     initEvents();
