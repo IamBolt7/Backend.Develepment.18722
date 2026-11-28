@@ -86,7 +86,7 @@ HTML Response
 
 ---
 
-# 1️⃣ EXP-1
+# EXP-1
 
 **Project:** [Open EXP-1](./EXP-1/)  
 **README:** [EXP-1/README.md](./EXP-1/README.md)
@@ -103,7 +103,7 @@ The introductory experiment establishes the basic project workflow used througho
 
 ---
 
-# 2️⃣ Lab Test-1 Experiment
+# Lab Test-1 Experiment
 
 **Project:** [Open Lab Test-1](./Lab%20Test-1%20Experiment/)  
 **README:** [Lab Test-1 README](./Lab%20Test-1%20Experiment/README.md)
@@ -120,7 +120,7 @@ This experiment reinforces the foundational workflow for developing and testing 
 
 ---
 
-# 3️⃣ Lab Test-2 Experiment
+# Lab Test-2 Experiment
 
 **Project:** [Open Lab Test-2](./Lab%20Test-2%20Experiment/)  
 **README:** [Lab Test-2 README](./Lab%20Test-2%20Experiment/README.md)
@@ -138,7 +138,7 @@ This experiment progresses toward structured server-side development and routing
 
 ---
 
-# 4️⃣ Lab Test-3 Experiment
+# Lab Test-3 Experiment
 
 **Project:** [Open Lab Test-3](./Lab%20Test-3%20Experiment/)  
 **README:** [Lab Test-3 README](./Lab%20Test-3%20Experiment/README.md)
@@ -165,7 +165,7 @@ This experiment focuses on API-oriented backend development and CRUD-style resou
 
 ---
 
-# 5️⃣ Lab Test-4 Experiment
+# Lab Test-4 Experiment
 
 **Project:** [Open Lab Test-4](./Lab%20Test-4%20Experiment/)  
 **README:** [Lab Test-4 README](./Lab%20Test-4%20Experiment/README.md)
@@ -182,7 +182,7 @@ This experiment moves into persistent data and database-backed backend applicati
 
 ---
 
-# 6️⃣ Lab Test-5 Experiment
+# Lab Test-5 Experiment
 
 **Project:** [Open Lab Test-5](./Lab%20Test-5%20Experiment/)  
 **README:** [Lab Test-5 README](./Lab%20Test-5%20Experiment/README.md)
@@ -214,7 +214,7 @@ This experiment compares relational and document-oriented database models.
 
 ---
 
-# 7️⃣ Lab Test-6 Experiment
+# Lab Test-6 Experiment
 
 **Project:** [Open Lab Test-6](./Lab%20Test-6%20Experiment/)  
 **README:** [Lab Test-6 README](./Lab%20Test-6%20Experiment/README.md)
@@ -266,7 +266,7 @@ Error    → Error Handler
 
 ---
 
-# 8️⃣ Lab Test-7 Experiment
+# Lab Test-7 Experiment
 
 **Project:** [Open Lab Test-7](./Lab%20Test-7%20Experiment/)  
 **README:** [Lab Test-7 README](./Lab%20Test-7%20Experiment/README.md)
@@ -287,7 +287,7 @@ This experiment demonstrates dynamic server-side HTML generation using Express a
 
 ---
 
-# 9️⃣ Lab Test-8 Experiment
+# Lab Test-8 Experiment
 
 **Project:** [Open Lab Test-8](./Lab%20Test-8%20Experiment/)  
 **README:** [Lab Test-8 README](./Lab%20Test-8%20Experiment/README.md)
@@ -327,7 +327,7 @@ Protected API
 
 ---
 
-# 🔟 Lab Test-9 Experiment
+# Lab Test-9 Experiment
 
 **Project:** [Open Lab Test-9](./Lab%20Test-9%20Experiment/)  
 **README:** [Lab Test-9 README](./Lab%20Test-9%20Experiment/README.md)
@@ -349,7 +349,7 @@ This experiment focuses on strengthening and preparing an Express backend for de
 
 ---
 
-# 1️⃣1️⃣ Lab Test-10 Experiment
+# Lab Test-10 Experiment
 
 **Project:** [Open Lab Test-10](./Lab%20Test-10%20Experiment/)  
 **README:** [Lab Test-10 README](./Lab%20Test-10%20Experiment/README.md)
