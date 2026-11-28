@@ -1,11 +1,6 @@
 (() => {
   const GITHUB_BASE = 'https://github.com/IamBolt7/Backend.Develepment.18722';
 
-  const GRID_SVG =
-    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>';
-  const READER_SVG =
-    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>';
-
   const DOCS = [
     {
       path: 'README.md',
@@ -13,8 +8,10 @@
       group: 'Overview',
       category: 'all',
       badge: 'Root',
-      summary: 'Master documentation index connecting every lab, theory module, and application in Backend Development 18722. Made by Arnav Daftuar.',
-      tags: ['Hub', 'Architecture', 'Node.js', 'Python', 'Databases']
+      featured: 'black',
+      kicker: 'Repository Hub',
+      summary: 'Master documentation index connecting every lab, theory module, and application in Backend Development 18722.',
+      tags: ['Index', 'Node.js', 'Python', 'Databases']
     },
     {
       path: 'LABS/README.md',
@@ -22,8 +19,8 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Index',
-      summary: 'Overview of all 12 practical laboratory projects spanning HTML and CSS fundamentals, Express, Django, databases, Socket.IO, and Docker.',
-      tags: ['Labs', 'Express', 'Django', 'MongoDB', 'PostgreSQL']
+      summary: 'Complete overview of all twelve practical laboratory experiments from HTML and CSS to WebSockets and Docker.',
+      tags: ['Labs', 'Express', 'Django', 'Databases']
     },
     {
       path: 'LABS/django_todo_app/README.md',
@@ -31,17 +28,17 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Django',
-      summary: 'Database-backed task manager built with Django MVT, ModelForm validation, CSRF protection, SQLite persistence, and view tests.',
+      summary: 'Database-backed task manager built with Django MVT, ModelForm validation, CSRF protection, SQLite persistence, and automated tests.',
       tags: ['Python', 'Django', 'SQLite', 'CSRF']
     },
     {
       path: 'LABS/EXP-1/README.md',
-      title: 'EXP-1 — HTML & CSS Intro',
+      title: 'EXP-1 — HTML and CSS Intro',
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'HTML/CSS',
       demo: 'LABS/EXP-1/arnav.html',
-      summary: 'Semantic HTML5 and responsive CSS card introduction webpage.',
+      summary: 'Semantic HTML5 and responsive CSS card webpage with custom properties and Grid centering.',
       tags: ['HTML5', 'CSS3', 'Responsive']
     },
     {
@@ -59,7 +56,7 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Report',
-      summary: 'Detailed project report documenting the Simple CMS Blog implementation and testing.',
+      summary: 'Detailed project report documenting the Simple CMS Blog implementation and test results.',
       tags: ['Report', 'CMS', 'MongoDB']
     },
     {
@@ -69,21 +66,21 @@
       category: 'labs',
       badge: 'Grid/Flex',
       demo: 'LABS/Lab Test-2 Experiment/index.html',
-      summary: 'Zero-framework responsive webpage using CSS Grid, Flexbox, clamp(), and media queries.',
+      summary: 'Zero-framework responsive webpage using CSS Grid, Flexbox, fluid sizing with clamp(), and media queries.',
       tags: ['HTML5', 'CSS Grid', 'Flexbox', 'Media Queries']
     },
     {
       path: 'LABS/Lab Test-3 Experiment/README.md',
-      title: 'Lab Test-3 — Express & EJS',
+      title: 'Lab Test-3 — Express and EJS',
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Express',
-      summary: 'Express routing, URL and query parameters, POST handling, dynamic EJS templates, and Nodemon.',
+      summary: 'Express routing, URL and query parameters, POST form processing, dynamic EJS templates, and Nodemon.',
       tags: ['Node.js', 'Express', 'EJS', 'Nodemon']
     },
     {
       path: 'LABS/Lab Test-4 Experiment/README.md',
-      title: 'Lab Test-4 — Express + Mongoose',
+      title: 'Lab Test-4 — Express and Mongoose',
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Mongoose',
@@ -92,12 +89,14 @@
     },
     {
       path: 'LABS/Lab Test-5 Experiment/README.md',
-      title: 'Lab Test-5 — PostgreSQL vs MongoDB',
+      title: 'PostgreSQL vs MongoDB',
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'SQL/NoSQL',
+      featured: 'charcoal',
+      kicker: 'Databases',
       demo: 'LABS/Lab Test-5 Experiment/ui/index.html',
-      summary: 'Comparison of relational PostgreSQL, MongoDB documents, JSONB extensions, and an interactive companion UI.',
+      summary: 'Side-by-side comparison of relational PostgreSQL, MongoDB documents, JSONB extensions, and an interactive companion UI.',
       tags: ['PostgreSQL', 'MongoDB', 'JSONB', 'CRUD']
     },
     {
@@ -106,7 +105,7 @@
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Notes',
-      summary: 'Comparison between relational and document-oriented persistence models.',
+      summary: 'Architectural comparison between relational schemas and document-oriented collections.',
       tags: ['PostgreSQL', 'MongoDB', 'Architecture']
     },
     {
@@ -138,30 +137,36 @@
     },
     {
       path: 'LABS/Lab Test-8 Experiment/README.md',
-      title: 'Lab Test-8 — REST API & JWT',
+      title: 'REST API & JWT Authentication',
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'JWT',
-      summary: 'RESTful Books CRUD API with query filtering, bcrypt password hashing, and JWT Bearer protection.',
+      featured: 'white',
+      kicker: 'Security',
+      summary: 'RESTful Books CRUD API with query filtering, bcrypt password hashing, and JWT Bearer token protection.',
       tags: ['REST API', 'JWT', 'bcrypt', 'Express']
     },
     {
       path: 'LABS/Lab Test-9 Experiment/README.md',
-      title: 'Lab Test-9 — Security & Docker',
+      title: 'Security hardening & Docker',
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'Docker',
-      summary: 'Helmet security headers, CORS allowlist, rate limiting, health checks, and Docker Compose setup.',
+      featured: 'white',
+      kicker: 'Deployment',
+      summary: 'Helmet security headers, CORS allowlist, rate limiting, health checks, and Docker Compose packaging.',
       tags: ['Helmet', 'CORS', 'Rate Limit', 'Docker']
     },
     {
       path: 'LABS/Lab Test-10 Experiment/README.md',
-      title: 'Lab Test-10 — Socket.IO Chat',
+      title: 'Real-time Chat with Socket.IO',
       group: 'Laboratory Work',
       category: 'labs',
       badge: 'WebSocket',
-      summary: 'Real-time bidirectional group chat with online user tracking and join/leave system events.',
-      tags: ['Socket.IO', 'WebSockets', 'Express', 'Real-Time']
+      featured: 'black',
+      kicker: 'Real-Time',
+      summary: 'Bidirectional group chat with online user tracking, join and leave events, and WebSocket messaging.',
+      tags: ['Socket.IO', 'WebSockets', 'Express']
     },
     {
       path: 'Theory/README.md',
@@ -174,12 +179,14 @@
     },
     {
       path: 'Theory/Assignment-1-Notes-App/README.md',
-      title: 'Assignment 1 — NoteSpace App',
+      title: 'NoteSpace Web Storage App',
       group: 'Theory & Units',
       category: 'theory',
       badge: 'Storage',
+      featured: 'white',
+      kicker: 'Client Storage',
       demo: 'Theory/Assignment-1-Notes-App/index.html',
-      summary: 'Client-side notes application with localStorage persistence, sessionStorage drafts, a JSON playground, and export/import.',
+      summary: 'Notes workspace powered by localStorage persistence, sessionStorage drafts, JSON inspection, and export/import.',
       tags: ['JavaScript', 'localStorage', 'sessionStorage', 'JSON']
     },
     {
@@ -189,7 +196,7 @@
       category: 'theory',
       badge: 'JSONB',
       demo: 'Theory/Assignment 2/index.html',
-      summary: 'PostgreSQL hybrid experiment with JSONB operators, GIN indexes, and an interactive query playground.',
+      summary: 'PostgreSQL hybrid modeling with JSONB operators, GIN indexes, and an interactive query playground.',
       tags: ['PostgreSQL', 'JSONB', 'GIN Index', 'SQL']
     },
     {
@@ -198,7 +205,7 @@
       group: 'Theory & Units',
       category: 'theory',
       badge: 'FastAPI',
-      summary: 'FastAPI and SQLAlchemy Student Management API implementing bcrypt hashing, JWT tokens, expiry, and authorization.',
+      summary: 'FastAPI and SQLAlchemy Student Management API implementing bcrypt hashing, JWT expiry, and route authorization.',
       tags: ['Python', 'FastAPI', 'SQLAlchemy', 'JWT']
     },
     {
@@ -207,12 +214,12 @@
       group: 'Theory & Units',
       category: 'theory',
       badge: 'Notes',
-      summary: 'Lecture 20 theory notes on Basic Auth, Token Auth, JWT structure, and security practices.',
+      summary: 'Lecture 20 notes on Basic Auth, Token Auth, JWT structure, and authentication security practices.',
       tags: ['Lecture Notes', 'JWT', 'Security']
     },
     {
       path: 'Theory/Theory 1/README.md',
-      title: 'Theory 1 — Express & Flask',
+      title: 'Theory 1 — Express and Flask',
       group: 'Theory & Units',
       category: 'theory',
       badge: 'Dual Stack',
@@ -230,7 +237,7 @@
     },
     {
       path: 'Theory/Unit 4/README.md',
-      title: 'Unit 4 — Docker & Express',
+      title: 'Unit 4 — Docker and Express',
       group: 'Theory & Units',
       category: 'theory',
       badge: 'Docker',
@@ -252,34 +259,30 @@
       group: 'Applications',
       category: 'apps',
       badge: 'Full App',
-      summary: 'Blog CMS built with Express, EJS, and MongoDB featuring validation, custom 404s, and demo fallback mode.',
+      featured: 'charcoal',
+      kicker: 'Application',
+      summary: 'Full Blog CMS built with Express, EJS, and MongoDB featuring validation, custom 404s, and demo fallback mode.',
       tags: ['Node.js', 'Express', 'EJS', 'MongoDB']
     }
   ];
 
   const state = {
-    currentDoc: 'README.md',
+    view: 'showcase',
     filter: 'all',
     query: '',
-    view: 'reader'
+    currentDoc: 'README.md'
   };
 
   const els = {
-    sidebar: document.getElementById('sidebar'),
-    sidebarBackdrop: document.getElementById('sidebarBackdrop'),
-    menuToggle: document.getElementById('menuToggle'),
-    sidebarNav: document.getElementById('sidebarNav'),
-    searchInput: document.getElementById('searchInput'),
-    themeToggle: document.getElementById('themeToggle'),
-    themeToggleLabel: document.getElementById('themeToggleLabel'),
-    viewToggle: document.getElementById('viewToggle'),
-    viewToggleIcon: document.getElementById('viewToggleIcon'),
-    viewToggleLabel: document.getElementById('viewToggleLabel'),
-    browseGridBtn: document.getElementById('browseGridBtn'),
-    gridView: document.getElementById('gridView'),
+    showcaseView: document.getElementById('showcaseView'),
     readerView: document.getElementById('readerView'),
-    projectGrid: document.getElementById('projectGrid'),
-    gridCount: document.getElementById('gridCount'),
+    featuredTrack: document.getElementById('featuredTrack'),
+    shelfPrev: document.getElementById('shelfPrev'),
+    shelfNext: document.getElementById('shelfNext'),
+    catalogGroups: document.getElementById('catalogGroups'),
+    catalogHeading: document.getElementById('catalogHeading'),
+    inlineFilterInput: document.getElementById('inlineFilterInput'),
+    readerSidebarNav: document.getElementById('readerSidebarNav'),
     markdownBody: document.getElementById('markdownBody'),
     breadcrumbs: document.getElementById('breadcrumbs'),
     liveDemoBtn: document.getElementById('liveDemoBtn'),
@@ -287,7 +290,21 @@
     tocList: document.getElementById('tocList'),
     tocPanel: document.getElementById('tocPanel'),
     pagerNav: document.getElementById('pagerNav'),
-    statTotalDocs: document.getElementById('statTotalDocs')
+    backToShowcaseBtn: document.getElementById('backToShowcaseBtn'),
+    navHomeBtn: document.getElementById('navHomeBtn'),
+    themeToggle: document.getElementById('themeToggle'),
+    mobileMenuBtn: document.getElementById('mobileMenuBtn'),
+    mobileDrawer: document.getElementById('mobileDrawer'),
+    openSearchBtn: document.getElementById('openSearchBtn'),
+    closeSearchBtn: document.getElementById('closeSearchBtn'),
+    searchOverlay: document.getElementById('searchOverlay'),
+    searchInput: document.getElementById('searchInput'),
+    searchResults: document.getElementById('searchResults'),
+    countAll: document.getElementById('countAll'),
+    countLabs: document.getElementById('countLabs'),
+    countTheory: document.getElementById('countTheory'),
+    countApps: document.getElementById('countApps'),
+    countDemos: document.getElementById('countDemos')
   };
 
   function encodeRepoPath(p) {
@@ -379,9 +396,8 @@
           i++;
         }
         i++;
-        const rawCode = codeLines.join('\n');
         html.push(
-          `<div class="code-block"><div class="code-header"><span>${escapeHtml(lang)}</span><button class="copy-btn" type="button">Copy</button></div><pre><code>${escapeHtml(rawCode)}</code></pre></div>`
+          `<div class="code-block"><div class="code-header"><span>${escapeHtml(lang)}</span><button class="copy-btn" type="button">Copy</button></div><pre><code>${escapeHtml(codeLines.join('\n'))}</code></pre></div>`
         );
         continue;
       }
@@ -503,11 +519,37 @@
     return `# Document Not Found\n\nCould not load \`${docPath}\`.`;
   }
 
-  function getFilteredDocs() {
+  function renderFeatured() {
+    const featured = DOCS.filter((d) => d.featured);
+    els.featuredTrack.innerHTML = featured
+      .map(
+        (d) => `
+      <article class="feature-card tone-${d.featured}" data-doc="${escapeHtml(d.path)}">
+        <div>
+          <div class="feature-kicker">${escapeHtml(d.kicker || d.group)}</div>
+          <h3 class="feature-title">${escapeHtml(d.title)}</h3>
+          <p class="feature-desc">${escapeHtml(d.summary)}</p>
+        </div>
+        <div class="feature-bottom">
+          <div class="feature-tags">
+            ${d.tags.slice(0, 3).map((t) => `<span class="feature-tag">${escapeHtml(t)}</span>`).join('')}
+          </div>
+          <span class="feature-cta">${d.demo ? 'Explore & Demo' : 'Read guide'} &rsaquo;</span>
+        </div>
+      </article>
+    `
+      )
+      .join('');
+  }
+
+  function getCatalogDocs() {
     const q = state.query.trim().toLowerCase();
     return DOCS.filter((d) => {
-      const catOk = state.filter === 'all' || d.category === 'all' || d.category === state.filter;
-      if (!catOk) return false;
+      if (state.filter === 'demos') {
+        if (!d.demo) return false;
+      } else if (state.filter !== 'all') {
+        if (d.category !== state.filter) return false;
+      }
       if (!q) return true;
       return (
         d.title.toLowerCase().includes(q) ||
@@ -518,68 +560,83 @@
     });
   }
 
-  function renderSidebar() {
-    const docs = getFilteredDocs();
+  function renderCatalog() {
+    const titles = {
+      all: 'All documentation. <span>Explore every connected README.</span>',
+      labs: 'Laboratory work. <span>Twelve progressive backend experiments.</span>',
+      theory: 'Theory and units. <span>Assignments, architecture, and lecture notes.</span>',
+      apps: 'Applications. <span>Integrated full-stack web builds.</span>',
+      demos: 'Browser demos. <span>Interactive pages you can open directly.</span>'
+    };
+    els.catalogHeading.innerHTML = titles[state.filter] || titles.all;
+
+    const filtered = getCatalogDocs();
     const groups = ['Overview', 'Laboratory Work', 'Theory & Units', 'Applications'];
-    const parts = [];
+    const html = [];
 
     for (const group of groups) {
-      const items = docs.filter((d) => d.group === group);
+      const items = filtered.filter((d) => d.group === group);
       if (!items.length) continue;
-      parts.push(`
+      html.push(`
         <section>
-          <h3 class="nav-group-title">${group}</h3>
-          <ul class="nav-list">
+          <div class="group-block-head">
+            <h3>${escapeHtml(group)}</h3>
+            <span>${items.length} item${items.length === 1 ? '' : 's'}</span>
+          </div>
+          <div class="apple-grid">
             ${items
               .map(
                 (d) => `
-              <li>
-                <button class="nav-item ${d.path === state.currentDoc ? 'active' : ''}" type="button" data-doc="${escapeHtml(d.path)}">
-                  <span class="nav-item-label"><span>${escapeHtml(d.title)}</span></span>
-                  <span class="nav-badge">${escapeHtml(d.badge)}</span>
-                </button>
-              </li>
+              <article class="module-card">
+                <div>
+                  <div class="module-top">
+                    <span class="module-label">${escapeHtml(d.group)}</span>
+                    <span class="module-badge">${escapeHtml(d.badge)}</span>
+                  </div>
+                  <h4>${escapeHtml(d.title)}</h4>
+                  <p>${escapeHtml(d.summary)}</p>
+                </div>
+                <div class="module-actions">
+                  <button class="link-btn" type="button" data-doc="${escapeHtml(d.path)}">Read Docs &rsaquo;</button>
+                  ${
+                    d.demo
+                      ? `<a class="link-btn" href="${encodeRepoPath(d.demo)}" target="_blank" rel="noopener noreferrer">Live Demo &rsaquo;</a>`
+                      : ''
+                  }
+                  <a class="link-btn muted" href="${GITHUB_BASE}/blob/main/${encodeRepoPath(d.path)}" target="_blank" rel="noopener noreferrer">GitHub &rsaquo;</a>
+                </div>
+              </article>
             `
               )
               .join('')}
-          </ul>
+          </div>
         </section>
       `);
     }
 
-    els.sidebarNav.innerHTML = parts.length
-      ? parts.join('')
-      : '<p style="color:var(--muted);font-size:0.85rem;padding:8px;">No matching documents found.</p>';
+    els.catalogGroups.innerHTML = html.length
+      ? html.join('')
+      : '<p style="color:var(--muted);font-size:15px;">No matching modules found.</p>';
   }
 
-  function renderGrid() {
-    const docs = getFilteredDocs().filter((d) => d.path !== 'README.md');
-    els.gridCount.textContent = `${docs.length} module${docs.length === 1 ? '' : 's'}`;
-    els.projectGrid.innerHTML = docs
-      .map(
-        (d) => `
-      <article class="project-card">
-        <div class="project-card-top">
-          <span class="cat-tag">${escapeHtml(d.group)}</span>
-          <span class="nav-badge">${escapeHtml(d.badge)}</span>
-        </div>
-        <h3>${escapeHtml(d.title)}</h3>
-        <p>${escapeHtml(d.summary)}</p>
-        <div class="tech-row">
-          ${d.tags.map((t) => `<span class="tech-pill">${escapeHtml(t)}</span>`).join('')}
-        </div>
-        <div class="card-actions">
-          <button class="btn btn-primary" style="padding:7px 14px;font-size:0.79rem;" type="button" data-doc="${escapeHtml(d.path)}">Read Docs</button>
-          ${
-            d.demo
-              ? `<a class="btn btn-secondary" style="padding:7px 14px;font-size:0.79rem;" href="${encodeRepoPath(d.demo)}" target="_blank" rel="noopener noreferrer">Live Demo</a>`
-              : ''
-          }
-          <a class="btn btn-ghost" style="padding:7px 14px;font-size:0.79rem;" href="${GITHUB_BASE}/blob/main/${encodeRepoPath(d.path)}" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </article>
-    `
-      )
+  function renderReaderSidebar() {
+    const groups = ['Overview', 'Laboratory Work', 'Theory & Units', 'Applications'];
+    els.readerSidebarNav.innerHTML = groups
+      .map((group) => {
+        const items = DOCS.filter((d) => d.group === group);
+        return `
+          <div>
+            <div class="side-group-label">${escapeHtml(group)}</div>
+            ${items
+              .map(
+                (d) => `
+              <button class="side-link ${d.path === state.currentDoc ? 'active' : ''}" type="button" data-doc="${escapeHtml(d.path)}">${escapeHtml(d.title)}</button>
+            `
+              )
+              .join('')}
+          </div>
+        `;
+      })
       .join('');
   }
 
@@ -617,17 +674,32 @@
     `;
   }
 
+  function showShowcase(filter = state.filter, updateHash = true) {
+    state.view = 'showcase';
+    state.filter = filter;
+    els.showcaseView.hidden = false;
+    els.readerView.hidden = true;
+    updateActiveNav();
+    renderCatalog();
+    if (updateHash && window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  }
+
   async function openDoc(docPath, updateHash = true) {
     const normalized = DOCS.some((d) => d.path === docPath) ? docPath : 'README.md';
+    state.view = 'reader';
     state.currentDoc = normalized;
-    setView('reader');
+    els.showcaseView.hidden = true;
+    els.readerView.hidden = false;
+    updateActiveNav();
 
     if (updateHash) {
       history.replaceState(null, '', `#doc=${encodeRepoPath(normalized)}`);
     }
 
     const meta = DOCS.find((d) => d.path === normalized) || DOCS[0];
-    renderSidebar();
+    renderReaderSidebar();
     renderBreadcrumbs(meta);
     renderPager(normalized);
 
@@ -646,44 +718,68 @@
 
     els.tocList.innerHTML = toc.length
       ? toc.map((t) => `<a class="toc-link level-${t.level}" href="#${t.id}">${escapeHtml(t.text)}</a>`).join('')
-      : '<span style="font-size:0.8rem;color:var(--muted);">No subsections</span>';
+      : '<span style="font-size:12px;color:var(--muted);">No subsections</span>';
     els.tocPanel.style.display = toc.length ? '' : 'none';
 
-    closeMobileSidebar();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  function setView(mode) {
-    state.view = mode;
-    const isGrid = mode === 'grid';
-    els.gridView.hidden = !isGrid;
-    els.readerView.hidden = isGrid;
-    els.viewToggleIcon.innerHTML = isGrid ? READER_SVG : GRID_SVG;
-    els.viewToggleLabel.textContent = isGrid ? 'Docs Reader' : 'Project Grid';
-    if (isGrid) renderGrid();
+  function updateActiveNav() {
+    document.querySelectorAll('.nav-link[data-nav-view]').forEach((btn) => {
+      const match = state.view === 'showcase' && btn.dataset.filter === state.filter;
+      btn.classList.toggle('active', match);
+    });
+    document.querySelectorAll('.nav-link[data-doc="README.md"]').forEach((btn) => {
+      btn.classList.toggle('active', state.view === 'reader' && state.currentDoc === 'README.md');
+    });
+    document.querySelectorAll('.cat-tile').forEach((tile) => {
+      tile.classList.toggle('active', tile.dataset.filter === state.filter);
+    });
+  }
+
+  function renderSearchResults(term) {
+    const q = term.trim().toLowerCase();
+    const matches = q
+      ? DOCS.filter(
+          (d) =>
+            d.title.toLowerCase().includes(q) ||
+            d.summary.toLowerCase().includes(q) ||
+            d.tags.some((t) => t.toLowerCase().includes(q))
+        )
+      : DOCS.slice(0, 8);
+
+    els.searchResults.innerHTML = matches.length
+      ? matches
+          .map(
+            (d) => `
+          <button class="search-result-item" type="button" data-doc="${escapeHtml(d.path)}">
+            <div>
+              <strong>${escapeHtml(d.title)}</strong>
+              <small>${escapeHtml(d.summary)}</small>
+            </div>
+            <span class="search-result-badge">${escapeHtml(d.badge)}</span>
+          </button>
+        `
+          )
+          .join('')
+      : '<p style="padding:14px;color:var(--muted);font-size:13px;">No matching documentation.</p>';
+  }
+
+  function openSearch() {
+    els.searchOverlay.hidden = false;
+    els.searchInput.value = '';
+    renderSearchResults('');
+    setTimeout(() => els.searchInput.focus(), 20);
+  }
+
+  function closeSearch() {
+    els.searchOverlay.hidden = true;
   }
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('b18-theme', theme);
-    els.themeToggleLabel.textContent = theme === 'dark' ? 'Light' : 'Dark';
-  }
-
-  function toggleTheme() {
-    const current = document.documentElement.getAttribute('data-theme') || 'light';
-    applyTheme(current === 'dark' ? 'light' : 'dark');
-  }
-
-  function openMobileSidebar() {
-    els.sidebar.classList.add('open');
-    els.sidebarBackdrop.hidden = false;
-    els.menuToggle.setAttribute('aria-expanded', 'true');
-  }
-
-  function closeMobileSidebar() {
-    els.sidebar.classList.remove('open');
-    els.sidebarBackdrop.hidden = true;
-    els.menuToggle.setAttribute('aria-expanded', 'false');
+    localStorage.setItem('b18-apple-theme', theme);
+    els.themeToggle.textContent = theme === 'dark' ? 'Light' : 'Dark';
   }
 
   function initEvents() {
@@ -691,7 +787,28 @@
       const docTrigger = e.target.closest('[data-doc]');
       if (docTrigger) {
         e.preventDefault();
+        closeSearch();
+        els.mobileDrawer.hidden = true;
         openDoc(docTrigger.getAttribute('data-doc'));
+        return;
+      }
+
+      const navView = e.target.closest('[data-nav-view="showcase"]');
+      if (navView) {
+        e.preventDefault();
+        els.mobileDrawer.hidden = true;
+        showShowcase(navView.dataset.filter || 'all');
+        const target = navView.dataset.filter && navView.dataset.filter !== 'all' ? '#catalogSection' : '#showcaseView';
+        document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      const catTile = e.target.closest('.cat-tile');
+      if (catTile) {
+        state.filter = catTile.dataset.filter;
+        updateActiveNav();
+        renderCatalog();
+        document.getElementById('catalogSection')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         return;
       }
 
@@ -707,53 +824,79 @@
       }
     });
 
-    document.querySelectorAll('.filter-chip').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-chip').forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
-        state.filter = btn.dataset.filter;
-        renderSidebar();
-        if (state.view === 'grid') renderGrid();
-      });
+    els.navHomeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showShowcase('all');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    els.searchInput.addEventListener('input', (e) => {
+    els.backToShowcaseBtn.addEventListener('click', () => showShowcase(state.filter));
+
+    els.shelfPrev.addEventListener('click', () => {
+      els.featuredTrack.scrollBy({ left: -400, behavior: 'smooth' });
+    });
+
+    els.shelfNext.addEventListener('click', () => {
+      els.featuredTrack.scrollBy({ left: 400, behavior: 'smooth' });
+    });
+
+    els.inlineFilterInput.addEventListener('input', (e) => {
       state.query = e.target.value;
-      renderSidebar();
-      if (state.view === 'grid') renderGrid();
+      renderCatalog();
+    });
+
+    els.openSearchBtn.addEventListener('click', openSearch);
+    els.closeSearchBtn.addEventListener('click', closeSearch);
+    els.searchOverlay.addEventListener('click', (e) => {
+      if (e.target === els.searchOverlay) closeSearch();
+    });
+    els.searchInput.addEventListener('input', (e) => renderSearchResults(e.target.value));
+
+    els.themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    els.mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = els.mobileDrawer.hidden;
+      els.mobileDrawer.hidden = !isHidden;
+      els.mobileMenuBtn.setAttribute('aria-expanded', String(isHidden));
     });
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === '/' && document.activeElement !== els.searchInput && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) {
+      if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
         e.preventDefault();
-        els.searchInput.focus();
+        openSearch();
+      } else if (e.key === 'Escape' && !els.searchOverlay.hidden) {
+        closeSearch();
       }
     });
-
-    els.themeToggle.addEventListener('click', toggleTheme);
-    els.viewToggle.addEventListener('click', () => setView(state.view === 'grid' ? 'reader' : 'grid'));
-    els.browseGridBtn.addEventListener('click', () => setView('grid'));
-    els.menuToggle.addEventListener('click', openMobileSidebar);
-    els.sidebarBackdrop.addEventListener('click', closeMobileSidebar);
 
     window.addEventListener('hashchange', () => {
       const m = window.location.hash.match(/^#doc=(.+)$/);
       if (m) openDoc(decodeURIComponent(m[1]), false);
+      else showShowcase('all');
     });
   }
 
   function bootstrap() {
-    const savedTheme = localStorage.getItem('b18-theme') || 'light';
-    applyTheme(savedTheme);
-    els.viewToggleIcon.innerHTML = GRID_SVG;
-    els.statTotalDocs.textContent = String(DOCS.length);
+    applyTheme(localStorage.getItem('b18-apple-theme') || 'light');
 
+    els.countAll.textContent = String(DOCS.length);
+    els.countLabs.textContent = String(DOCS.filter((d) => d.category === 'labs').length);
+    els.countTheory.textContent = String(DOCS.filter((d) => d.category === 'theory').length);
+    els.countApps.textContent = String(DOCS.filter((d) => d.category === 'apps').length);
+    els.countDemos.textContent = String(DOCS.filter((d) => d.demo).length);
+
+    renderFeatured();
     initEvents();
-    renderSidebar();
 
     const hashMatch = window.location.hash.match(/^#doc=(.+)$/);
-    const initialDoc = hashMatch ? decodeURIComponent(hashMatch[1]) : 'README.md';
-    openDoc(initialDoc, false);
+    if (hashMatch) {
+      openDoc(decodeURIComponent(hashMatch[1]), false);
+    } else {
+      showShowcase('all', false);
+    }
   }
 
   bootstrap();
