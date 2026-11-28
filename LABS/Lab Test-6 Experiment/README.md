@@ -1,5 +1,7 @@
 # 🚀 Lab Test-6 Experiment — Express Middleware
 
+> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-6%20Experiment/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
+
 > A practical **Express.js middleware experiment** covering the complete request-processing pipeline — from logging and body parsing to authentication, 404 handling, and centralized error management.
 
 ---
@@ -152,3 +154,11 @@ This experiment brings those pieces together in one compact application covering
 **Arnav Daftuar**
 
 Backend Development — Lab Test-6 Express Middleware Experiment
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [🧪 Back to LABS README](../README.md)
+- [🌐 Open Website Portal](../../index.html)

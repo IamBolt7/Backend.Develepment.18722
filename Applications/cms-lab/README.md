@@ -1,5 +1,7 @@
 # CMS Lab
 
+> **Navigation:** [🏠 Main README](../../README.md) · [🖥️ Applications README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Applications/cms-lab/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
+
 A simple, responsive **Content Management System (CMS)** for creating and reading blog posts. The project is built with **Node.js, Express.js, EJS, and MongoDB** and is designed as a practical backend-development lab project.
 
 The application can run in two modes:
@@ -518,3 +520,13 @@ MongoDB is optional for this quick-start workflow. If it is unavailable, the app
 ## Project Summary
 
 **CMS Lab** is a beginner-friendly backend web application that combines Express routing, EJS templates, form processing, validation, MongoDB storage, and responsive frontend styling in one project. Its fallback demo mode makes the application easy to run for demonstrations, while MongoDB support provides persistent storage for normal use.
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [🖥️ Back to Applications README](../README.md)
+- [🌐 Open Website Portal](../../index.html)
+
+**Made by Arnav Daftuar** · Backend Development (18722)

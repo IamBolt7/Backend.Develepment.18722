@@ -1,5 +1,7 @@
 # 🎨 Lab Test-7 Experiment — EJS Templating Engine
 
+> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-7%20Experiment/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
+
 > A server-side rendering project using **Express.js + EJS** to build dynamic student pages, reusable templates, forms, and route-driven views.
 
 ## 📌 Overview
@@ -62,3 +64,11 @@ Open **http://localhost:3005**.
 ## 👨‍💻 Author
 **Arnav Daftuar**  
 Backend Development — Lab Test-7
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [🧪 Back to LABS README](../README.md)
+- [🌐 Open Website Portal](../../index.html)

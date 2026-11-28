@@ -1,4 +1,6 @@
-# Theory - Backend Development Practice Project
+# Theory 1 — Backend Development Practice Project
+
+> **Navigation:** [🏠 Main README](../../README.md) · [📚 Theory README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Theory/Theory%201/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
 
 A small learning project containing **two independent backend examples**:
 
@@ -177,3 +179,11 @@ This is intentionally still a beginner-friendly project. It can later be extende
 ## Notes
 
 The Express and Flask examples are **separate servers**. You do not need to run both at the same time. Use whichever example you are studying.
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [📚 Back to Theory README](../README.md)
+- [🌐 Open Website Portal](../../index.html)

@@ -1,5 +1,7 @@
 # 🔐 Lab Test-8 Experiment — RESTful API + JWT Authentication
 
+> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-8%20Experiment/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
+
 > A combined **RESTful Books CRUD API** and **JWT authentication** exercise built with Express.
 
 ## Summary
@@ -100,3 +102,11 @@ curl -X DELETE http://localhost:3007/api/books/1 \
 ## 👨‍💻 Author
 **Arnav Daftuar**  
 Backend Development — Lab Test-8
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [🧪 Back to LABS README](../README.md)
+- [🌐 Open Website Portal](../../index.html)

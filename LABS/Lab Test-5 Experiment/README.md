@@ -1,6 +1,8 @@
 # Lab Test-5 Experiment
 ## Relational vs Document Databases — PostgreSQL & MongoDB
 
+> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🚀 Open Companion UI](./ui/index.html) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-5%20Experiment/README.md)
+
 A complete Backend Development lab comparing a **relational database (PostgreSQL)** with a **document database (MongoDB)** through the same student-management use case. The experiment also demonstrates how PostgreSQL **JSONB** can provide document-style flexibility inside a relational database.
 
 ## Objectives
@@ -193,3 +195,12 @@ This experiment shows that PostgreSQL is a natural fit when the main data has a 
 ## Submission Notes
 
 Run the scripts locally and capture genuine terminal output/screenshots if your instructor requires execution evidence. The repository contains executable source files rather than fabricated result screenshots.
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [🧪 Back to LABS README](../README.md)
+- [🚀 Launch Companion Web UI](./ui/index.html)
+- [📘 Mac Setup Guide](./RUN_ON_MAC.md) · [📊 Detailed Comparison](./comparison.md)

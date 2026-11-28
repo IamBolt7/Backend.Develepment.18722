@@ -1,4 +1,6 @@
-# Lab Test-4 Experiment
+# Lab Test-4 Experiment — Express + Mongoose User Management System
+
+> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-4%20Experiment/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
 
 ## Experiment 13A — Express + Mongoose User Management System
 
@@ -302,3 +304,11 @@ The experiment successfully demonstrates how an Express application can connect 
 ## Conclusion
 
 This project provides a foundation for MongoDB-backed Node.js applications. It connects the main concepts—**Express routes → Mongoose model → MongoDB documents**—in a small application that can be run and tested locally.
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [🧪 Back to LABS README](../README.md)
+- [🌐 Open Website Portal](../../index.html)

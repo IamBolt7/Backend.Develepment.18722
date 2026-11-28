@@ -20,10 +20,10 @@ const page = (title, content) => `<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${title} | User Management System</title>
 <style>
-*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#1f2937}
-main{width:min(1000px,92%);margin:42px auto}.hero{background:#111827;color:white;padding:32px;border-radius:18px;margin-bottom:22px}.hero h1{margin:0 0 8px}.hero p{margin:0;color:#cbd5e1}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}.card{background:white;padding:22px;border-radius:14px;box-shadow:0 8px 28px #0f172a12;border:1px solid #e5e7eb}.card h2{margin-top:0}
-label{font-size:14px;font-weight:700}input{width:100%;padding:11px 12px;margin:6px 0 14px;border:1px solid #cbd5e1;border-radius:8px}button,.button{display:inline-block;background:#2563eb;color:white;border:0;padding:11px 16px;border-radius:8px;text-decoration:none;cursor:pointer;font-weight:700}button:hover,.button:hover{background:#1d4ed8}.secondary{background:#475569}.success{color:#15803d}.error{color:#b91c1c}.user{padding:14px 0;border-bottom:1px solid #e5e7eb}.muted{color:#64748b;font-size:14px}nav{margin-top:20px}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top right,#eef2ff 0,#f4f7fb 48%);color:#0f172a;line-height:1.6}
+main{width:min(1040px,92%);margin:44px auto}.hero{background:linear-gradient(135deg,#0f172a,#312e81);color:#fff;padding:36px;border-radius:20px;margin-bottom:24px;box-shadow:0 18px 45px rgba(15,23,42,.15)}.hero h1{margin:0 0 8px;letter-spacing:-.03em}.hero p{margin:0;color:#cbd5e1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}.card{background:#fff;padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(15,23,42,.06);border:1px solid #e2e8f0}.card h2{margin-top:0;letter-spacing:-.02em}
+label{font-size:14px;font-weight:650;color:#1e293b}input{width:100%;padding:11px 13px;margin:6px 0 15px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;outline:none}input:focus{border-color:#4f46e5;box-shadow:0 0 0 4px rgba(79,70,229,.12)}button,.button{display:inline-block;background:#4f46e5;color:#fff;border:0;padding:11px 18px;border-radius:10px;text-decoration:none;cursor:pointer;font-weight:700;font:inherit;transition:.15s ease}button:hover,.button:hover{background:#4338ca;transform:translateY(-1px)}.secondary{background:#334155}.secondary:hover{background:#1e293b}.success{color:#15803d}.error{color:#b91c1c}.user{padding:14px 0;border-bottom:1px solid #e2e8f0}.muted{color:#64748b;font-size:14px}nav{margin-top:20px}
 </style>
 </head><body><main>${content}</main></body></html>`;
 

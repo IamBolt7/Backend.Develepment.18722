@@ -1,5 +1,7 @@
 # Assignment 2 — PostgreSQL as SQL + NoSQL: Working with JSONB
 
+> **Navigation:** [🏠 Main README](../../README.md) · [📚 Theory README](../README.md) · [🚀 Open Interactive UI](./index.html) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Theory/Assignment%202/README.md)
+
 A complete Theory Assignment demonstrating how **PostgreSQL JSONB** combines relational SQL features with flexible, document-style data. The project includes a runnable SQL experiment and a responsive interactive webpage that explains the major JSONB operations visually.
 
 ## Learning Objective
@@ -192,3 +194,11 @@ PostgreSQL remains a relational database when JSONB is used. JSONB extends the r
 **Core technology:** PostgreSQL / JSONB  
 **Supporting UI:** HTML, CSS, JavaScript  
 **Outcome:** Demonstrates storage, querying, updates, indexing, relational/document integration, and a balanced comparison with MongoDB.
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [📚 Back to Theory README](../README.md)
+- [🚀 Launch JSONB Interactive UI](./index.html)

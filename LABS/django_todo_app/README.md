@@ -1,5 +1,7 @@
 # ✅ Django To-Do App
 
+> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/django_todo_app/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
+
 A clean, database-backed **To-Do List application built with Django** for Backend Development practice. The project demonstrates Django models, forms, views, URL routing, templates, static files, CSRF protection, messages, SQLite persistence, and basic automated testing.
 
 ## ✨ Features
@@ -187,3 +189,11 @@ This project provides practice with Django's MVT architecture, ORM, models, form
 
 **Arnav Daftuar**  
 Backend Development — Django To-Do Application
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [🧪 Back to LABS README](../README.md)
+- [🌐 Open Website Portal](../../index.html)

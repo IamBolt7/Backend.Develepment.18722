@@ -1,4 +1,6 @@
-# Lab Test-3 Experiment
+# Lab Test-3 Experiment — Node.js, Express.js & EJS Templating
+
+> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-3%20Experiment/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
 
 ## Experiment 12: Node.js, Express.js, and EJS Templating
 
@@ -199,3 +201,11 @@ The Express server should start successfully on port `3000`. Each GET endpoint s
 ## Conclusion
 
 This experiment demonstrates the core workflow of a Node.js backend application: creating a project with NPM, building routes with Express, processing different forms of request data, returning multiple response types, rendering dynamic pages with EJS, and using Nodemon during development. These concepts provide a foundation for larger REST APIs and server-rendered web applications.
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [🧪 Back to LABS README](../README.md)
+- [🌐 Open Website Portal](../../index.html)

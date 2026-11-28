@@ -1,5 +1,7 @@
 # JWT Authentication Lab - Student Management API
 
+> **Navigation:** [🏠 Main README](../../README.md) · [📚 Theory README](../README.md) · [📖 Lecture Notes](./docs/LECTURE_NOTES.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Theory/JWT-Authentication-Lab/README.md)
+
 A GitHub-ready **FastAPI** project based on **Lecture 20: Authentication Mechanisms - Basic Auth, Token-based Authentication, JWT**. It turns the lecture concepts and lab exercise into a working Student Management API with password hashing, JWT login, protected routes, token expiry, and authorization.
 
 > **Course Outcome (CO3):** Implement secure authentication mechanisms to protect API endpoints.
@@ -318,3 +320,11 @@ For the expanded theory corresponding to the lecture screenshots, read [`docs/LE
 **Course Outcome:** CO3  
 **Bloom's Level:** Apply  
 **Application:** API security, user identity verification, secure backend services
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [📚 Back to Theory README](../README.md)
+- [📖 Lecture 20 Notes](./docs/LECTURE_NOTES.md)

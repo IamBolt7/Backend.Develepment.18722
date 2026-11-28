@@ -1,4 +1,6 @@
-# Simple CMS Blog
+# Lab Test-1 Experiment — Simple CMS Blog
+
+> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [📄 Lab Report](./Report.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-1%20Experiment/README.md)
 
 ## 1. Project Description
 
@@ -213,3 +215,11 @@ The application successfully supports creating, storing, listing and viewing ind
 **Saanvi Singh**
 
 B.Tech CSE
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [🧪 Back to LABS README](../README.md)
+- [📄 Full Lab Report](./Report.md)

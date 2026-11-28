@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Backend Development 18722 — Interactive Documentation Portal and Project Showcase made by Arnav Daftuar." />
+  <title>Backend Development 18722 · Docs &amp; Portfolio | Arnav Daftuar</title>
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <button id="menuToggle" class="icon-btn mobile-only" aria-label="Toggle navigation sidebar" aria-expanded="false">☰</button>
+        <a href="#doc=README.md" class="brand" data-doc="README.md">
+          <span class="brand-badge">B18</span>
+          <span class="brand-text">
+            <strong>Backend.18722</strong>
+            <small>Made by Arnav Daftuar</small>
+          </span>
+        </a>
+      </div>
+
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search READMEs, Express, Django, JWT, Docker..." aria-label="Search documentation" autocomplete="off" />
+        <kbd class="shortcut-hint" aria-hidden="true">/</kbd>
+      </div>
+
+      <div class="topbar-actions">
+        <button id="viewToggle" class="pill-btn" type="button" title="Switch between Docs Reader and Project Grid">
+          <span id="viewToggleIcon">▦</span>
+          <span id="viewToggleLabel">Project Grid</span>
+        </button>
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle light/dark theme" title="Toggle theme">☀︎</button>
+        <a class="github-btn" href="https://github.com/IamBolt7/Backend.Develepment.18722" target="_blank" rel="noopener noreferrer">
+          <span>GitHub</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div id="sidebarBackdrop" class="sidebar-backdrop" hidden></div>
+
+  <div class="shell">
+    <aside id="sidebar" class="sidebar" aria-label="Documentation Navigation">
+      <div class="sidebar-filters" role="tablist" aria-label="Filter category">
+        <button class="filter-chip active" data-filter="all" type="button">All</button>
+        <button class="filter-chip" data-filter="labs" type="button">Labs</button>
+        <button class="filter-chip" data-filter="theory" type="button">Theory</button>
+        <button class="filter-chip" data-filter="apps" type="button">Apps</button>
+      </div>
+
+      <nav id="sidebarNav" class="sidebar-nav"></nav>
+
+      <div class="sidebar-footer">
+        <p>Repository by <strong>Arnav Daftuar</strong></p>
+        <a href="https://github.com/IamBolt7/Backend.Develepment.18722" target="_blank" rel="noopener noreferrer">IamBolt7 / Backend.Develepment.18722 ↗</a>
+      </div>
+    </aside>
+
+    <main class="content-area">
+      <section id="heroBanner" class="hero">
+        <div class="hero-content">
+          <span class="eyebrow">BACKEND DEVELOPMENT · 18722 · MADE BY ARNAV DAFTUAR</span>
+          <h1>Every Lab, Theory Module &amp; App — <span>Connected in One Portal.</span></h1>
+          <p class="hero-lead">
+            Explore full GitHub documentation, architecture diagrams, API references, and live interactive web demos across Node.js, Express, EJS, Django, FastAPI, MongoDB, PostgreSQL + JSONB, Socket.IO, and Docker.
+          </p>
+          <div class="hero-actions">
+            <a href="#doc=README.md" class="btn btn-primary" data-doc="README.md">Main README Hub</a>
+            <button id="browseGridBtn" class="btn btn-secondary" type="button">Browse All Projects</button>
+            <a href="https://github.com/IamBolt7/Backend.Develepment.18722" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">View Source on GitHub ↗</a>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <strong id="statTotalDocs">25</strong>
+            <span>Connected Docs</span>
+          </div>
+          <div class="stat-card">
+            <strong>12</strong>
+            <span>Lab Projects</span>
+          </div>
+          <div class="stat-card">
+            <strong>6</strong>
+            <span>Theory Modules</span>
+          </div>
+          <div class="stat-card">
+            <strong>5</strong>
+            <span>Live Browser Demos</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="gridView" class="grid-view" hidden>
+        <div class="section-bar">
+          <div>
+            <span class="eyebrow">DIRECTORY SHOWCASE</span>
+            <h2>All Connected Projects &amp; Documentation</h2>
+          </div>
+          <span id="gridCount" class="count-pill"></span>
+        </div>
+        <div id="projectGrid" class="project-grid"></div>
+      </section>
+
+      <section id="readerView" class="reader-view">
+        <div class="doc-toolbar">
+          <div id="breadcrumbs" class="breadcrumbs"></div>
+          <div class="doc-actions">
+            <a href="#doc=README.md" class="tool-btn" data-doc="README.md">🏠 Main README</a>
+            <a id="liveDemoBtn" class="tool-btn tool-btn-accent" href="#" target="_blank" rel="noopener noreferrer" hidden>🚀 Live Demo</a>
+            <a id="githubDocBtn" class="tool-btn" href="#" target="_blank" rel="noopener noreferrer">💻 GitHub Source ↗</a>
+          </div>
+        </div>
+
+        <div class="doc-layout">
+          <article id="markdownBody" class="markdown-body" aria-live="polite">
+            <div class="loading-state">Loading documentation…</div>
+          </article>
+
+          <aside id="tocPanel" class="toc-panel" aria-label="On this page">
+            <div class="toc-title">On this page</div>
+            <nav id="tocList" class="toc-list"></nav>
+          </aside>
+        </div>
+
+        <nav id="pagerNav" class="pager-nav" aria-label="Document pagination"></nav>
+      </section>
+
+      <footer class="site-footer">
+        <div>
+          <strong>Backend Development — 18722</strong> · Made by <strong>Arnav Daftuar</strong>
+        </div>
+        <div class="footer-links">
+          <a href="#doc=README.md" data-doc="README.md">Main README</a>
+          <a href="#doc=LABS/README.md" data-doc="LABS/README.md">Labs</a>
+          <a href="#doc=Theory/README.md" data-doc="Theory/README.md">Theory</a>
+          <a href="#doc=Applications/README.md" data-doc="Applications/README.md">Applications</a>
+          <a href="https://github.com/IamBolt7/Backend.Develepment.18722" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/js/docs-bundle.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

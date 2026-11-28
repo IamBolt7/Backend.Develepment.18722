@@ -1,5 +1,7 @@
 # NoteSpace — Web Storage Notes App
 
+> **Navigation:** [🏠 Main README](../../README.md) · [📚 Theory README](../README.md) · [🚀 Open Live App](./index.html) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Theory/Assignment-1-Notes-App/README.md)
+
 > **Backend Development · Theory · Assignment 01**  
 > Final Task: Build a Notes App using `localStorage`, `sessionStorage`, and JSON.
 
@@ -154,3 +156,11 @@ After completing this assignment, a student should be able to explain the differ
 ---
 
 **Assignment 01 — Web Storage API / Final Task: Notes App**
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [📚 Back to Theory README](../README.md)
+- [🚀 Launch NoteSpace Web App](./index.html)

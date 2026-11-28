@@ -1,5 +1,7 @@
 # Experiment 1 — Introduction to HTML and CSS
 
+> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🚀 Open Live Page](./arnav.html) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/EXP-1/README.md)
+
 A simple, responsive personal introduction webpage created as **Experiment 1** for web/backend development practice. The experiment demonstrates the basic structure of an HTML document and the use of CSS to create a clean, responsive user interface.
 
 ## Overview
@@ -173,3 +175,11 @@ UPES
 ---
 
 > This project is intended for educational and laboratory practice.
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [🧪 Back to LABS README](../README.md)
+- [🚀 Launch Live Webpage (`arnav.html`)](./arnav.html)

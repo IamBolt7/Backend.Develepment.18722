@@ -1,5 +1,7 @@
 # 🛡️ Lab Test-9 Experiment — Security, Rate Limiting & Deployment
 
+> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-9%20Experiment/README.md) · [💻 GitHub Repo](https://github.com/IamBolt7/Backend.Develepment.18722)
+
 > An Express server demonstrating environment-based configuration, HTTP security headers, CORS, rate limiting, health checks, and Docker packaging.
 
 ## Summary
@@ -91,3 +93,11 @@ Referrer-Policy: no-referrer
 ## 👨‍💻 Author
 **Arnav Daftuar**  
 Backend Development — Lab Test-9
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [🧪 Back to LABS README](../README.md)
+- [🌐 Open Website Portal](../../index.html)

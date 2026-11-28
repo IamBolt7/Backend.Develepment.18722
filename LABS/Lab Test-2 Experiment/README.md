@@ -1,4 +1,6 @@
-# Experiment 03 — Create a Responsive Web Page with HTML and CSS
+# Lab Test-2 Experiment — Responsive Web Page (HTML & CSS)
+
+> **Navigation:** [🏠 Main README](../../README.md) · [🧪 LABS README](../README.md) · [🚀 Open Live Page](./index.html) · [🌐 Website View](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/Lab%20Test-2%20Experiment/README.md)
 
 A polished, responsive webpage for the **Backend Development Lab**, built entirely with HTML5 and CSS3. The experiment demonstrates semantic HTML, Flexbox, CSS Grid, fluid sizing, and media queries without Bootstrap or another framework.
 
@@ -136,3 +138,11 @@ This experiment shows how HTML5 and modern CSS can produce a professional respon
 
 **Experiment:** 03 — Create a Responsive Web Page with HTML and CSS  
 **Course:** Backend Development Lab
+
+---
+
+## 🔗 Connected Navigation
+
+- [🏠 Back to Main Repository README](../../README.md)
+- [🧪 Back to LABS README](../README.md)
+- [🚀 Launch Live Webpage (`index.html`)](./index.html)
