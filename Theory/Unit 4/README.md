@@ -60,6 +60,15 @@ node app.js
 
 ---
 
+## 3. PBL Assignment
+
+- **Repository:** [PBL Assignment — DockerAPI](https://github.com/IamBolt7/DockerAPI)
+- **Hosted Portal:** [DockerAPI Documentation and Route Explorer](https://iambolt7.github.io/DockerAPI/)
+
+Containerized FastAPI Student Management API with SQLAlchemy persistence, JWT authentication, structured request logging, `Dockerfile`, `docker-compose.yml`, Nginx scaling config, `automationTesting.py`, and GitHub Actions CI/CD.
+
+---
+
 ## Navigation
 
 - [Back to Main README](../../README.md)

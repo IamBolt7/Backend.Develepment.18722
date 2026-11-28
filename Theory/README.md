@@ -16,6 +16,7 @@ This folder groups together my theory assignments, lecture labs, and unit practi
 | 4 | **Theory 1** | Node.js (Express + EJS) and Python (Flask) side-by-side | [Open](./Theory%201/) | [README](./Theory%201/README.md) |
 | 5 | **Unit 3 — Django** | Django `student_system` views and JSON endpoints | [Open](./Unit%203/) | [README](./Unit%203/README.md) |
 | 6 | **Unit 4 — Docker and Express** | Container state preservation and Dockerized Express API | [Open](./Unit%204/) | [README](./Unit%204/README.md) |
+| 7 | **PBL Assignment (DockerAPI)** | Containerized FastAPI Student API, Compose, pytest automation, and CI/CD | [GitHub Repo](https://github.com/IamBolt7/DockerAPI) | [Hosted Portal](https://iambolt7.github.io/DockerAPI/) |
 
 ---
 

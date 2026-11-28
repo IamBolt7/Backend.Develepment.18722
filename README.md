@@ -49,6 +49,7 @@ Every `README.md` in the repository is linked here and links back to this main h
 | Theory | Theory 1 — Express/EJS and Flask | [Theory 1/](./Theory/Theory%201/) | [Theory 1 README](./Theory/Theory%201/README.md) | Express (`3000`) / Flask (`5000`) |
 | Theory | Unit 3 — Django Student System | [Unit 3/](./Theory/Unit%203/) | [Unit 3 README](./Theory/Unit%203/README.md) | Django (`127.0.0.1:8000`) |
 | Theory | Unit 4 — Docker and Express | [Unit 4/](./Theory/Unit%204/) | [Unit 4 README](./Theory/Unit%204/README.md) | Docker (`localhost:3000`) |
+| PBL | **PBL Assignment** — DockerAPI | [DockerAPI Repo](https://github.com/IamBolt7/DockerAPI) | [DockerAPI README](https://github.com/IamBolt7/DockerAPI/blob/main/README.md) | [Hosted Portal](https://iambolt7.github.io/DockerAPI/) |
 | Applications | Applications Overview Index | [Applications/](./Applications/) | [Applications/README.md](./Applications/README.md) | — |
 | Applications | CMS Lab | [cms-lab/](./Applications/cms-lab/) | [Applications/cms-lab/README.md](./Applications/cms-lab/README.md) | Express (`localhost:3000`) |
 
@@ -115,6 +116,7 @@ The [`Theory`](./Theory/README.md) folder covers conceptual assignments, lecture
 4. **[Theory 1](./Theory/Theory%201/README.md)** — Two separate backend examples comparing Node.js (Express + EJS) with Python (Flask).
 5. **[Unit 3 — Django Student System](./Theory/Unit%203/README.md)** — Minimal Django project exposing HTTP and JSON views.
 6. **[Unit 4 — Docker and Containers](./Theory/Unit%204/README.md)** — Java container state preservation and a containerized Express API.
+7. **[PBL Assignment](https://github.com/IamBolt7/DockerAPI)** — Containerized FastAPI Student Management API (`DockerAPI`) with `Dockerfile`, `docker-compose.yml`, `automationTesting.py`, GitHub Actions CI/CD, and [hosted documentation portal](https://iambolt7.github.io/DockerAPI/).
 
 ---
 
