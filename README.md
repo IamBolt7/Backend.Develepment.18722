@@ -19,6 +19,7 @@ You can read everything directly here on GitHub, open [`index.html`](./index.htm
 | **LABS** | Django To-Do App, EXP-1, and Lab Tests 1–10 | [LABS/README.md](./LABS/README.md) | [Open Labs](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/README.md) |
 | **Theory** | Assignments 1–2, JWT Lab, Theory 1, Unit 3, Unit 4 | [Theory/README.md](./Theory/README.md) | [Open Theory](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Theory/README.md) |
 | **Applications** | Full CMS Lab Web Application | [Applications/README.md](./Applications/README.md) | [Open Applications](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Applications/README.md) |
+| **PBL (DockerAPI)** | Containerized FastAPI Student API, Compose, pytest, CI/CD | [DockerAPI Repo](https://github.com/IamBolt7/DockerAPI) | [Hosted Portal](https://iambolt7.github.io/DockerAPI/) |
 
 ---
 
@@ -125,6 +126,16 @@ The [`Theory`](./Theory/README.md) folder covers conceptual assignments, lecture
 The [`Applications`](./Applications/README.md) folder contains larger integrated builds:
 
 - **[CMS Lab](./Applications/cms-lab/README.md)** — Content Management System built with Node.js, Express, EJS, and MongoDB, with automatic fallback to in-memory demo posts if MongoDB is offline.
+
+---
+
+## PBL Assignment — DockerAPI
+
+The semester Problem-Based Learning (PBL) project is maintained in the dedicated **[DockerAPI](https://github.com/IamBolt7/DockerAPI)** repository:
+
+- **Repository:** [github.com/IamBolt7/DockerAPI](https://github.com/IamBolt7/DockerAPI)
+- **Hosted Documentation & Route Explorer:** [iambolt7.github.io/DockerAPI](https://iambolt7.github.io/DockerAPI/)
+- **Scope:** Containerized FastAPI Student Management API backed by SQLAlchemy, JWT authentication, structured request logging, `Dockerfile`, `docker-compose.yml`, Nginx scaling setup, `automationTesting.py`, and GitHub Actions CI/CD.
 
 ---
 

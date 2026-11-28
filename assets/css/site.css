@@ -14,8 +14,13 @@
   --border-subtle: rgba(0, 0, 0, 0.08);
   --shadow-card: 2px 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-card-hover: 2px 8px 22px rgba(0, 0, 0, 0.13);
-  --code-bg: #1d1d1f;
-  --code-ink: #f5f5f7;
+  --code-bg: #f5f5f7;
+  --code-ink: #000000;
+  --code-border: rgba(0, 0, 0, 0.08);
+  --code-header-bg: rgba(0, 0, 0, 0.03);
+  --code-header-ink: #6e6e73;
+  --code-copy-border: rgba(0, 0, 0, 0.18);
+  --code-copy-hover: rgba(0, 0, 0, 0.06);
 }
 
 [data-theme="dark"] {
@@ -35,6 +40,11 @@
   --shadow-card-hover: 0 10px 28px rgba(0, 0, 0, 0.65);
   --code-bg: #0c0c0d;
   --code-ink: #f5f5f7;
+  --code-border: rgba(255, 255, 255, 0.08);
+  --code-header-bg: rgba(255, 255, 255, 0.05);
+  --code-header-ink: #a1a1a6;
+  --code-copy-border: rgba(255, 255, 255, 0.18);
+  --code-copy-hover: rgba(255, 255, 255, 0.14);
 }
 
 * {
@@ -1016,6 +1026,7 @@ a {
   margin: 18px 0;
   border-radius: 14px;
   overflow: hidden;
+  border: 1px solid var(--code-border);
   background: var(--code-bg);
 }
 
@@ -1024,18 +1035,18 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 8px 14px;
-  background: rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--code-header-bg);
+  border-bottom: 1px solid var(--code-border);
   font-size: 11px;
-  color: #a1a1a6;
+  color: var(--code-header-ink);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
 .copy-btn {
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--code-copy-border);
   background: transparent;
-  color: #f5f5f7;
+  color: var(--code-ink);
   border-radius: 980px;
   padding: 2px 10px;
   font-size: 11px;
@@ -1043,7 +1054,7 @@ a {
 }
 
 .copy-btn:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: var(--code-copy-hover);
 }
 
 .code-block pre {
