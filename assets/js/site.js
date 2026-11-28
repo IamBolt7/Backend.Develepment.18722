@@ -169,6 +169,17 @@
       tags: ['Socket.IO', 'WebSockets', 'Express']
     },
     {
+      path: 'LABS/Lab Test-11 Experiment/README.md',
+      title: 'Lab Test-11 — Docker Todo App',
+      group: 'Laboratory Work',
+      category: 'labs',
+      badge: 'Docker',
+      featured: 'white',
+      kicker: 'End Exam · Containers',
+      summary: 'Containerized persistent Todo app packaged with Dockerfile, port mapping, and host volume persistence in docker-data.',
+      tags: ['Docker', 'Express', 'Volumes', 'CRUD']
+    },
+    {
       path: 'Theory/README.md',
       title: 'Theory Directory Index',
       group: 'Theory & Units',
@@ -579,7 +590,7 @@
   function renderCatalog() {
     const titles = {
       all: 'All documentation. <span>Explore every connected README.</span>',
-      labs: 'Laboratory work. <span>Twelve progressive backend experiments.</span>',
+      labs: 'Laboratory work. <span>Thirteen progressive backend experiments.</span>',
       theory: 'Theory and units. <span>Assignments, architecture, and lecture notes.</span>',
       apps: 'Applications. <span>Integrated full-stack web builds.</span>',
       demos: 'Browser demos. <span>Interactive pages you can open directly.</span>'

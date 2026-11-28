@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f5f5f7;
+  color: #1d1d1f;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px 56px;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #6e6e73;
+  margin-bottom: 8px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+h1 span {
+  color: #6e6e73;
+}
+
+.lead {
+  margin: 0;
+  color: #6e6e73;
+  font-size: 15px;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+}
+
+.stat {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px 18px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.06);
+  min-width: 84px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.stat span {
+  font-size: 12px;
+  color: #6e6e73;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+}
+
+.create-form {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr 1.4fr auto;
+  gap: 10px;
+}
+
+.create-form input,
+.search {
+  border: 1px solid #d2d2d7;
+  border-radius: 10px;
+  padding: 10px 13px;
+  font: inherit;
+  font-size: 14px;
+  background: #ffffff;
+  color: #1d1d1f;
+  outline: none;
+}
+
+.create-form input:focus,
+.search:focus {
+  border-color: #1d1d1f;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.tabs {
+  display: inline-flex;
+  background: #e8e8ed;
+  padding: 3px;
+  border-radius: 980px;
+}
+
+.tab {
+  border: 0;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 980px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6e6e73;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #ffffff;
+  color: #1d1d1f;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 980px;
+  padding: 9px 16px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #1d1d1f;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: #d2d2d7;
+  color: #6e6e73;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.task-card.completed h3 {
+  text-decoration: line-through;
+  color: #6e6e73;
+}
+
+.task-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 980px;
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+
+.status-text {
+  font-size: 11px;
+  color: #6e6e73;
+}
+
+.task-card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.notes {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #6e6e73;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.empty {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  color: #6e6e73;
+}
+
+.foot {
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid #d2d2d7;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  color: #6e6e73;
+}
+
+@media (max-width: 720px) {
+  .create-form {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "task-1",
+    "title": "Build Docker image with Dockerfile",
+    "category": "Docker",
+    "notes": "Package Express server and dependencies using node:20-alpine.",
+    "completed": true,
+    "createdAt": "2026-11-28T07:00:00.000Z",
+    "updatedAt": "2026-11-28T07:00:00.000Z"
+  },
+  {
+    "id": "task-2",
+    "title": "Verify host volume persistence in docker-data",
+    "category": "Storage",
+    "notes": "Stop, remove, and recreate container with -v \"$(pwd)/docker-data:/app/data\".",
+    "completed": false,
+    "createdAt": "2026-11-28T07:05:00.000Z",
+    "updatedAt": "2026-11-28T07:05:00.000Z"
+  }
+]

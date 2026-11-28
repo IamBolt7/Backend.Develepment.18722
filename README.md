@@ -16,7 +16,7 @@ You can read everything directly here on GitHub, open [`index.html`](./index.htm
 
 | Section | Coverage | Section README | Website Portal |
 | --- | --- | --- | --- |
-| **LABS** | Django To-Do App, EXP-1, and Lab Tests 1–10 | [LABS/README.md](./LABS/README.md) | [Open Labs](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/README.md) |
+| **LABS** | Django To-Do App, EXP-1, and Lab Tests 1–11 | [LABS/README.md](./LABS/README.md) | [Open Labs](https://iambolt7.github.io/Backend.Develepment.18722/#doc=LABS/README.md) |
 | **Theory** | Assignments 1–2, JWT Lab, Theory 1, Unit 3, Unit 4 | [Theory/README.md](./Theory/README.md) | [Open Theory](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Theory/README.md) |
 | **Applications** | Full CMS Lab Web Application | [Applications/README.md](./Applications/README.md) | [Open Applications](https://iambolt7.github.io/Backend.Develepment.18722/#doc=Applications/README.md) |
 | **PBL (DockerAPI)** | Containerized FastAPI Student API, Compose, pytest, CI/CD | [DockerAPI Repo](https://github.com/IamBolt7/DockerAPI) | [Hosted Portal](https://iambolt7.github.io/DockerAPI/) |
@@ -43,6 +43,7 @@ Every `README.md` in the repository is linked here and links back to this main h
 | LABS | Lab Test-8 — REST API and JWT Auth | [Lab Test-8 Experiment/](./LABS/Lab%20Test-8%20Experiment/) | [Lab Test-8 README](./LABS/Lab%20Test-8%20Experiment/README.md) | Express (`localhost:3007`) |
 | LABS | Lab Test-9 — Security, Rate Limit and Docker | [Lab Test-9 Experiment/](./LABS/Lab%20Test-9%20Experiment/) | [Lab Test-9 README](./LABS/Lab%20Test-9%20Experiment/README.md) | Express / Docker (`3009`) |
 | LABS | Lab Test-10 — Socket.IO Real-Time Chat | [Lab Test-10 Experiment/](./LABS/Lab%20Test-10%20Experiment/) | [Lab Test-10 README](./LABS/Lab%20Test-10%20Experiment/README.md) | Socket.IO (`localhost:3015`) |
+| LABS | Lab Test-11 — Containerized Todo App (Docker) | [Lab Test-11 Experiment/](./LABS/Lab%20Test-11%20Experiment/) | [Lab Test-11 README](./LABS/Lab%20Test-11%20Experiment/README.md) | Docker (`localhost:8080`) |
 | Theory | Theory Overview Index | [Theory/](./Theory/) | [Theory/README.md](./Theory/README.md) | — |
 | Theory | Assignment 1 — NoteSpace | [Assignment-1-Notes-App/](./Theory/Assignment-1-Notes-App/) | [Assignment 1 README](./Theory/Assignment-1-Notes-App/README.md) | [index.html](./Theory/Assignment-1-Notes-App/index.html) |
 | Theory | Assignment 2 — PostgreSQL JSONB | [Assignment 2/](./Theory/Assignment%202/) | [Assignment 2 README](./Theory/Assignment%202/README.md) | [index.html](./Theory/Assignment%202/index.html) |
@@ -74,7 +75,7 @@ Backend.Develepment.18722/
 │   ├── README.md
 │   ├── django_todo_app/README.md
 │   ├── EXP-1/README.md
-│   └── Lab Test-1..10 Experiment/README.md
+│   └── Lab Test-1..11 Experiment/README.md
 ├── Theory/
 │   ├── README.md
 │   ├── Assignment-1-Notes-App/README.md
@@ -90,7 +91,7 @@ Backend.Develepment.18722/
 
 ## Laboratory Work
 
-The [`LABS`](./LABS/README.md) folder holds twelve practical projects built across the semester:
+The [`LABS`](./LABS/README.md) folder holds thirteen practical projects built across the semester:
 
 1. **[Django To-Do App](./LABS/django_todo_app/README.md)** — Server-rendered task manager using Django models, `ModelForm`, CSRF protection, SQLite, and view tests.
 2. **[EXP-1](./LABS/EXP-1/README.md)** — Single-card profile webpage built with semantic HTML5 and responsive CSS ([preview](./LABS/EXP-1/arnav.html)).
@@ -104,6 +105,7 @@ The [`LABS`](./LABS/README.md) folder holds twelve practical projects built acro
 10. **[Lab Test-8 Experiment](./LABS/Lab%20Test-8%20Experiment/README.md)** — RESTful Books CRUD API secured with bcrypt password hashing and JWT Bearer tokens.
 11. **[Lab Test-9 Experiment](./LABS/Lab%20Test-9%20Experiment/README.md)** — Express hardening using Helmet, CORS allowlists, rate limiting, `/health`, and Docker Compose.
 12. **[Lab Test-10 Experiment](./LABS/Lab%20Test-10%20Experiment/README.md)** — Real-time group chat built with Express and Socket.IO.
+13. **[Lab Test-11 Experiment](./LABS/Lab%20Test-11%20Experiment/README.md)** — Containerized persistent Todo application packaged with Docker, port mapping (`8080:3000`), and host volume persistence (`docker-data:/app/data`).
 
 ---
 
